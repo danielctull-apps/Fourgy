@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iPodAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPodAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		241CB96C100BD66E00180B5F /* ipod.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CB96B100BD66E00180B5F /* ipod.png */; };
+		241CB975100BD9E300180B5F /* DTiPodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB974100BD9E300180B5F /* DTiPodViewController.m */; };
+		241CB979100BDA0700180B5F /* DTiPodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CB978100BDA0700180B5F /* DTiPodView.xib */; };
+		241CB994100BE25C00180B5F /* DTiPodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB993100BE25C00180B5F /* DTiPodTableViewCell.m */; };
+		241CB99D100BE45800180B5F /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CB99C100BE45800180B5F /* wheel.png */; };
+		241CBA10100BEEF200180B5F /* DTiPodBackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBA0F100BEEF200180B5F /* DTiPodBackGroundView.m */; };
+		241CBA33100BF13500180B5F /* DTiPodScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBA32100BF13500180B5F /* DTiPodScreenView.m */; };
+		241CBA44100BF3A100180B5F /* DTClickWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBA43100BF3A100180B5F /* DTClickWheelView.m */; };
+		241CBA7A100BFC9000180B5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CBA79100BFC9000180B5F /* Default.png */; };
+		241CBC4B100C96A000180B5F /* DTScreenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBC4A100C96A000180B5F /* DTScreenTableViewController.m */; };
+		241CBCA4100C9B3F00180B5F /* DTiPodNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBCA3100C9B3F00180B5F /* DTiPodNavigationBar.m */; };
+		241CBDD2100CD11200180B5F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CBDD1100CD11200180B5F /* MediaPlayer.framework */; };
+		241CBEB2100CFEF800180B5F /* MainMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241CBEB1100CFEF800180B5F /* MainMenu.plist */; };
+		241CBEB6100CFF2F00180B5F /* MusicMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241CBEB5100CFF2F00180B5F /* MusicMenu.plist */; };
+		241CBF69100D414500180B5F /* DTBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBF68100D414500180B5F /* DTBatteryLevelView.m */; };
+		248AE1F8100DC63E001864E6 /* DTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE1F0100DC63E001864E6 /* DTGridView.m */; };
+		248AE1F9100DC63E001864E6 /* DTGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE1F2100DC63E001864E6 /* DTGridViewCell.m */; };
+		248AE1FA100DC63E001864E6 /* DTGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE1F5100DC63E001864E6 /* DTGridViewController.m */; };
+		248AE1FB100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE1F7100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.m */; };
+		248AE243100DCA8D001864E6 /* DTBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE242100DCA8D001864E6 /* DTBlockView.m */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iPodAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPodAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iPodAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPodAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		241CB96B100BD66E00180B5F /* ipod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipod.png; path = ../../../Downloads/ipod.png; sourceTree = SOURCE_ROOT; };
+		241CB973100BD9E300180B5F /* DTiPodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodViewController.h; sourceTree = "<group>"; };
+		241CB974100BD9E300180B5F /* DTiPodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodViewController.m; sourceTree = "<group>"; };
+		241CB978100BDA0700180B5F /* DTiPodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTiPodView.xib; sourceTree = "<group>"; };
+		241CB992100BE25C00180B5F /* DTiPodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodTableViewCell.h; sourceTree = "<group>"; };
+		241CB993100BE25C00180B5F /* DTiPodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodTableViewCell.m; sourceTree = "<group>"; };
+		241CB99C100BE45800180B5F /* wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheel.png; sourceTree = "<group>"; };
+		241CBA0E100BEEF200180B5F /* DTiPodBackGroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBackGroundView.h; sourceTree = "<group>"; };
+		241CBA0F100BEEF200180B5F /* DTiPodBackGroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBackGroundView.m; sourceTree = "<group>"; };
+		241CBA31100BF13500180B5F /* DTiPodScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodScreenView.h; sourceTree = "<group>"; };
+		241CBA32100BF13500180B5F /* DTiPodScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodScreenView.m; sourceTree = "<group>"; };
+		241CBA42100BF3A100180B5F /* DTClickWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTClickWheelView.h; sourceTree = "<group>"; };
+		241CBA43100BF3A100180B5F /* DTClickWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTClickWheelView.m; sourceTree = "<group>"; };
+		241CBA79100BFC9000180B5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		241CBC49100C96A000180B5F /* DTScreenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScreenTableViewController.h; sourceTree = "<group>"; };
+		241CBC4A100C96A000180B5F /* DTScreenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScreenTableViewController.m; sourceTree = "<group>"; };
+		241CBCA2100C9B3F00180B5F /* DTiPodNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodNavigationBar.h; sourceTree = "<group>"; };
+		241CBCA3100C9B3F00180B5F /* DTiPodNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodNavigationBar.m; sourceTree = "<group>"; };
+		241CBDD1100CD11200180B5F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		241CBEB1100CFEF800180B5F /* MainMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainMenu.plist; sourceTree = "<group>"; };
+		241CBEB5100CFF2F00180B5F /* MusicMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MusicMenu.plist; sourceTree = "<group>"; };
+		241CBF67100D414500180B5F /* DTBatteryLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBatteryLevelView.h; sourceTree = "<group>"; };
+		241CBF68100D414500180B5F /* DTBatteryLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBatteryLevelView.m; sourceTree = "<group>"; };
+		248AE1EF100DC63E001864E6 /* DTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridView.h; sourceTree = "<group>"; };
+		248AE1F0100DC63E001864E6 /* DTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridView.m; sourceTree = "<group>"; };
+		248AE1F1100DC63E001864E6 /* DTGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCell.h; sourceTree = "<group>"; };
+		248AE1F2100DC63E001864E6 /* DTGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewCell.m; sourceTree = "<group>"; };
+		248AE1F3100DC63E001864E6 /* DTGridViewCellInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCellInfoProtocol.h; sourceTree = "<group>"; };
+		248AE1F4100DC63E001864E6 /* DTGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewController.h; sourceTree = "<group>"; };
+		248AE1F5100DC63E001864E6 /* DTGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewController.m; sourceTree = "<group>"; };
+		248AE1F6100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewExampleDataSourceAndDelegate.h; sourceTree = "<group>"; };
+		248AE1F7100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewExampleDataSourceAndDelegate.m; sourceTree = "<group>"; };
+		248AE241100DCA8D001864E6 /* DTBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockView.h; sourceTree = "<group>"; };
+		248AE242100DCA8D001864E6 /* DTBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockView.m; sourceTree = "<group>"; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iPod_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPod_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iPod-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPod-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				241CBDD2100CD11200180B5F /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* iPodAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iPodAppDelegate.m */,
+				241CB973100BD9E300180B5F /* DTiPodViewController.h */,
+				241CB974100BD9E300180B5F /* DTiPodViewController.m */,
+				241CB992100BE25C00180B5F /* DTiPodTableViewCell.h */,
+				241CB993100BE25C00180B5F /* DTiPodTableViewCell.m */,
+				241CBA0E100BEEF200180B5F /* DTiPodBackGroundView.h */,
+				241CBA0F100BEEF200180B5F /* DTiPodBackGroundView.m */,
+				241CBA31100BF13500180B5F /* DTiPodScreenView.h */,
+				241CBA32100BF13500180B5F /* DTiPodScreenView.m */,
+				241CBA42100BF3A100180B5F /* DTClickWheelView.h */,
+				241CBA43100BF3A100180B5F /* DTClickWheelView.m */,
+				241CBC49100C96A000180B5F /* DTScreenTableViewController.h */,
+				241CBC4A100C96A000180B5F /* DTScreenTableViewController.m */,
+				241CBCA2100C9B3F00180B5F /* DTiPodNavigationBar.h */,
+				241CBCA3100C9B3F00180B5F /* DTiPodNavigationBar.m */,
+				241CBF67100D414500180B5F /* DTBatteryLevelView.h */,
+				241CBF68100D414500180B5F /* DTBatteryLevelView.m */,
+				248AE241100DCA8D001864E6 /* DTBlockView.h */,
+				248AE242100DCA8D001864E6 /* DTBlockView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iPod.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		248AE1EE100DC63E001864E6 /* DTGridView */ = {
+			isa = PBXGroup;
+			children = (
+				248AE1EF100DC63E001864E6 /* DTGridView.h */,
+				248AE1F0100DC63E001864E6 /* DTGridView.m */,
+				248AE1F1100DC63E001864E6 /* DTGridViewCell.h */,
+				248AE1F2100DC63E001864E6 /* DTGridViewCell.m */,
+				248AE1F3100DC63E001864E6 /* DTGridViewCellInfoProtocol.h */,
+				248AE1F4100DC63E001864E6 /* DTGridViewController.h */,
+				248AE1F5100DC63E001864E6 /* DTGridViewController.m */,
+				248AE1F6100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.h */,
+				248AE1F7100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.m */,
+			);
+			name = DTGridView;
+			path = ../DTKit/DTGridView;
+			sourceTree = SOURCE_ROOT;
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				248AE1EE100DC63E001864E6 /* DTGridView */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iPod_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				241CB99C100BE45800180B5F /* wheel.png */,
+				241CB96B100BD66E00180B5F /* ipod.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* iPod-Info.plist */,
+				241CB978100BDA0700180B5F /* DTiPodView.xib */,
+				241CBA79100BFC9000180B5F /* Default.png */,
+				241CBEB1100CFEF800180B5F /* MainMenu.plist */,
+				241CBEB5100CFF2F00180B5F /* MusicMenu.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				241CBDD1100CD11200180B5F /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iPod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPod" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPod;
+			productName = iPod;
+			productReference = 1D6058910D05DD3D006BFB54 /* iPod.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPod" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iPod */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				241CB96C100BD66E00180B5F /* ipod.png in Resources */,
+				241CB979100BDA0700180B5F /* DTiPodView.xib in Resources */,
+				241CB99D100BE45800180B5F /* wheel.png in Resources */,
+				241CBA7A100BFC9000180B5F /* Default.png in Resources */,
+				241CBEB2100CFEF800180B5F /* MainMenu.plist in Resources */,
+				241CBEB6100CFF2F00180B5F /* MusicMenu.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iPodAppDelegate.m in Sources */,
+				241CB975100BD9E300180B5F /* DTiPodViewController.m in Sources */,
+				241CB994100BE25C00180B5F /* DTiPodTableViewCell.m in Sources */,
+				241CBA10100BEEF200180B5F /* DTiPodBackGroundView.m in Sources */,
+				241CBA33100BF13500180B5F /* DTiPodScreenView.m in Sources */,
+				241CBA44100BF3A100180B5F /* DTClickWheelView.m in Sources */,
+				241CBC4B100C96A000180B5F /* DTScreenTableViewController.m in Sources */,
+				241CBCA4100C9B3F00180B5F /* DTiPodNavigationBar.m in Sources */,
+				241CBF69100D414500180B5F /* DTBatteryLevelView.m in Sources */,
+				248AE1F8100DC63E001864E6 /* DTGridView.m in Sources */,
+				248AE1F9100DC63E001864E6 /* DTGridViewCell.m in Sources */,
+				248AE1FA100DC63E001864E6 /* DTGridViewController.m in Sources */,
+				248AE1FB100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.m in Sources */,
+				248AE243100DCA8D001864E6 /* DTBlockView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPod_Prefix.pch;
+				INFOPLIST_FILE = "iPod-Info.plist";
+				PRODUCT_NAME = iPod;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPod_Prefix.pch;
+				INFOPLIST_FILE = "iPod-Info.plist";
+				PRODUCT_NAME = iPod;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
