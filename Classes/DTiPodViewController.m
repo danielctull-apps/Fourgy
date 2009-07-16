@@ -42,7 +42,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];	
 	
-	DTScreenTableViewController *table = [[DTScreenTableViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MainMenu" ofType:@"plist"]]];
+	//DTScreenTableViewController *table = [[DTScreenTableViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MainMenu" ofType:@"plist"]]];
+	
+	
 	
 	
 	nav = [[UINavigationController alloc] initWithRootViewController:table];

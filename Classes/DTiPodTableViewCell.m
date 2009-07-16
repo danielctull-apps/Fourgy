@@ -14,7 +14,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
 		
 		//self.frame = CGRectMake(0.0, 0.0, 240.0, 27.0);
-		
+		/*
 		UIView *bgView = [[UIView alloc] init];
 		bgView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
 		self.backgroundView = bgView;
@@ -24,7 +24,7 @@
 		sbgView.backgroundColor = [UIColor colorWithRed:0.176 green:0.204 blue:0.42 alpha:1.0];
 		self.selectedBackgroundView = sbgView;
 		[sbgView release];
-		
+		*/
 		self.textLabel.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
 		self.textLabel.font = [UIFont boldSystemFontOfSize:17.0];
 		self.textLabel.textColor = [UIColor colorWithRed:0.176 green:0.204 blue:0.42 alpha:1.0];

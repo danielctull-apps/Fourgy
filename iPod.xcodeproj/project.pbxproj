@@ -11,8 +11,10 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		240821A5100F7460006EDE45 /* DTiPodBlockViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */; };
+		240821AC100F75D3006EDE45 /* DTiPodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB974100BD9E300180B5F /* DTiPodViewController.m */; };
+		240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240821B2100F7627006EDE45 /* DTScreenViewController.m */; };
 		241CB96C100BD66E00180B5F /* ipod.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CB96B100BD66E00180B5F /* ipod.png */; };
-		241CB975100BD9E300180B5F /* DTiPodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB974100BD9E300180B5F /* DTiPodViewController.m */; };
 		241CB979100BDA0700180B5F /* DTiPodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CB978100BDA0700180B5F /* DTiPodView.xib */; };
 		241CB994100BE25C00180B5F /* DTiPodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB993100BE25C00180B5F /* DTiPodTableViewCell.m */; };
 		241CB99D100BE45800180B5F /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CB99C100BE45800180B5F /* wheel.png */; };
@@ -41,6 +43,10 @@
 		1D3623250D0F684500981E51 /* iPodAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPodAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* iPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		240821A3100F7460006EDE45 /* DTiPodBlockViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBlockViewCell.h; sourceTree = "<group>"; };
+		240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockViewCell.m; sourceTree = "<group>"; };
+		240821B1100F7627006EDE45 /* DTScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScreenViewController.h; sourceTree = "<group>"; };
+		240821B2100F7627006EDE45 /* DTScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScreenViewController.m; sourceTree = "<group>"; };
 		241CB96B100BD66E00180B5F /* ipod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipod.png; path = ../../../Downloads/ipod.png; sourceTree = SOURCE_ROOT; };
 		241CB973100BD9E300180B5F /* DTiPodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodViewController.h; sourceTree = "<group>"; };
 		241CB974100BD9E300180B5F /* DTiPodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodViewController.m; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 		241CBEB5100CFF2F00180B5F /* MusicMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MusicMenu.plist; sourceTree = "<group>"; };
 		241CBF67100D414500180B5F /* DTBatteryLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBatteryLevelView.h; sourceTree = "<group>"; };
 		241CBF68100D414500180B5F /* DTBatteryLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBatteryLevelView.m; sourceTree = "<group>"; };
+		241E6115100F1C5F00A2199C /* DTBlockViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockViewCellProtocol.h; sourceTree = "<group>"; };
 		248AE1EF100DC63E001864E6 /* DTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridView.h; sourceTree = "<group>"; };
 		248AE1F0100DC63E001864E6 /* DTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridView.m; sourceTree = "<group>"; };
 		248AE1F1100DC63E001864E6 /* DTGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCell.h; sourceTree = "<group>"; };
@@ -120,6 +127,11 @@
 				241CBF68100D414500180B5F /* DTBatteryLevelView.m */,
 				248AE241100DCA8D001864E6 /* DTBlockView.h */,
 				248AE242100DCA8D001864E6 /* DTBlockView.m */,
+				241E6115100F1C5F00A2199C /* DTBlockViewCellProtocol.h */,
+				240821A3100F7460006EDE45 /* DTiPodBlockViewCell.h */,
+				240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */,
+				240821B1100F7627006EDE45 /* DTScreenViewController.h */,
+				240821B2100F7627006EDE45 /* DTScreenViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -258,7 +270,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* iPodAppDelegate.m in Sources */,
-				241CB975100BD9E300180B5F /* DTiPodViewController.m in Sources */,
 				241CB994100BE25C00180B5F /* DTiPodTableViewCell.m in Sources */,
 				241CBA10100BEEF200180B5F /* DTiPodBackGroundView.m in Sources */,
 				241CBA33100BF13500180B5F /* DTiPodScreenView.m in Sources */,
@@ -271,6 +282,9 @@
 				248AE1FA100DC63E001864E6 /* DTGridViewController.m in Sources */,
 				248AE1FB100DC63E001864E6 /* DTGridViewExampleDataSourceAndDelegate.m in Sources */,
 				248AE243100DCA8D001864E6 /* DTBlockView.m in Sources */,
+				240821A5100F7460006EDE45 /* DTiPodBlockViewCell.m in Sources */,
+				240821AC100F75D3006EDE45 /* DTiPodViewController.m in Sources */,
+				240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

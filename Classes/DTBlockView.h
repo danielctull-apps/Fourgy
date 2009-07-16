@@ -7,19 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DTBlockViewCellProtocol.h"
 
 @protocol DTBlockViewDataSource;
 
 @interface DTBlockView : UIView {
 	
-	NSMutableArray *blocks;
+	NSArray *blocks;
 	NSMutableArray *freeBlocks;
-	NSInteger *numberOfRows;
+	NSInteger numberOfRows;
 	
 	CGFloat *cellHeights;
 }
 
-- (DTGridViewCell *)dequeueReusableCellWithIdentifier:(NSString *)identifier;
+@property (nonatomic, retain) NSArray *blocks;
+
+- (UIView<DTBlockViewCellProtocol> *)dequeueReusableCell;
 - (void)moveToRow:(NSInteger)rowIndex;
 
 @end
@@ -28,6 +31,6 @@
 @protocol DTBlockViewDataSource
 
 - (NSInteger)numberOfRowsForBlockView:(DTBlockView *)blockView;
-- (DTBlockViewCell *)blockView:(DTBlockView *)blockView blockViewCellForRow:(NSInteger)rowIndex;
+- (UIView<DTBlockViewCellProtocol> *)blockView:(DTBlockView *)blockView blockViewCellForRow:(NSInteger)rowIndex;
 
 @end
