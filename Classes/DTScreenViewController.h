@@ -13,4 +13,6 @@
 	DTBlockView *itemsView;
 }
 
+- (void)moveDown;
+
 @end

@@ -117,7 +117,6 @@
 		cell.textLabel.text = @"Backlight";
 		
 	return cell;
-	
 }
 
 #pragma mark DTClickWheelViewDelegate Methods
@@ -205,6 +204,11 @@
 	
 	
 	difference += diff;
+	
+	DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+	[tableController moveDown];
+	
+	
 	/*
 	if (difference > 30) {
 		difference = 0.0;

@@ -71,10 +71,12 @@
 
 - (UIView<DTBlockViewCellProtocol> *)blockView:(DTBlockView *)blockView blockViewCellForRow:(NSInteger)rowIndex {
 	
-	DTiPodBlockViewCell *cell = [blockView dequeueReusableCell];
+	DTiPodBlockViewCell *cell = (DTiPodBlockViewCell *)[blockView dequeueReusableCell];
 	
-	if (!cell) cell = [[DTiPodBlockViewCell alloc] init];
-	
+	if (!cell) {
+		cell = [[DTiPodBlockViewCell alloc] initWithFrame:CGRectMake(0.0, 0.0, blockView.frame.size.width, 27.0)];
+	}
+	/*
 	if (rowIndex == 0)
 		cell.backgroundColor = [UIColor redColor];
 	else if (rowIndex == 1)
@@ -87,9 +89,25 @@
 		cell.backgroundColor = [UIColor grayColor];
 	else if (rowIndex == 5)
 		cell.backgroundColor = [UIColor lightGrayColor];
+	*/
 	
+	if (rowIndex == 0)
+		cell.titleLabel.text = @"Music";
+	else if (rowIndex == 1)
+		cell.titleLabel.text = @"Extras";
+	else if (rowIndex == 2)
+		cell.titleLabel.text = @"Settings";
+	else if (rowIndex == 3)
+		cell.titleLabel.text = @"Shuffle Songs";
+	else if (rowIndex == 4)
+		cell.titleLabel.text = @"Backlight";
 	
 	return cell;
+}
+
+- (void)moveDown {
+	NSLog(@"%@:%s", self, _cmd);
+	[itemsView moveToRow:6];
 }
 
 @end

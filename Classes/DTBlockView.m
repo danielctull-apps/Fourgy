@@ -28,6 +28,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+	[self findnumberOfRowsToDisplay];
 	[self findNumberOfRows];
 	[self findInitialRows];
 	[self setNeedsLayout];
@@ -35,11 +36,7 @@
 
 - (void)layoutSubviews {
 	
-	if (![self.dataSource respondsToSelector:@selector(numberOfRowsToDisplayInBlockView:)]) return;
-	
 	if ([blocks count] == 0) return;
-		
-	NSInteger displayRowNumber = [self.dataSource numberOfRowsToDisplayInBlockView:self];
 	
 	CGFloat width = self.frame.size.width;
 	CGFloat height = self.frame.size.height/displayRowNumber;
@@ -57,7 +54,7 @@
 	
 	NSMutableArray *tempBlocks = [[NSMutableArray alloc] init];
 	
-	for (NSInteger i = 0; i < numberOfRows; i++) {
+	for (NSInteger i = 0; i < displayRowNumber; i++) {
 		UIView<DTBlockViewCellProtocol> *cell = [self.dataSource blockView:self blockViewCellForRow:i];
 		[self addSubview:cell];
 		[tempBlocks addObject:cell];
@@ -67,6 +64,11 @@
 	blocks = [tempBlocks copy];
 	[tempBlocks release];
 	
+}
+
+- (void)findnumberOfRowsToDisplay {
+	if ([self.dataSource respondsToSelector:@selector(numberOfRowsToDisplayInBlockView:)])
+		displayRowNumber = [self.dataSource numberOfRowsToDisplayInBlockView:self];
 }
 
 - (void)findNumberOfRows {
@@ -125,11 +127,15 @@
 	firstCell = [blocks objectAtIndex:0];
 	lastCell = [blocks lastObject];
 	
+	NSMutableArray *tempBlocks = [blocks mutableCopy];
+	
 	if (firstCell.rowIndex > firstRowIndex) {
 		// needs some before
 		
 		for (NSInteger i = firstCell.rowIndex - 1; i >= firstRowIndex; i--) {
-			// ask for cell and add
+			UIView<DTBlockViewCellProtocol> *cell = [self.dataSource blockView:self blockViewCellForRow:i];
+			[self addSubview:cell];
+			[tempBlocks addObject:cell];
 		}
 	}
 	
@@ -137,10 +143,14 @@
 		// needs some after
 		
 		for (NSInteger i = lastCell.rowIndex + 1; i <= lastRowIndex; i++) {
-			//ask for cell and add
+			UIView<DTBlockViewCellProtocol> *cell = [self.dataSource blockView:self blockViewCellForRow:i];
+			[self addSubview:cell];
+			[tempBlocks addObject:cell];
 		}
 	}
 	
+	[blocks release];
+	blocks = tempBlocks;
 	
 	
 	

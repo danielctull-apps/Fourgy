@@ -16,7 +16,7 @@
 	NSArray *blocks;
 	NSMutableArray *freeBlocks;
 	NSInteger numberOfRows;
-	
+	NSInteger displayRowNumber;
 	CGFloat *cellHeights;
 	
 	NSObject<DTBlockViewDataSource> *dataSource;

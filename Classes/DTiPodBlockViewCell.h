@@ -12,9 +12,11 @@
 @interface DTiPodBlockViewCell : UIView <DTBlockViewCellProtocol> {
 	UILabel *titleLabel;
 	NSInteger rowIndex;
+	BOOL selected;
 }
 
 @property (nonatomic, retain) UILabel *titleLabel;
 @property (nonatomic, assign) NSInteger rowIndex;
+@property (nonatomic, assign) BOOL selected;
 
 @end
