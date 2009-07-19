@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DTBlockView.h"
 
-
-@interface DTScreenViewController : UIViewController {
+@interface DTScreenViewController : UIViewController <DTBlockViewDataSource> {
 	DTBlockView *itemsView;
 }
 

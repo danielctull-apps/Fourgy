@@ -17,10 +17,17 @@
     if (!(self = [super initWithFrame:frame])) return nil;
 	
 	titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, frame.size.width - 20, frame.size.height)];
+	self.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
 	[self addSubview:titleLabel];
-	
+	titleLabel.text = @"YES";
     return self;
 }
+
+/*- (void)drawRect:(CGRect)rect {
+	NSLog(@"%@:%s", self, _cmd);
+	[self addSubview:titleLabel];
+	titleLabel.text = @"YES";
+}*/
 
 - (void)dealloc {
 	[titleLabel release];

@@ -11,10 +11,10 @@
 
 @interface DTiPodBlockViewCell : UIView <DTBlockViewCellProtocol> {
 	UILabel *titleLabel;
-	NSInteger *rowIndex;
+	NSInteger rowIndex;
 }
 
 @property (nonatomic, retain) UILabel *titleLabel;
-@property (nonatomic, assign) NSInteger *rowIndex;
+@property (nonatomic, assign) NSInteger rowIndex;
 
 @end

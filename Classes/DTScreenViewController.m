@@ -7,7 +7,7 @@
 //
 
 #import "DTScreenViewController.h"
-
+#import "DTiPodBlockViewCell.h"
 
 @implementation DTScreenViewController
 
@@ -19,10 +19,19 @@
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
+/*- (void)loadView {
+	self.view = [[DTBlockView alloc] initWithFrame:CGRectZero];
+	((DTBlockView *)self.view).dataSource = self;
+	itemsView = self.view;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+}*/
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	itemsView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
 	
 }
 
@@ -52,5 +61,35 @@
     [super dealloc];
 }
 
+- (NSInteger)numberOfRowsForBlockView:(DTBlockView *)blockView {
+	return 50;
+}
+
+- (NSInteger)numberOfRowsToDisplayInBlockView:(DTBlockView *)blockView {
+	return 6;
+}
+
+- (UIView<DTBlockViewCellProtocol> *)blockView:(DTBlockView *)blockView blockViewCellForRow:(NSInteger)rowIndex {
+	
+	DTiPodBlockViewCell *cell = [blockView dequeueReusableCell];
+	
+	if (!cell) cell = [[DTiPodBlockViewCell alloc] init];
+	
+	if (rowIndex == 0)
+		cell.backgroundColor = [UIColor redColor];
+	else if (rowIndex == 1)
+		cell.backgroundColor = [UIColor blueColor];
+	else if (rowIndex == 2)
+		cell.backgroundColor = [UIColor yellowColor];
+	else if (rowIndex == 3)
+		cell.backgroundColor = [UIColor blackColor];
+	else if (rowIndex == 4)
+		cell.backgroundColor = [UIColor grayColor];
+	else if (rowIndex == 5)
+		cell.backgroundColor = [UIColor lightGrayColor];
+	
+	
+	return cell;
+}
 
 @end

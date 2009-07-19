@@ -8,7 +8,7 @@
 
 #import "DTiPodViewController.h"
 #import "DTiPodTableViewCell.h"
-#import "DTScreenTableViewController.h"
+#import "DTScreenViewController.h"
 #import "DTiPodNavigationBar.h"
 #import <MediaPlayer/MediaPlayer.h>
 
@@ -44,12 +44,11 @@
 	
 	//DTScreenTableViewController *table = [[DTScreenTableViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MainMenu" ofType:@"plist"]]];
 	
+	DTScreenViewController *vc = [[DTScreenViewController alloc] init];
 	
+	nav = [[UINavigationController alloc] initWithRootViewController:vc];
 	
-	
-	nav = [[UINavigationController alloc] initWithRootViewController:table];
-	
-	[table release];
+	[vc release];
 	
 	nav.view.frame = CGRectMake(0.0, 30.0 - nav.navigationBar.frame.size.height, 240.0, 162.0 + nav.navigationBar.frame.size.height);
 	
@@ -131,7 +130,7 @@
 	
 	oldAngle = 500.0;
 	
-	DTScreenTableViewController *tableController = (DTScreenTableViewController *)nav.visibleViewController;
+	DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
 	/*
 	UITableViewCell *cell = [tableController.tableView cellForRowAtIndexPath:[tableController.tableView indexPathForSelectedRow]];
 	

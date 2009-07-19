@@ -11,30 +11,68 @@
 
 @implementation DTBlockView
 
-@synthesize blocks;
+@synthesize blocks, dataSource;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        // Initialization code
+		
+		blocks = [[NSArray alloc] init];
+		freeBlocks = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
+- (void)awakeFromNib {
+	blocks = [[NSArray alloc] init];
+	freeBlocks = [[NSMutableArray alloc] init];
+}
+
 - (void)drawRect:(CGRect)rect {
-	[self moveToRow:0];
+	[self findNumberOfRows];
+	[self findInitialRows];
+	[self setNeedsLayout];
 }
 
 - (void)layoutSubviews {
 	
-	CGFloat width = self.frame.size.width;
-	CGFloat height = self.frame.size.height/numberOfRows;
+	if (![self.dataSource respondsToSelector:@selector(numberOfRowsToDisplayInBlockView:)]) return;
 	
-	for (NSInteger i = 0; i < numberOfRows; i++) {
+	if ([blocks count] == 0) return;
+		
+	NSInteger displayRowNumber = [self.dataSource numberOfRowsToDisplayInBlockView:self];
+	
+	CGFloat width = self.frame.size.width;
+	CGFloat height = self.frame.size.height/displayRowNumber;
+	
+	for (NSInteger i = 0; i < displayRowNumber; i++) {
 		UIView<DTBlockViewCellProtocol> *cell = [blocks objectAtIndex:i];
 		cell.frame = CGRectMake(0.0, i*height, width, height);
 	}
 }
 
+- (void)findInitialRows {
+	
+	if (![self.dataSource respondsToSelector:@selector(blockView:blockViewCellForRow:)])
+		return;
+	
+	NSMutableArray *tempBlocks = [[NSMutableArray alloc] init];
+	
+	for (NSInteger i = 0; i < numberOfRows; i++) {
+		UIView<DTBlockViewCellProtocol> *cell = [self.dataSource blockView:self blockViewCellForRow:i];
+		[self addSubview:cell];
+		[tempBlocks addObject:cell];
+	}
+	
+	[blocks release];
+	blocks = [tempBlocks copy];
+	[tempBlocks release];
+	
+}
+
+- (void)findNumberOfRows {
+	if ([self.dataSource respondsToSelector:@selector(numberOfRowsForBlockView:)])
+		numberOfRows = [self.dataSource numberOfRowsForBlockView:self];
+}
 
 - (void)dealloc {
     [super dealloc];
@@ -49,7 +87,7 @@
 }
 
 - (void)moveToRow:(NSInteger)rowIndex {
-	
+		
 	UIView<DTBlockViewCellProtocol> *firstCell = [blocks objectAtIndex:0];
 	UIView<DTBlockViewCellProtocol> *lastCell = [blocks lastObject];
 	

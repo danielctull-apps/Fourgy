@@ -18,9 +18,12 @@
 	NSInteger numberOfRows;
 	
 	CGFloat *cellHeights;
+	
+	NSObject<DTBlockViewDataSource> *dataSource;
 }
 
 @property (nonatomic, retain) NSArray *blocks;
+@property (nonatomic, assign) IBOutlet NSObject<DTBlockViewDataSource> *dataSource;
 
 - (UIView<DTBlockViewCellProtocol> *)dequeueReusableCell;
 - (void)moveToRow:(NSInteger)rowIndex;
@@ -32,5 +35,6 @@
 
 - (NSInteger)numberOfRowsForBlockView:(DTBlockView *)blockView;
 - (UIView<DTBlockViewCellProtocol> *)blockView:(DTBlockView *)blockView blockViewCellForRow:(NSInteger)rowIndex;
+- (NSInteger)numberOfRowsToDisplayInBlockView:(DTBlockView *)blockView;
 
 @end
