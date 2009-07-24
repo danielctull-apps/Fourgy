@@ -60,6 +60,8 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	trackNameLabel.speed = 30.0;
+	trackNameLabel.delay = 5.0;
     [super viewDidLoad];
 	[self refreshPlaying];
 }

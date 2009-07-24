@@ -31,6 +31,9 @@
 
 - (UIView<DTBlockViewCellProtocol> *)dequeueReusableCell;
 - (void)moveToRow:(NSInteger)rowIndex;
+-(void)findnumberOfRowsToDisplay;
+-(void)findNumberOfRows;
+-(void)findInitialRows;
 
 @end
 

@@ -7,7 +7,7 @@
 //
 
 #import "DTiPodViewController.h"
-#import "DTiPodTableViewCell.h"
+//#import "DTiPodTableViewCell.h"
 #import "DTScreenViewController.h"
 #import "DTiPodNavigationBar.h"
 #import <MediaPlayer/MediaPlayer.h>
@@ -45,7 +45,7 @@
 	
 	//DTScreenTableViewController *table = [[DTScreenTableViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MainMenu" ofType:@"plist"]]];
 	
-	DTScreenViewController *vc = [[DTScreenViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MusicMenu" ofType:@"plist"]]];
+	DTScreenViewController *vc = [[DTScreenViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MainMenu" ofType:@"plist"]]];
 	
 	nav = [[UINavigationController alloc] initWithRootViewController:vc];
 	
@@ -91,7 +91,7 @@
 }
 
 #pragma mark UITableViewDataSource Methods
-
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	//NSLog(@"%@:%s", self, _cmd);
 	return 5;
@@ -117,9 +117,9 @@
 	else if (indexPath.row == 4)
 		cell.textLabel.text = @"Backlight";
 		
-	return cell;
+	return (UITableViewCell *)cell;
 }
-
+*/
 #pragma mark DTClickWheelViewDelegate Methods
 
 - (void)menuButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {
@@ -135,17 +135,9 @@
 	
 	oldAngle = 500.0;
 	
-	if (doneOnce) {
-		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
-		[tableController selected];
-	} else {
-		doneOnce = YES;
-		MPMediaQuery *query = [MPMediaQuery artistsQuery];
-		[query setGroupingType:MPMediaGroupingArtist];
-		DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:query property:MPMediaItemPropertyArtist lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
-		[nav pushViewController:table animated:YES];
-		[table release];
-	}
+
+	DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+	[tableController selected];
 	//NSLog(@"%@", [query collections]);
 	
 	

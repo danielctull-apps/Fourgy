@@ -206,6 +206,59 @@
 			[table release];
 			
 		}
+	} else if (items) {
+		
+		NSString *text = [items objectAtIndex:itemsView.selectedIndex];
+		
+		if ([text isEqualToString:@"Music"]) {
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MusicMenu" ofType:@"plist"]]];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Playlists"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery playlistsQuery];
+			[aQuery setGroupingType:MPMediaGroupingPlaylist];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaPlaylistPropertyName lastPredicate:nil lastGroupingType:MPMediaGroupingPlaylist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Artists"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery artistsQuery];
+			[aQuery setGroupingType:MPMediaGroupingArtist];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyArtist lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Albums"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery albumsQuery];
+			[aQuery setGroupingType:MPMediaGroupingAlbum];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyAlbumTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Genres"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery genresQuery];
+			[aQuery setGroupingType:MPMediaGroupingGenre];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyGenre lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Songs"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery songsQuery];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Podcasts"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery podcastsQuery];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyPodcastTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Audiobooks"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery audiobooksQuery];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		} else if ([text isEqualToString:@"Composers"]) {
+			MPMediaQuery *aQuery = [MPMediaQuery composersQuery];
+			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyComposer lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+			[self.navigationController pushViewController:table animated:YES];
+			[table release];
+		}
 	}
 }
 

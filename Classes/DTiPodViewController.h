@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DTClickWheelView.h"
 
-@interface DTiPodViewController : UIViewController <UITableViewDataSource, DTClickWheelViewDelegate> {
+@interface DTiPodViewController : UIViewController {
 	
 	UITableView *screenTable;
 	CGFloat oldAngle, difference;
