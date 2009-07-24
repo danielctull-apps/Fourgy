@@ -9,6 +9,6 @@
 @protocol DTBlockViewCellProtocol
 
 @property (nonatomic, assign) NSInteger rowIndex;
-//@property (nonatomic, assign) BOOL selected;
+@property (nonatomic, assign) BOOL selected;
 
 @end

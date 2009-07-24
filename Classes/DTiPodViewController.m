@@ -26,6 +26,7 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		oldAngle = 500.0;
 		difference = 0.0;
+		doneOnce = NO;
     }
     return self;
 }
@@ -44,7 +45,7 @@
 	
 	//DTScreenTableViewController *table = [[DTScreenTableViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MainMenu" ofType:@"plist"]]];
 	
-	DTScreenViewController *vc = [[DTScreenViewController alloc] init];
+	DTScreenViewController *vc = [[DTScreenViewController alloc] initWithArray:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MusicMenu" ofType:@"plist"]]];
 	
 	nav = [[UINavigationController alloc] initWithRootViewController:vc];
 	
@@ -92,13 +93,13 @@
 #pragma mark UITableViewDataSource Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	
 	DTiPodTableViewCell *cell = (DTiPodTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell"];
 	
@@ -122,6 +123,11 @@
 #pragma mark DTClickWheelViewDelegate Methods
 
 - (void)menuButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {
+	DTScreenViewController *svc = (DTScreenViewController *)nav.visibleViewController;
+	
+	if ([svc respondsToSelector:@selector(willPopFromNavigationController)])
+		[svc willPopFromNavigationController];
+
 	[nav popViewControllerAnimated:YES];
 }
 
@@ -129,7 +135,26 @@
 	
 	oldAngle = 500.0;
 	
-	DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+	if (doneOnce) {
+		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+		[tableController selected];
+	} else {
+		doneOnce = YES;
+		MPMediaQuery *query = [MPMediaQuery artistsQuery];
+		[query setGroupingType:MPMediaGroupingArtist];
+		DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:query property:MPMediaItemPropertyArtist lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
+		[nav pushViewController:table animated:YES];
+		[table release];
+	}
+	//NSLog(@"%@", [query collections]);
+	
+	
+	//NSLog(@"%@:%s", self, _cmd);
+	
+	
+	//DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+	//DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+	//[tableController.itemsView moveToRow:tableController.itemsView.selectedIndex + 1];
 	/*
 	UITableViewCell *cell = [tableController.tableView cellForRowAtIndexPath:[tableController.tableView indexPathForSelectedRow]];
 	
@@ -205,13 +230,19 @@
 	
 	difference += diff;
 	
-	DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
-	[tableController moveDown];
+
 	
 	
-	/*
+	
 	if (difference > 30) {
 		difference = 0.0;
+		
+		
+		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+		[tableController moveDown];
+		//[tableController.itemsView moveToRow:tableController.itemsView.selectedIndex + 1];
+		
+		/*
 		DTScreenTableViewController *tableController = (DTScreenTableViewController *)nav.visibleViewController;
 		NSIndexPath *ip = [tableController.tableView indexPathForSelectedRow];
 		
@@ -220,8 +251,13 @@
 				[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row+1 inSection:ip.section] animated:NO scrollPosition:UITableViewScrollPositionNone];
 			else
 				[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row+1 inSection:ip.section] animated:NO scrollPosition:UITableViewScrollPositionBottom];
-		}
+		}*/
 	} else if (difference < -30) {
+		
+		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+		[tableController moveUp];
+		//[tableController.itemsView moveToRow:tableController.itemsView.selectedIndex - 1];
+		/*
 		DTScreenTableViewController *tableController = (DTScreenTableViewController *)nav.visibleViewController;
 		NSIndexPath *ip = [tableController.tableView indexPathForSelectedRow];
 		if (ip.row > 0) {
@@ -230,10 +266,10 @@
 			else
 				[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row-1 inSection:ip.section] animated:NO scrollPosition:UITableViewScrollPositionTop];
 		
-		}
+		}*/
 		difference = 0.0;
 		
-	}*/
+	}
 		
 }
 

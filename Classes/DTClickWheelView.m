@@ -34,7 +34,7 @@
 	menuLabel.backgroundColor = [UIColor colorWithRed:0.824 green:0.824 blue:0.843 alpha:1.0];
 	[self addSubview:menuLabel];
 	[menuLabel release];
-	
+	/*
 	UILabel *backLabel = [[UILabel alloc] initWithFrame:CGRectMake(rect.size.width/21, 11*rect.size.width/24, rect.size.width/6, rect.size.width/12)];
 	backLabel.textColor = [UIColor whiteColor];
 	backLabel.text = @"|<";
@@ -51,7 +51,7 @@
 	nextLabel.textAlignment = UITextAlignmentRight;
 	nextLabel.backgroundColor = [UIColor colorWithRed:0.824 green:0.824 blue:0.843 alpha:1.0];
 	[self addSubview:nextLabel];
-	[nextLabel release];
+	[nextLabel release];*/
 	
 }
 

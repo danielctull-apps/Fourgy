@@ -43,7 +43,7 @@
 	
     if (!(self = [super initWithStyle:style])) return nil;
 	
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	firstRun = YES;
 	
     return self;
@@ -51,7 +51,7 @@
 
 - (void)viewDidLoad {
 	
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	/*
     self.tableView.rowHeight = 27.0;
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -116,7 +116,7 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	
 	if (items)
 		return [items count];
@@ -128,7 +128,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	
 	DTiPodTableViewCell *cell = (DTiPodTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell"];
 	
@@ -168,7 +168,7 @@
 	return 1;
 }
 - (CGFloat)gridView:(DTGridView *)gridView heightForRow:(NSInteger)rowIndex {
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	return 27;
 }
 - (CGFloat)gridView:(DTGridView *)gridView widthForCellAtRow:(NSInteger)rowIndex column:(NSInteger)columnIndex {

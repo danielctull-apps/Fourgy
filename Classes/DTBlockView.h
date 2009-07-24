@@ -19,11 +19,15 @@
 	NSInteger displayRowNumber;
 	CGFloat *cellHeights;
 	
+	NSInteger selectedIndex;
+	
 	NSObject<DTBlockViewDataSource> *dataSource;
 }
 
-@property (nonatomic, retain) NSArray *blocks;
+@property (nonatomic, copy) NSArray *blocks;
 @property (nonatomic, assign) IBOutlet NSObject<DTBlockViewDataSource> *dataSource;
+@property (nonatomic, assign) NSInteger selectedIndex;
+
 
 - (UIView<DTBlockViewCellProtocol> *)dequeueReusableCell;
 - (void)moveToRow:(NSInteger)rowIndex;

@@ -14,7 +14,7 @@
 	UITableView *screenTable;
 	CGFloat oldAngle, difference;
 	
-	
+	BOOL doneOnce;
 	UIView *screenView;
 	UINavigationController *nav;
 	
