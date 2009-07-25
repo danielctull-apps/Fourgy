@@ -11,7 +11,7 @@
 
 @implementation DTiPodBlockViewCell
 
-@synthesize titleLabel, rowIndex, selected;
+@synthesize titleLabel, selectedTitleLabel, rowIndex, selected;
 
 - (id)init {
 	return [self initWithFrame:CGRectZero];
@@ -19,9 +19,8 @@
 
 - (id)initWithFrame:(CGRect)frame {
     if (!(self = [super initWithFrame:frame])) return nil;
-	
-	//NSLog(@"%@:%s", self, _cmd);
 	titleLabel = [[UILabel alloc] init];
+	selectedTitleLabel = nil;
 	
     return self;
 }
@@ -35,27 +34,42 @@
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
-	
+	self.titleLabel.textColor = darkBlueColor;
 	
 	if (self.selected) {
 		self.backgroundColor = darkBlueColor;
-		self.titleLabel.textColor = lightBlueColor;
 		CGContextSetRGBFillColor(context, 0.176, 0.204, 0.42, 1.0);
 	} else {
 	
 		self.backgroundColor = lightBlueColor;
-		self.titleLabel.textColor = darkBlueColor;	
+		
 		CGContextSetRGBFillColor(context, 0.8, 0.867, 0.937, 1.0);
 	
 	}
-	
-	
+		
 	CGContextFillRect(context, rect);
-	
-	self.titleLabel.font = [UIFont boldSystemFontOfSize:17.0];
-	self.titleLabel.backgroundColor = self.backgroundColor;
-	self.titleLabel.frame = CGRectMake(10.0, 0.0, rect.size.width - 20, rect.size.height);
-	[self addSubview:self.titleLabel];
+		
+	if (self.selected) {
+		self.titleLabel.hidden = YES;
+		self.selectedTitleLabel = [[[DTTickingLabel alloc] init] autorelease];
+		self.selectedTitleLabel.font = [UIFont boldSystemFontOfSize:17.0];
+		self.selectedTitleLabel.backgroundColor = darkBlueColor;
+		self.selectedTitleLabel.textColor = lightBlueColor;
+		self.selectedTitleLabel.text = self.titleLabel.text;
+		self.selectedTitleLabel.frame = CGRectMake(10.0, 0.0, rect.size.width - 20, rect.size.height);
+		self.selectedTitleLabel.delay = 1.5;
+		self.selectedTitleLabel.speed = 50.0;
+		self.selectedTitleLabel.separatingDistance = 0.25;
+		[self addSubview:self.selectedTitleLabel];
+	} else {
+		self.titleLabel.hidden = NO;
+		[self.selectedTitleLabel removeFromSuperview];
+		self.selectedTitleLabel = nil;
+		self.titleLabel.font = [UIFont boldSystemFontOfSize:17.0];
+		self.titleLabel.backgroundColor = self.backgroundColor;
+		self.titleLabel.frame = CGRectMake(10.0, 0.0, rect.size.width - 20, rect.size.height);
+		[self addSubview:self.titleLabel];
+	}
 }
 
 - (void)setSelected:(BOOL)aBool {

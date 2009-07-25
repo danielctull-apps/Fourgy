@@ -9,6 +9,7 @@
 #import "DTScreenViewController.h"
 #import "DTiPodBlockViewCell.h"
 #import "DTPlayingScreenViewController.h"
+#import "MPMediaItem+DTTrackNumber.h"
 
 @implementation DTScreenViewController
 
@@ -154,15 +155,15 @@
 			 
 		} else if (query.groupingType == MPMediaGroupingTitle) {
 			
-			NSMutableArray *tempReverseArray = [[NSMutableArray alloc] init];
+			NSArray *queryitems = query.items;
 			
-			for (MPMediaItem *item in query.items)
-				[tempReverseArray insertObject:item atIndex:0];
+			if ([property isEqualToString:MPMediaItemPropertyAlbumTrackNumber]) {
+			
+				queryitems = [query.items sortedArrayUsingSelector:@selector(albumTrackNumber)];
+			}
 			
 			DTPlayingScreenViewController *playing = [[DTPlayingScreenViewController alloc] initWithMediaItem:((MPMediaItemCollection *)[collections objectAtIndex:itemsView.selectedIndex]).representativeItem
-																							  mediaCollection:[MPMediaItemCollection collectionWithItems:tempReverseArray]];
-			
-			[tempReverseArray release];
+																							  mediaCollection:[MPMediaItemCollection collectionWithItems:queryitems]];
 			
 			[self.navigationController pushViewController:playing animated:YES];
 			[playing release];
@@ -205,8 +206,16 @@
 			MPMediaPropertyPredicate *predicate = [MPMediaPropertyPredicate predicateWithValue:text forProperty:property];
 			[query addFilterPredicate:predicate];
 			[query setGroupingType:MPMediaGroupingTitle];
+			
+			NSString *tempProperty = nil;
+			
+			if (query.groupingType == MPMediaGroupingAlbum)
+				tempProperty = MPMediaItemPropertyAlbumTrackNumber;
+			else
+				tempProperty = MPMediaItemPropertyTitle;
+			
 			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:query
-																				 property:MPMediaItemPropertyTitle
+																				 property:tempProperty
 																			lastPredicate:predicate
 																		 lastGroupingType:group];
 			[self.navigationController pushViewController:table animated:YES];

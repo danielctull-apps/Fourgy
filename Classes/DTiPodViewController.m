@@ -140,7 +140,12 @@
 }
 
 - (void)backButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {
-	[[MPMusicPlayerController iPodMusicPlayer] skipToPreviousItem];
+	MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+	
+	if (iPod.currentPlaybackTime < 3)
+		[iPod skipToPreviousItem];
+	else
+		[iPod skipToBeginning];
 }
 
 - (void)nextButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {

@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "DTBlockViewCellProtocol.h"
+#import "DTTickingLabel.h"
 
 @interface DTiPodBlockViewCell : UIView <DTBlockViewCellProtocol> {
 	UILabel *titleLabel;
+	DTTickingLabel *selectedTitleLabel;
 	NSInteger rowIndex;
 	BOOL selected;
 }
 
 @property (nonatomic, retain) UILabel *titleLabel;
+@property (nonatomic, retain) DTTickingLabel *selectedTitleLabel;
 @property (nonatomic, assign) NSInteger rowIndex;
 @property (nonatomic, assign) BOOL selected;
 
