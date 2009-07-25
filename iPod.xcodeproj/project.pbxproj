@@ -15,6 +15,8 @@
 		240821AC100F75D3006EDE45 /* DTiPodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB974100BD9E300180B5F /* DTiPodViewController.m */; };
 		240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240821B2100F7627006EDE45 /* DTScreenViewController.m */; };
 		241741AB101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 241741AA101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m */; };
+		2417429F101B481B009759F2 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2417429E101B481B009759F2 /* click.wav */; };
+		241742A7101B485F009759F2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241742A6101B485F009759F2 /* AudioToolbox.framework */; };
 		241CB979100BDA0700180B5F /* DTiPodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CB978100BDA0700180B5F /* DTiPodView.xib */; };
 		241CB99D100BE45800180B5F /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CB99C100BE45800180B5F /* wheel.png */; };
 		241CBA10100BEEF200180B5F /* DTiPodBackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBA0F100BEEF200180B5F /* DTiPodBackGroundView.m */; };
@@ -51,6 +53,8 @@
 		240821B2100F7627006EDE45 /* DTScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScreenViewController.m; sourceTree = "<group>"; };
 		241741A9101B21F6009759F2 /* MPMediaItem+DTTrackNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MPMediaItem+DTTrackNumber.h"; sourceTree = "<group>"; };
 		241741AA101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MPMediaItem+DTTrackNumber.m"; sourceTree = "<group>"; };
+		2417429E101B481B009759F2 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		241742A6101B485F009759F2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		241CB973100BD9E300180B5F /* DTiPodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodViewController.h; sourceTree = "<group>"; };
 		241CB974100BD9E300180B5F /* DTiPodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodViewController.m; sourceTree = "<group>"; };
 		241CB978100BDA0700180B5F /* DTiPodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTiPodView.xib; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				241CBDD2100CD11200180B5F /* MediaPlayer.framework in Frameworks */,
+				241742A7101B485F009759F2 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +212,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2417429E101B481B009759F2 /* click.wav */,
 				246ADFFF101997B8009FA983 /* Icon.png */,
 				241CB99C100BE45800180B5F /* wheel.png */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -228,6 +234,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				241CBDD1100CD11200180B5F /* MediaPlayer.framework */,
+				241742A6101B485F009759F2 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +290,7 @@
 				24F662AA1013AF2200437934 /* DTScreenView.xib in Resources */,
 				249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */,
 				246AE000101997B8009FA983 /* Icon.png in Resources */,
+				2417429F101B481B009759F2 /* click.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

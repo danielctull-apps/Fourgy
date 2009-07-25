@@ -30,6 +30,6 @@
 - (id)initWithArray:(NSArray *)array;
 - (void)willPopFromNavigationController;
 - (void)selected;
-- (void)moveUp;
-- (void)moveDown;
+- (BOOL)moveUp;
+- (BOOL)moveDown;
 @end

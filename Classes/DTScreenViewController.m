@@ -279,14 +279,20 @@
 }
 
 
-- (void)moveDown {
-	if (itemsView.selectedIndex < amount - 1)
+- (BOOL)moveDown {
+	if (itemsView.selectedIndex < amount - 1) {
 		[itemsView moveToRow:itemsView.selectedIndex + 1];
+		return YES;
+	}
+	return NO;
 }
 
-- (void)moveUp {
-	if (itemsView.selectedIndex > 0)
+- (BOOL)moveUp {
+	if (itemsView.selectedIndex > 0) {
 		[itemsView moveToRow:itemsView.selectedIndex - 1];
+		return YES;
+	}
+	return NO;
 }
 
 @end

@@ -27,6 +27,22 @@
 		oldAngle = 500.0;
 		difference = 0.0;
 		doneOnce = NO;
+				
+		CFBundleRef mainBundle;
+		mainBundle = CFBundleGetMainBundle ();
+		
+		// Get the URL to the sound file to play
+		CFURLRef soundFileURLRef  =	CFBundleCopyResourceURL (
+															 mainBundle,
+															 CFSTR ("click"),
+															 CFSTR ("wav"),
+															 NULL
+															 );
+		
+		// Create a system sound object representing the sound file
+		AudioServicesCreateSystemSoundID (soundFileURLRef,
+										  &clickSound
+										  );
     }
     return self;
 }
@@ -87,6 +103,7 @@
 
 
 - (void)dealloc {
+	AudioServicesDisposeSystemSoundID(clickSound);
     [super dealloc];
 }
 
@@ -247,39 +264,21 @@
 	
 	
 	
-	if (difference > 30) {
+	if (difference > 22.5) {
+		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+		
+		if([tableController moveDown])
+			AudioServicesPlaySystemSound(clickSound);
+
 		difference = 0.0;
 		
+	} else if (difference < -22.5) {
 		
 		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
-		[tableController moveDown];
-		//[tableController.itemsView moveToRow:tableController.itemsView.selectedIndex + 1];
 		
-		/*
-		DTScreenTableViewController *tableController = (DTScreenTableViewController *)nav.visibleViewController;
-		NSIndexPath *ip = [tableController.tableView indexPathForSelectedRow];
+		if ([tableController moveUp])
+			AudioServicesPlaySystemSound(clickSound);
 		
-		if (ip.row+1 < [tableController.tableView numberOfRowsInSection:ip.section]) {
-			if ([[tableController.tableView visibleCells] containsObject:[tableController.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row+1 inSection:ip.section]]])
-				[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row+1 inSection:ip.section] animated:NO scrollPosition:UITableViewScrollPositionNone];
-			else
-				[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row+1 inSection:ip.section] animated:NO scrollPosition:UITableViewScrollPositionBottom];
-		}*/
-	} else if (difference < -30) {
-		
-		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
-		[tableController moveUp];
-		//[tableController.itemsView moveToRow:tableController.itemsView.selectedIndex - 1];
-		/*
-		DTScreenTableViewController *tableController = (DTScreenTableViewController *)nav.visibleViewController;
-		NSIndexPath *ip = [tableController.tableView indexPathForSelectedRow];
-		if (ip.row > 0) {
-			if ([[tableController.tableView visibleCells] containsObject:[tableController.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row-1 inSection:ip.section]]])
-				[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row-1 inSection:ip.section] animated:NO scrollPosition:UITableViewScrollPositionNone];
-			else
-				[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:ip.row-1 inSection:ip.section] animated:NO scrollPosition:UITableViewScrollPositionTop];
-		
-		}*/
 		difference = 0.0;
 		
 	}

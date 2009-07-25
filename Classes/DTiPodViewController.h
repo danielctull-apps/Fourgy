@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "DTClickWheelView.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface DTiPodViewController : UIViewController {
+
+	SystemSoundID clickSound;
 	
 	UITableView *screenTable;
 	CGFloat oldAngle, difference;
