@@ -26,7 +26,7 @@
 - (void)menuButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel;
 - (void)backButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel;
 - (void)nextButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel;
-- (void)playButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel;
+- (void)playPauseButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel;
 - (void)centerButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel;
 - (void)clickWheel:(DTClickWheelView *)clickWheel touchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance;
 @end

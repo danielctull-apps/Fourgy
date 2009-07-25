@@ -122,6 +122,14 @@
 */
 #pragma mark DTClickWheelViewDelegate Methods
 
+- (void)playPauseButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {
+	MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+	if (iPod.playbackState == MPMusicPlaybackStatePlaying)
+		[iPod pause];
+	else if (iPod.playbackState == MPMusicPlaybackStatePaused)
+		[iPod play];
+}
+
 - (void)menuButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {
 	DTScreenViewController *svc = (DTScreenViewController *)nav.visibleViewController;
 	
@@ -129,6 +137,14 @@
 		[svc willPopFromNavigationController];
 
 	[nav popViewControllerAnimated:YES];
+}
+
+- (void)backButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {
+	[[MPMusicPlayerController iPodMusicPlayer] skipToPreviousItem];
+}
+
+- (void)nextButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {
+	[[MPMusicPlayerController iPodMusicPlayer] skipToNextItem];
 }
 
 - (void)centerButtonTappedOnClickWheel:(DTClickWheelView *)clickWheel {

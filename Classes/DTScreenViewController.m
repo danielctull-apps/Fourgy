@@ -154,8 +154,15 @@
 			 
 		} else if (query.groupingType == MPMediaGroupingTitle) {
 			
+			NSMutableArray *tempReverseArray = [[NSMutableArray alloc] init];
+			
+			for (MPMediaItem *item in query.items)
+				[tempReverseArray insertObject:item atIndex:0];
+			
 			DTPlayingScreenViewController *playing = [[DTPlayingScreenViewController alloc] initWithMediaItem:((MPMediaItemCollection *)[collections objectAtIndex:itemsView.selectedIndex]).representativeItem
-																							  mediaCollection:[MPMediaItemCollection collectionWithItems:query.items]];
+																							  mediaCollection:[MPMediaItemCollection collectionWithItems:tempReverseArray]];
+			
+			[tempReverseArray release];
 			
 			[self.navigationController pushViewController:playing animated:YES];
 			[playing release];

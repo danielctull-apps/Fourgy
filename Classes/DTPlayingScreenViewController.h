@@ -16,6 +16,7 @@
 	
 	MPMediaItem *nowPlaying;
 	MPMusicPlayerController *iPod;
+	MPMediaItemCollection *musicQueue;
 	
 }
 

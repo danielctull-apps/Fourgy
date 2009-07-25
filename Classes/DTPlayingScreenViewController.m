@@ -33,6 +33,8 @@
 		[iPod play];
 	}
 	
+	musicQueue = [aCollection retain];
+	
 	[iPod beginGeneratingPlaybackNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(trackChanged:) name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification object:iPod];
 	
@@ -78,11 +80,22 @@
 }
 
 - (void)refreshPlaying {
+	if (iPod.playbackState == MPMusicPlaybackStateStopped) {
+		[self.navigationController popViewControllerAnimated:YES];
+		return;
+	}
+	
 	self.nowPlaying = iPod.nowPlayingItem;
-	self.artistLabel.text = [nowPlaying valueForProperty:MPMediaItemPropertyArtist];
-	self.trackNameLabel.text = [nowPlaying valueForProperty:MPMediaItemPropertyTitle];
-	self.albumLabel.text = [nowPlaying valueForProperty:MPMediaItemPropertyAlbumTitle];
-	self.trackNumberLabel.text = [NSString stringWithFormat:@"%@ of %@", [nowPlaying valueForProperty:MPMediaItemPropertyAlbumTrackNumber], [nowPlaying valueForProperty:MPMediaItemPropertyAlbumTrackCount]];
+	self.artistLabel.text = [self.nowPlaying valueForProperty:MPMediaItemPropertyArtist];
+	self.trackNameLabel.text = [self.nowPlaying valueForProperty:MPMediaItemPropertyTitle];
+	self.albumLabel.text = [self.nowPlaying valueForProperty:MPMediaItemPropertyAlbumTitle];
+	
+	NSInteger trackNumber = 0;
+	for (NSInteger i = 0; i < musicQueue.count; i++)
+		if ([[musicQueue.items objectAtIndex:i] isEqual:self.nowPlaying])
+			trackNumber = i+1;
+	
+	self.trackNumberLabel.text = [NSString stringWithFormat:@"%i of %i", trackNumber, [musicQueue count]];
 }
 
 /*
