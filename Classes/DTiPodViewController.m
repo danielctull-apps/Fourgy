@@ -11,6 +11,7 @@
 #import "DTScreenViewController.h"
 #import "DTiPodNavigationBar.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "DTPlayingScreenViewController.h"
 
 @implementation DTiPodViewController
 
@@ -69,6 +70,12 @@
 	
 	[vc release];
 	
+	MPMusicPlayerController * iPod = [MPMusicPlayerController iPodMusicPlayer];
+	if (iPod.playbackState == MPMusicPlaybackStatePlaying) {
+		DTPlayingScreenViewController *playingScreen = [[DTPlayingScreenViewController alloc] initWithMediaItem:iPod.nowPlayingItem mediaCollection:nil];
+		[nav pushViewController:playingScreen animated:NO];
+		[playingScreen release];
+	}
 	nav.view.frame = CGRectMake(0.0, 29.0 - nav.navigationBar.frame.size.height, 240.0, 163.0 + nav.navigationBar.frame.size.height);
 	
 	DTiPodNavigationBar *navbar = [[DTiPodNavigationBar alloc] init];
