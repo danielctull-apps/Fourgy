@@ -39,8 +39,10 @@
 	
 	CGFloat knobPosition = (CGFloat)(NSInteger)(rect.size.height * self.currentItemNumber / self.numberOfitems);
 	
+	//NSLog(@"position: %f", knobPosition+ knobInsets.top);
+	
 	[self drawKnobInRect:CGRectMake(knobInsets.left,
-									knobPosition + knobInsets.top, 
+									knobPosition + knobInsets.top,
 									rect.size.width - knobInsets.left - knobInsets.right, 
 									knobHeight + 1.0 - knobInsets.top - knobInsets.bottom)];
 }

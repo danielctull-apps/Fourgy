@@ -127,13 +127,7 @@
 
 - (void)moveToRow:(NSInteger)rowIndex {
 	
-	NSLog(@"%@:%s %i", self, _cmd, rowIndex);
-	
-	
-	
 	self.selectedIndex = rowIndex;
-	
-	//NSLog(@"%@:%s selected:%i", self, _cmd, self.selectedIndex);
 	
 	UIView<DTBlockViewCellProtocol> *firstCell = [blocks objectAtIndex:0];
 	UIView<DTBlockViewCellProtocol> *lastCell = [blocks lastObject];
@@ -208,9 +202,7 @@
 	
 	[blocks release];
 	blocks = tempBlocks;
-	
-	//NSLog(@"%@:%s blocks:%@", self, _cmd, self.blocks);
-	
+		
 	for (UIView<DTBlockViewCellProtocol> *cell in blocks)
 		if (cell.rowIndex == selectedIndex)
 			cell.selected = YES;

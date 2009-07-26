@@ -166,7 +166,10 @@
 			if ([self.delegate respondsToSelector:@selector(nextButtonTappedOnClickWheel:)])
 				[self.delegate nextButtonTappedOnClickWheel:self];
 		}
-    }
+    } else {
+		if ([self.delegate respondsToSelector:@selector(touchesEndedOnClickWheel:)])
+			[self.delegate touchesEndedOnClickWheel:self];
+	}
 	
 }
 

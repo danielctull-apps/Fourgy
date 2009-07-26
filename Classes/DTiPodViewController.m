@@ -238,6 +238,10 @@
 	*/
 }
 
+- (void)touchesEndedOnClickWheel:(DTClickWheelView *)clickWheel {
+	oldAngle = 500.0;
+}
+
 - (void)clickWheel:(DTClickWheelView *)clickWheel touchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance {
 	
 	if (oldAngle == 500.0) {
