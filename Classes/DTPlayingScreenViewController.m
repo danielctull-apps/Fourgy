@@ -81,7 +81,7 @@
 
 - (void)refreshPlaying {
 	if (iPod.playbackState == MPMusicPlaybackStateStopped) {
-		[self.navigationController popViewControllerAnimated:YES];
+		[self.navigationController popToRootViewControllerAnimated:YES];
 		return;
 	}
 	
