@@ -35,16 +35,16 @@
 	
 	[self drawBackgroundInRect:rect];
 	
-	CGFloat knobHeight = (CGFloat)(NSInteger)(rect.size.height * numberOfItemsOnScreen / numberOfitems);
+	CGFloat scrollerHeight = rect.size.height - knobInsets.top - knobInsets.bottom;
 	
-	CGFloat knobPosition = (CGFloat)(NSInteger)(rect.size.height * self.currentItemNumber / self.numberOfitems);
+	CGFloat knobHeight = (CGFloat)(NSInteger)(scrollerHeight * numberOfItemsOnScreen / numberOfitems);
 	
-	//NSLog(@"position: %f", knobPosition+ knobInsets.top);
+	CGFloat knobPosition = (CGFloat)(NSInteger)(scrollerHeight * self.currentItemNumber / self.numberOfitems);
 	
 	[self drawKnobInRect:CGRectMake(knobInsets.left,
 									knobPosition + knobInsets.top,
 									rect.size.width - knobInsets.left - knobInsets.right, 
-									knobHeight + 1.0 - knobInsets.top - knobInsets.bottom)];
+									knobHeight + 1.0)];
 }
 
 - (void)drawBackgroundInRect:(CGRect)rect {
