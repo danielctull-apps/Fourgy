@@ -33,6 +33,8 @@
 		248AE1F9100DC63E001864E6 /* DTGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE1F2100DC63E001864E6 /* DTGridViewCell.m */; };
 		248AE243100DCA8D001864E6 /* DTBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE242100DCA8D001864E6 /* DTBlockView.m */; };
 		248C8BB8101A1CB400F4E8DD /* DTTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248C8BB4101A1CB400F4E8DD /* DTTickingLabel.m */; };
+		248CA4B1101C4E2C00B61E2E /* DTBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 248CA4B0101C4E2C00B61E2E /* DTBlockScroller.m */; };
+		248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */; };
 		249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */; };
 		249E45AC101901DF0084B4E2 /* DTPlayingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */; };
 		24F662AA1013AF2200437934 /* DTScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F662A91013AF2200437934 /* DTScreenView.xib */; };
@@ -88,6 +90,10 @@
 		248AE242100DCA8D001864E6 /* DTBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockView.m; sourceTree = "<group>"; };
 		248C8BB3101A1CB400F4E8DD /* DTTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTickingLabel.h; sourceTree = "<group>"; };
 		248C8BB4101A1CB400F4E8DD /* DTTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTickingLabel.m; sourceTree = "<group>"; };
+		248CA4AF101C4E2C00B61E2E /* DTBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockScroller.h; sourceTree = "<group>"; };
+		248CA4B0101C4E2C00B61E2E /* DTBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockScroller.m; sourceTree = "<group>"; };
+		248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBlockScroller.h; sourceTree = "<group>"; };
+		248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockScroller.m; sourceTree = "<group>"; };
 		249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTPlayingScreenView.xib; sourceTree = "<group>"; };
 		249E45AA101901DF0084B4E2 /* DTPlayingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlayingScreenViewController.h; sourceTree = "<group>"; };
 		249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPlayingScreenViewController.m; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 				24F96B8A10191A0C00829FF9 /* DTPlaybackTimeView.m */,
 				241741A9101B21F6009759F2 /* MPMediaItem+DTTrackNumber.h */,
 				241741AA101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m */,
+				248CA4AF101C4E2C00B61E2E /* DTBlockScroller.h */,
+				248CA4B0101C4E2C00B61E2E /* DTBlockScroller.m */,
+				248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */,
+				248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -318,6 +328,8 @@
 				24F96B8B10191A0C00829FF9 /* DTPlaybackTimeView.m in Sources */,
 				248C8BB8101A1CB400F4E8DD /* DTTickingLabel.m in Sources */,
 				241741AB101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m in Sources */,
+				248CA4B1101C4E2C00B61E2E /* DTBlockScroller.m in Sources */,
+				248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

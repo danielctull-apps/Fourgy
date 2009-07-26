@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DTBlockViewCellProtocol.h"
+#import "DTBlockScroller.h"
 
 @protocol DTBlockViewDataSource;
 
@@ -22,12 +23,18 @@
 	NSInteger selectedIndex;
 	
 	NSObject<DTBlockViewDataSource> *dataSource;
+	
+	BOOL shouldShowScroller;
+	CGFloat scrollerWidth;
+	DTBlockScroller *scroller;
 }
 
 @property (nonatomic, copy) NSArray *blocks;
 @property (nonatomic, assign) IBOutlet NSObject<DTBlockViewDataSource> *dataSource;
 @property (nonatomic, assign) NSInteger selectedIndex;
-
+@property (nonatomic, assign) BOOL shouldShowScroller;
+@property (nonatomic, assign) CGFloat scrollerWidth;
+@property (nonatomic, retain) DTBlockScroller *scroller;
 
 - (UIView<DTBlockViewCellProtocol> *)dequeueReusableCell;
 - (void)moveToRow:(NSInteger)rowIndex;

@@ -11,7 +11,7 @@
 
 @implementation DTBlockView
 
-@synthesize blocks, dataSource, selectedIndex;
+@synthesize blocks, dataSource, selectedIndex, shouldShowScroller, scrollerWidth, scroller;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -27,12 +27,34 @@
 	blocks = [[NSArray alloc] init];
 	freeBlocks = [[NSMutableArray alloc] init];
 	selectedIndex = 0;
+	scrollerWidth = 20.0;
+	shouldShowScroller = YES;
+	scroller = nil;
 }
 
 - (void)drawRect:(CGRect)rect {
+	
+	
+	
 	[self findnumberOfRowsToDisplay];
 	[self findNumberOfRows];
 	[self findInitialRows];
+	
+	if (shouldShowScroller && !scroller)
+		scroller = [[DTBlockScroller alloc] initWithFrame:CGRectMake(rect.size.width - self.scrollerWidth, 0.0, self.scrollerWidth, rect.size.height)];
+	
+	if (shouldShowScroller) {
+		scroller.frame = CGRectMake(rect.size.width - self.scrollerWidth, 0.0, self.scrollerWidth, rect.size.height);
+		[self addSubview:scroller];
+	} else {
+		self.scrollerWidth = 0.0;
+	}
+	
+	if (scroller) {
+		scroller.numberOfitems = numberOfRows;
+		scroller.numberOfItemsOnScreen = displayRowNumber;
+	}
+	
 	[self setNeedsLayout];
 }
 
@@ -40,7 +62,7 @@
 	
 	if ([blocks count] == 0) return;
 	
-	CGFloat width = self.frame.size.width;
+	CGFloat width = self.frame.size.width - scrollerWidth;
 	CGFloat height = self.frame.size.height/displayRowNumber;
 	
 	NSInteger numRows = displayRowNumber;
@@ -105,6 +127,10 @@
 
 - (void)moveToRow:(NSInteger)rowIndex {
 	
+	NSLog(@"%@:%s %i", self, _cmd, rowIndex);
+	
+	
+	
 	self.selectedIndex = rowIndex;
 	
 	//NSLog(@"%@:%s selected:%i", self, _cmd, self.selectedIndex);
@@ -164,6 +190,8 @@
 			[self addSubview:cell];
 			[tempBlocks insertObject:cell atIndex:0];
 			cell.rowIndex = i;
+			if (scroller)
+				scroller.currentItemNumber = rowIndex;
 		}
 	}
 	
@@ -175,6 +203,8 @@
 			[self addSubview:cell];
 			[tempBlocks addObject:cell];
 			cell.rowIndex = i;
+			if (scroller)
+				scroller.currentItemNumber = rowIndex;
 		}
 	}
 	

@@ -10,6 +10,7 @@
 #import "DTiPodBlockViewCell.h"
 #import "DTPlayingScreenViewController.h"
 #import "MPMediaItem+DTTrackNumber.h"
+#import "DTiPodBlockScroller.h"
 
 @implementation DTScreenViewController
 
@@ -80,7 +81,10 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+	DTiPodBlockScroller *scroller = [[DTiPodBlockScroller alloc] init];
+	itemsView.scroller = scroller;
+	[scroller release];
+	itemsView.scroller.knobInsets = UIEdgeInsetsMake(0.0, 6.0, 4.0, 4.0);
 	itemsView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
 	
 }
