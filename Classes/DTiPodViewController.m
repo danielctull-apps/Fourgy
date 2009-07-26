@@ -43,6 +43,8 @@
 		AudioServicesCreateSystemSoundID (soundFileURLRef,
 										  &clickSound
 										  );
+		
+		CFRelease(soundFileURLRef);
     }
     return self;
 }

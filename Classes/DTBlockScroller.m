@@ -11,7 +11,7 @@
 
 @implementation DTBlockScroller
 
-@synthesize numberOfitems, numberOfItemsOnScreen, currentItemNumber, knobInsets, scrollerInsets, minimumKnobHeight;
+@synthesize numberOfitems, numberOfItemsOnScreen, currentItemNumber, knobInsets, scrollerInsets;
 
 - (id)initWithFrame:(CGRect)frame {
     if (!(self = [super initWithFrame:frame])) return nil;
@@ -21,7 +21,6 @@
 	numberOfitems = 1;
 	numberOfItemsOnScreen = 1;
 	currentItemNumber = 0;
-	minimumKnobHeight = 0;
 	
     return self;
 }
@@ -38,19 +37,12 @@
 	
 	CGFloat knobHeight = (CGFloat)(NSInteger)(rect.size.height * numberOfItemsOnScreen / numberOfitems);
 	
-	if (knobHeight < self.minimumKnobHeight)
-		knobHeight = (CGFloat)self.minimumKnobHeight;
-	
-	NSLog(@"%@:%s knobHeight: %f %f", self, _cmd, knobHeight, rect.size.height);
-	
-	CGFloat knobPosition = (rect.size.height - knobHeight) * self.currentItemNumber / (self.numberOfitems - 1);
-	
-	NSLog(@"currentItemNumber = %i, numberOfitems = %i, knobPosition = %f", self.currentItemNumber, self.numberOfitems, knobPosition);
+	CGFloat knobPosition = (CGFloat)(NSInteger)(rect.size.height * self.currentItemNumber / self.numberOfitems);
 	
 	[self drawKnobInRect:CGRectMake(knobInsets.left,
 									knobPosition + knobInsets.top, 
 									rect.size.width - knobInsets.left - knobInsets.right, 
-									knobHeight - knobInsets.top - knobInsets.bottom)];
+									knobHeight + 1.0 - knobInsets.top - knobInsets.bottom)];
 }
 
 - (void)drawBackgroundInRect:(CGRect)rect {
@@ -66,7 +58,6 @@
 }
 
 - (void)setCurrentItemNumber:(NSInteger)anInteger {
-	NSLog(@"currentItemNumber = %i, numberOfitems = %i, numberOfItemsOnScreen = %i", anInteger, self.numberOfitems, self.numberOfItemsOnScreen);
 	currentItemNumber = anInteger;
 	[self setNeedsDisplay];
 }

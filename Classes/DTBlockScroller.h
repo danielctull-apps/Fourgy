@@ -10,11 +10,11 @@
 
 
 @interface DTBlockScroller : UIView {
-	NSInteger numberOfitems, numberOfItemsOnScreen, currentItemNumber, minimumKnobHeight;
+	NSInteger numberOfitems, numberOfItemsOnScreen, currentItemNumber;
 	UIEdgeInsets knobInsets, scrollerInsets;
 }
 
-@property (nonatomic, assign) NSInteger numberOfitems, numberOfItemsOnScreen, currentItemNumber, minimumKnobHeight;
+@property (nonatomic, assign) NSInteger numberOfitems, numberOfItemsOnScreen, currentItemNumber;
 @property (nonatomic, assign) UIEdgeInsets knobInsets, scrollerInsets;
 
 - (void)drawBackgroundInRect:(CGRect)rect;

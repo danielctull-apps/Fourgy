@@ -159,6 +159,8 @@
 
 	}
 
+	if (scroller)
+		scroller.currentItemNumber = firstRowIndex;
 	
 	NSMutableArray *temporaryBlocks = [blocks mutableCopy];
 	
@@ -190,8 +192,6 @@
 			[self addSubview:cell];
 			[tempBlocks insertObject:cell atIndex:0];
 			cell.rowIndex = i;
-			if (scroller)
-				scroller.currentItemNumber = rowIndex;
 		}
 	}
 	
@@ -203,8 +203,6 @@
 			[self addSubview:cell];
 			[tempBlocks addObject:cell];
 			cell.rowIndex = i;
-			if (scroller)
-				scroller.currentItemNumber = rowIndex;
 		}
 	}
 	

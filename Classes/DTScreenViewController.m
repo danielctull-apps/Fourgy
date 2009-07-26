@@ -80,10 +80,9 @@
 	DTiPodBlockScroller *scroller = [[DTiPodBlockScroller alloc] init];
 	itemsView.scroller = scroller;
 	[scroller release];
-	itemsView.scroller.knobInsets = UIEdgeInsetsMake(1.0, 4.0, 4.0, 4.0);
+	itemsView.scroller.knobInsets = UIEdgeInsetsMake(2.0, 4.0, 4.0, 4.0);
 	itemsView.itemsInsets = UIEdgeInsetsMake(1.0, 0.0, 0.0, 2.0);
 	itemsView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
-	itemsView.scroller.minimumKnobHeight = 20;
 	
 	if (amount < 6) {
 		itemsView.shouldShowScroller = NO;
