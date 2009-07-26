@@ -74,9 +74,11 @@
 
 - (void)selected {
 }
-- (void)moveUp {
+- (BOOL)moveUp {
+	return NO;
 }
-- (void)moveDown {
+- (BOOL)moveDown {
+	return NO;
 }
 
 - (void)refreshPlaying {

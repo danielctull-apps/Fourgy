@@ -27,6 +27,6 @@
 - (id)initWithMediaItem:(MPMediaItem *)theItem mediaCollection:(MPMediaItemCollection *)aCollection;
 - (void)refreshPlaying;
 - (void)selected;
-- (void)moveUp;
-- (void)moveDown;
+- (BOOL)moveUp;
+- (BOOL)moveDown;
 @end
