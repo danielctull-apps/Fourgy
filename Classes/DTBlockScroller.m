@@ -11,7 +11,7 @@
 
 @implementation DTBlockScroller
 
-@synthesize numberOfitems, numberOfItemsOnScreen, currentItemNumber, knobInsets, scrollerInsets;
+@synthesize numberOfitems, numberOfItemsOnScreen, currentItemNumber, knobInsets, scrollerInsets, minimumKnobHeight;
 
 - (id)initWithFrame:(CGRect)frame {
     if (!(self = [super initWithFrame:frame])) return nil;
@@ -21,6 +21,7 @@
 	numberOfitems = 1;
 	numberOfItemsOnScreen = 1;
 	currentItemNumber = 0;
+	minimumKnobHeight = 0;
 	
     return self;
 }
@@ -35,7 +36,10 @@
 	
 	[self drawBackgroundInRect:rect];
 	
-	CGFloat knobHeight = (rect.size.height * numberOfItemsOnScreen / numberOfitems);
+	CGFloat knobHeight = (CGFloat)(NSInteger)(rect.size.height * numberOfItemsOnScreen / numberOfitems);
+	
+	if (knobHeight < self.minimumKnobHeight)
+		knobHeight = (CGFloat)self.minimumKnobHeight;
 	
 	NSLog(@"%@:%s knobHeight: %f %f", self, _cmd, knobHeight, rect.size.height);
 	

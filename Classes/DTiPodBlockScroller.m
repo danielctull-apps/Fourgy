@@ -15,14 +15,11 @@
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
 	
-	CGContextSetRGBFillColor(context, 0.8, 0.867, 0.937, 1.0);
+	CGContextSetRGBFillColor(context, 0.176, 0.204, 0.42, 1.0);
 	CGContextFillRect(context, rect);
 	
-	CGContextSetRGBFillColor(context, 0.176, 0.204, 0.42, 1.0);
-	CGContextFillRect(context, CGRectMake(2.0, 0.0, rect.size.width - 2.0, rect.size.height));
-	
 	CGContextSetRGBFillColor(context, 0.8, 0.867, 0.937, 1.0);
-	CGContextFillRect(context, CGRectMake(4.0, 0.0, rect.size.width - 6.0, rect.size.height - 2.0));
+	CGContextFillRect(context, CGRectMake(2.0, 0.0, rect.size.width - 4.0, rect.size.height - 2.0));
 }
 
 - (void)drawKnobInRect:(CGRect)rect {

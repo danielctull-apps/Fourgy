@@ -24,9 +24,7 @@
 - (id)initWithQuery:(MPMediaQuery *)aQuery property:(NSString *)aProperty lastPredicate:(MPMediaPropertyPredicate *)theLastPredicate lastGroupingType:(MPMediaGrouping)thelastGroupingType {
 	
 	if (!(self = [self initWithNibName:@"DTScreenView" bundle:nil])) return nil;
-	
-	NSLog(@"%@:%s 1", self, _cmd);
-	
+		
 	predicateToRemoveFromQueryWhenPopped = [theLastPredicate retain];
 	groupingTypeToRevertToWhenPopped = thelastGroupingType;
 	items = nil;
@@ -34,8 +32,6 @@
 	collections = [[query collections] copy];
 	property = [aProperty copy];
 	amount = [collections count];
-	
-	NSLog(@"%@:%s 2", self, _cmd);
 	
 	return self;
 	
@@ -84,9 +80,15 @@
 	DTiPodBlockScroller *scroller = [[DTiPodBlockScroller alloc] init];
 	itemsView.scroller = scroller;
 	[scroller release];
-	itemsView.scroller.knobInsets = UIEdgeInsetsMake(0.0, 6.0, 4.0, 4.0);
+	itemsView.scroller.knobInsets = UIEdgeInsetsMake(1.0, 4.0, 4.0, 4.0);
+	itemsView.itemsInsets = UIEdgeInsetsMake(1.0, 0.0, 0.0, 2.0);
 	itemsView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
+	itemsView.scroller.minimumKnobHeight = 20;
 	
+	if (amount < 6) {
+		itemsView.shouldShowScroller = NO;
+		itemsView.itemsInsets = UIEdgeInsetsMake(1.0, 0.0, 0.0, 0.0);
+	}
 }
 
 

@@ -67,7 +67,7 @@
 	
 	[vc release];
 	
-	nav.view.frame = CGRectMake(0.0, 30.0 - nav.navigationBar.frame.size.height, 240.0, 162.0 + nav.navigationBar.frame.size.height);
+	nav.view.frame = CGRectMake(0.0, 29.0 - nav.navigationBar.frame.size.height, 240.0, 163.0 + nav.navigationBar.frame.size.height);
 	
 	DTiPodNavigationBar *navbar = [[DTiPodNavigationBar alloc] init];
 	

@@ -27,6 +27,7 @@
 	BOOL shouldShowScroller;
 	CGFloat scrollerWidth;
 	DTBlockScroller *scroller;
+	UIEdgeInsets itemsInsets;
 }
 
 @property (nonatomic, copy) NSArray *blocks;
@@ -35,6 +36,7 @@
 @property (nonatomic, assign) BOOL shouldShowScroller;
 @property (nonatomic, assign) CGFloat scrollerWidth;
 @property (nonatomic, retain) DTBlockScroller *scroller;
+@property (nonatomic, assign) UIEdgeInsets itemsInsets;
 
 - (UIView<DTBlockViewCellProtocol> *)dequeueReusableCell;
 - (void)moveToRow:(NSInteger)rowIndex;

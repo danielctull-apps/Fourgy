@@ -11,7 +11,7 @@
 
 @implementation DTBlockView
 
-@synthesize blocks, dataSource, selectedIndex, shouldShowScroller, scrollerWidth, scroller;
+@synthesize blocks, dataSource, selectedIndex, shouldShowScroller, scrollerWidth, scroller, itemsInsets;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -62,8 +62,8 @@
 	
 	if ([blocks count] == 0) return;
 	
-	CGFloat width = self.frame.size.width - scrollerWidth;
-	CGFloat height = self.frame.size.height/displayRowNumber;
+	CGFloat width = self.frame.size.width - scrollerWidth - self.itemsInsets.left - self.itemsInsets.right;
+	CGFloat height = (self.frame.size.height - self.itemsInsets.top - self.itemsInsets.bottom)/displayRowNumber;
 	
 	NSInteger numRows = displayRowNumber;
 	
@@ -72,7 +72,7 @@
 	
 	for (NSInteger i = 0; i < numRows; i++) {
 		UIView<DTBlockViewCellProtocol> *cell = [blocks objectAtIndex:i];
-		cell.frame = CGRectMake(0.0, i*height, width, height);
+		cell.frame = CGRectMake(self.itemsInsets.left, self.itemsInsets.top + i*height, width, height);
 	}
 }
 
