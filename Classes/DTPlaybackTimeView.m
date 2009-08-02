@@ -7,7 +7,7 @@
 //
 
 #import "DTPlaybackTimeView.h"
-
+#import "NSString+DTPrefixString.h"
 
 @implementation DTPlaybackTimeView
 
@@ -118,28 +118,42 @@
 		[self addSubview:remainingLabel];
 	}
 	
+	
 	NSInteger time = (NSInteger)iPod.currentPlaybackTime;
+	NSInteger remaining = (NSInteger)duration - time;
+	playedLabel.text = [self timeStringForSeconds:time];
+	remainingLabel.text = [NSString stringWithFormat:@"-%@", [self timeStringForSeconds:remaining]];
 	
-	NSInteger mins = (NSInteger)(iPod.currentPlaybackTime / 60);
-	NSInteger secs = (NSInteger)(time % 60);
-	
-	if (secs < 10)
-		playedLabel.text = [NSString stringWithFormat:@"%i:0%i", mins, secs];	
-	else
-		playedLabel.text = [NSString stringWithFormat:@"%i:%i", mins, secs];
 
 	
-	NSInteger remainingTime = (NSInteger)duration - time;
+}
+
+- (NSString *)timeStringForSeconds:(NSInteger)time {
+	NSString *hoursString = @"";
+	NSString *minutesString = @"";
+	NSString *secondsString = @"";
+		
+	NSInteger minutes = (NSInteger)(time / 60);
+	NSInteger hours = 0;
+	NSInteger seconds = time % 60;
 	
-	mins = (NSInteger)(remainingTime / 60);
-	secs = (NSInteger)(remainingTime % 60);
+	minutesString = [NSString stringWithFormat:@"%@:", [NSString stringWithFormat:@"%i", minutes]];
 	
-	if (secs < 10)
-		remainingLabel.text = [NSString stringWithFormat:@"-%i:0%i", mins, secs];	
-	else
-		remainingLabel.text = [NSString stringWithFormat:@"-%i:%i", mins, secs];
+	if (minutes > 59) {
+		hours = (NSInteger)(minutes / 60);
+		hoursString = [NSString stringWithFormat:@"%@:", [NSString stringWithFormat:@"%i", hours]];
+		minutes = minutes % 60;
+		minutesString = [NSString stringWithFormat:@"%@:", [[NSString stringWithFormat:@"%i", minutes] stringByPrefixingWithString:@"0" resultingInLength:2]];
+	}
+	
+	secondsString = [[NSString stringWithFormat:@"%i", seconds] stringByPrefixingWithString:@"0" resultingInLength:2];
+	
+	
+	return [NSString stringWithFormat:@"%@%@%@", hoursString, minutesString, secondsString];
+	
 	
 }
+
 
 - (void)setup {
 

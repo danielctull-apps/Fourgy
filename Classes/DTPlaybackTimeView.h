@@ -16,4 +16,6 @@
 	UILabel *playedLabel, *remainingLabel;
 }
 
+- (NSString *)timeStringForSeconds:(NSInteger)time;
+
 @end
