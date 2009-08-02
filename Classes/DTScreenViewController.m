@@ -41,6 +41,7 @@
 	[query release];
 	[items release];
 	[collections release];
+	[itemsView release];
 	[property release];
 	[predicateToRemoveFromQueryWhenPopped release];
     [super dealloc];
@@ -83,7 +84,7 @@
 	itemsView.scroller.knobInsets = UIEdgeInsetsMake(2.0, 4.0, 4.0, 4.0);
 	itemsView.itemsInsets = UIEdgeInsetsMake(1.0, 0.0, 0.0, 2.0);
 	itemsView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
-	
+	itemsView.scrollerWidth = 18.0;
 	if (amount < 6) {
 		itemsView.shouldShowScroller = NO;
 		itemsView.itemsInsets = UIEdgeInsetsMake(1.0, 0.0, 0.0, 0.0);

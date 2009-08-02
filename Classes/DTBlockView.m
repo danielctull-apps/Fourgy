@@ -114,6 +114,9 @@
 }
 
 - (void)dealloc {
+	[blocks release];
+	[freeBlocks release];
+	[scroller release];
     [super dealloc];
 }
 
