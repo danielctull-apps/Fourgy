@@ -12,6 +12,13 @@
 #import "MPMediaItem+DTTrackNumber.h"
 #import "DTiPodBlockScroller.h"
 
+#import "DTMusicModelController.h"
+#import "DTArtistsListViewController.h"
+#import "DTSongsListViewController.h"
+#import "DTAlbumsListViewController.h"
+#import "DTPlaylistsListViewController.h"
+#import "DTGenresListViewController.h"
+
 @implementation DTScreenViewController
 
 @synthesize itemsView;
@@ -243,23 +250,29 @@
 			[self.navigationController pushViewController:table animated:YES];
 			[table release];
 		} else if ([text isEqualToString:@"Artists"]) {
-			MPMediaQuery *aQuery = [MPMediaQuery artistsQuery];
-			[aQuery setGroupingType:MPMediaGroupingArtist];
-			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyArtist lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
-			[self.navigationController pushViewController:table animated:YES];
-			[table release];
+			
+			DTMusicModelController *music = [[DTMusicModelController alloc] init];
+			DTArtistsListViewController *alvc = [[DTArtistsListViewController alloc] initWithItems:[music allArtists]];
+			[self.navigationController pushViewController:alvc animated:YES];
+			[alvc release];
+			[music release];
+			
 		} else if ([text isEqualToString:@"Albums"]) {
-			MPMediaQuery *aQuery = [MPMediaQuery albumsQuery];
-			[aQuery setGroupingType:MPMediaGroupingAlbum];
-			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyAlbumTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
-			[self.navigationController pushViewController:table animated:YES];
-			[table release];
+			
+			DTMusicModelController *music = [[DTMusicModelController alloc] init];
+			DTAlbumsListViewController *alvc = [[DTAlbumsListViewController alloc] initWithItems:[music allAlbums]];
+			[self.navigationController pushViewController:alvc animated:YES];
+			[alvc release];
+			[music release];
+			
 		} else if ([text isEqualToString:@"Genres"]) {
-			MPMediaQuery *aQuery = [MPMediaQuery genresQuery];
-			[aQuery setGroupingType:MPMediaGroupingGenre];
-			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyGenre lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
-			[self.navigationController pushViewController:table animated:YES];
-			[table release];
+			
+			DTMusicModelController *music = [[DTMusicModelController alloc] init];
+			DTGenresListViewController *alvc = [[DTGenresListViewController alloc] initWithItems:[music allGenres]];
+			[self.navigationController pushViewController:alvc animated:YES];
+			[alvc release];
+			[music release];
+			
 		} else if ([text isEqualToString:@"Songs"]) {
 			MPMediaQuery *aQuery = [MPMediaQuery songsQuery];
 			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];

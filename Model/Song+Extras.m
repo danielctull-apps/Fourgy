@@ -6,10 +6,10 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "Song+MPMediaItemExtras.h"
+#import "Song+Extras.h"
 
 
-@implementation Song (MPMediaItemExtras)
+@implementation Song (Extras)
 
 - (UIImage *)artworkImageWithSize:(CGSize)imageSize {
 	return [[[self mediaItem] valueForProperty:MPMediaItemPropertyArtwork] imageWithSize:imageSize];
@@ -34,6 +34,10 @@
 }
 
 - (NSComparisonResult)compare:(Song *)song {
+	return [self.title compare:song.title];
+}
+
+- (NSComparisonResult)compareTrackNumber:(Song *)song {
 	return [self.title compare:song.title];
 }
 

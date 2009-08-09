@@ -9,9 +9,10 @@
 #import "Song.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface Song (MPMediaItemExtras)
+@interface Song (Extras)
 - (UIImage *)artworkImageWithSize:(CGSize)imageSize;
 - (MPMediaItem *)mediaItem;
 
 - (NSComparisonResult)compare:(Song *)song;
+- (NSComparisonResult)compareTrackNumber:(Song *)song;
 @end
