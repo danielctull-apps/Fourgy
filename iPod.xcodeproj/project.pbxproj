@@ -14,32 +14,43 @@
 		240821A5100F7460006EDE45 /* DTiPodBlockViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */; };
 		240821AC100F75D3006EDE45 /* DTiPodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB974100BD9E300180B5F /* DTiPodViewController.m */; };
 		240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240821B2100F7627006EDE45 /* DTScreenViewController.m */; };
-		241741AB101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 241741AA101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m */; };
 		2417429F101B481B009759F2 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2417429E101B481B009759F2 /* click.wav */; };
 		241742A7101B485F009759F2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241742A6101B485F009759F2 /* AudioToolbox.framework */; };
 		241CB979100BDA0700180B5F /* DTiPodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CB978100BDA0700180B5F /* DTiPodView.xib */; };
 		241CB99D100BE45800180B5F /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CB99C100BE45800180B5F /* wheel.png */; };
 		241CBA10100BEEF200180B5F /* DTiPodBackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBA0F100BEEF200180B5F /* DTiPodBackGroundView.m */; };
 		241CBA33100BF13500180B5F /* DTiPodScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBA32100BF13500180B5F /* DTiPodScreenView.m */; };
-		241CBA44100BF3A100180B5F /* DTClickWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBA43100BF3A100180B5F /* DTClickWheelView.m */; };
 		241CBA7A100BFC9000180B5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CBA79100BFC9000180B5F /* Default.png */; };
 		241CBCA4100C9B3F00180B5F /* DTiPodNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBCA3100C9B3F00180B5F /* DTiPodNavigationBar.m */; };
 		241CBDD2100CD11200180B5F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241CBDD1100CD11200180B5F /* MediaPlayer.framework */; };
 		241CBEB2100CFEF800180B5F /* MainMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241CBEB1100CFEF800180B5F /* MainMenu.plist */; };
 		241CBEB6100CFF2F00180B5F /* MusicMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 241CBEB5100CFF2F00180B5F /* MusicMenu.plist */; };
 		241CBF69100D414500180B5F /* DTBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CBF68100D414500180B5F /* DTBatteryLevelView.m */; };
+		2444F3AA102C5DB20005B1AE /* DTMusicModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2444F3A9102C5DB20005B1AE /* DTMusicModel.xcdatamodel */; };
+		2444F3AF102C63950005B1AE /* DTMusicModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F3AE102C63950005B1AE /* DTMusicModelController.m */; };
+		2444F3BE102C64470005B1AE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2444F3BD102C64470005B1AE /* CoreData.framework */; };
+		2444F6C7102DFB840005B1AE /* Song+MPMediaItemExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6C6102DFB840005B1AE /* Song+MPMediaItemExtras.m */; };
+		2444F6EF102DFBFF0005B1AE /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6E2102DFBFF0005B1AE /* Artist.m */; };
+		2444F6F0102DFBFF0005B1AE /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6E4102DFBFF0005B1AE /* Genre.m */; };
+		2444F6F1102DFBFF0005B1AE /* DataInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6E6102DFBFF0005B1AE /* DataInformation.m */; };
+		2444F6F2102DFBFF0005B1AE /* Composer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6E8102DFBFF0005B1AE /* Composer.m */; };
+		2444F6F3102DFBFF0005B1AE /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6EA102DFBFF0005B1AE /* Song.m */; };
+		2444F6F4102DFBFF0005B1AE /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6EC102DFBFF0005B1AE /* Playlist.m */; };
+		2444F6F5102DFBFF0005B1AE /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 2444F6EE102DFBFF0005B1AE /* Album.m */; };
 		244B7BFF101E2C8E0021C335 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244B7BFE101E2C8E0021C335 /* Entitlements.plist */; };
 		246AE000101997B8009FA983 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 246ADFFF101997B8009FA983 /* Icon.png */; };
-		248AE1F8100DC63E001864E6 /* DTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE1F0100DC63E001864E6 /* DTGridView.m */; };
-		248AE1F9100DC63E001864E6 /* DTGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE1F2100DC63E001864E6 /* DTGridViewCell.m */; };
-		248AE243100DCA8D001864E6 /* DTBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AE242100DCA8D001864E6 /* DTBlockView.m */; };
-		248C8BB8101A1CB400F4E8DD /* DTTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 248C8BB4101A1CB400F4E8DD /* DTTickingLabel.m */; };
-		248CA4B1101C4E2C00B61E2E /* DTBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 248CA4B0101C4E2C00B61E2E /* DTBlockScroller.m */; };
 		248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */; };
-		249B93BF1025A22700E5DEE1 /* NSDate+DTComponentExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 249B93BC1025A22700E5DEE1 /* NSDate+DTComponentExtension.m */; };
-		249B93C01025A22700E5DEE1 /* NSString+DTPrefixString.m in Sources */ = {isa = PBXBuildFile; fileRef = 249B93BE1025A22700E5DEE1 /* NSString+DTPrefixString.m */; };
 		249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */; };
 		249E45AC101901DF0084B4E2 /* DTPlayingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */; };
+		24A43D601025D9E5003E6959 /* DTTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D5E1025D9E5003E6959 /* DTTickingLabel.m */; };
+		24A43D671025D9FB003E6959 /* DTBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D631025D9FB003E6959 /* DTBlockScroller.m */; };
+		24A43D681025D9FB003E6959 /* DTBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D651025D9FB003E6959 /* DTBlockView.m */; };
+		24A43D6E1025DA10003E6959 /* DTClickWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D6D1025DA10003E6959 /* DTClickWheelView.m */; };
+		24A43D861025DA28003E6959 /* MPMediaItem+DTTrackNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D7B1025DA28003E6959 /* MPMediaItem+DTTrackNumber.m */; };
+		24A43D871025DA28003E6959 /* NSDate+DTComponentExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D7D1025DA28003E6959 /* NSDate+DTComponentExtension.m */; };
+		24A43D891025DA28003E6959 /* NSString+DTPrefixString.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D811025DA28003E6959 /* NSString+DTPrefixString.m */; };
+		24A43D8A1025DA28003E6959 /* UIDevice+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D831025DA28003E6959 /* UIDevice+Extras.m */; };
+		24A43D8B1025DA28003E6959 /* UILabel+DTCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D851025DA28003E6959 /* UILabel+DTCopyLabel.m */; };
 		24F662AA1013AF2200437934 /* DTScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F662A91013AF2200437934 /* DTScreenView.xib */; };
 		24F96B8B10191A0C00829FF9 /* DTPlaybackTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F96B8A10191A0C00829FF9 /* DTPlaybackTimeView.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -50,14 +61,12 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* iPodAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPodAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* iPodAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPodAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* Forgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Fourgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fourgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		240821A3100F7460006EDE45 /* DTiPodBlockViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBlockViewCell.h; sourceTree = "<group>"; };
 		240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockViewCell.m; sourceTree = "<group>"; };
 		240821B1100F7627006EDE45 /* DTScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScreenViewController.h; sourceTree = "<group>"; };
 		240821B2100F7627006EDE45 /* DTScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScreenViewController.m; sourceTree = "<group>"; };
-		241741A9101B21F6009759F2 /* MPMediaItem+DTTrackNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MPMediaItem+DTTrackNumber.h"; sourceTree = "<group>"; };
-		241741AA101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MPMediaItem+DTTrackNumber.m"; sourceTree = "<group>"; };
 		2417429E101B481B009759F2 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		241742A6101B485F009759F2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		241CB973100BD9E300180B5F /* DTiPodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodViewController.h; sourceTree = "<group>"; };
@@ -70,8 +79,6 @@
 		241CBA0F100BEEF200180B5F /* DTiPodBackGroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBackGroundView.m; sourceTree = "<group>"; };
 		241CBA31100BF13500180B5F /* DTiPodScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodScreenView.h; sourceTree = "<group>"; };
 		241CBA32100BF13500180B5F /* DTiPodScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodScreenView.m; sourceTree = "<group>"; };
-		241CBA42100BF3A100180B5F /* DTClickWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTClickWheelView.h; sourceTree = "<group>"; };
-		241CBA43100BF3A100180B5F /* DTClickWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTClickWheelView.m; sourceTree = "<group>"; };
 		241CBA79100BFC9000180B5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		241CBC49100C96A000180B5F /* DTScreenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScreenTableViewController.h; sourceTree = "<group>"; };
 		241CBC4A100C96A000180B5F /* DTScreenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScreenTableViewController.m; sourceTree = "<group>"; };
@@ -82,29 +89,52 @@
 		241CBEB5100CFF2F00180B5F /* MusicMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MusicMenu.plist; sourceTree = "<group>"; };
 		241CBF67100D414500180B5F /* DTBatteryLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBatteryLevelView.h; sourceTree = "<group>"; };
 		241CBF68100D414500180B5F /* DTBatteryLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBatteryLevelView.m; sourceTree = "<group>"; };
-		241E6115100F1C5F00A2199C /* DTBlockViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockViewCellProtocol.h; sourceTree = "<group>"; };
+		2444F3A9102C5DB20005B1AE /* DTMusicModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = DTMusicModel.xcdatamodel; sourceTree = "<group>"; };
+		2444F3AD102C63950005B1AE /* DTMusicModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMusicModelController.h; sourceTree = "<group>"; };
+		2444F3AE102C63950005B1AE /* DTMusicModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTMusicModelController.m; sourceTree = "<group>"; };
+		2444F3BD102C64470005B1AE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2444F6C5102DFB840005B1AE /* Song+MPMediaItemExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Song+MPMediaItemExtras.h"; sourceTree = "<group>"; };
+		2444F6C6102DFB840005B1AE /* Song+MPMediaItemExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Song+MPMediaItemExtras.m"; sourceTree = "<group>"; };
+		2444F6E1102DFBFF0005B1AE /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artist.h; sourceTree = "<group>"; };
+		2444F6E2102DFBFF0005B1AE /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
+		2444F6E3102DFBFF0005B1AE /* Genre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genre.h; sourceTree = "<group>"; };
+		2444F6E4102DFBFF0005B1AE /* Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Genre.m; sourceTree = "<group>"; };
+		2444F6E5102DFBFF0005B1AE /* DataInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataInformation.h; sourceTree = "<group>"; };
+		2444F6E6102DFBFF0005B1AE /* DataInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataInformation.m; sourceTree = "<group>"; };
+		2444F6E7102DFBFF0005B1AE /* Composer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Composer.h; sourceTree = "<group>"; };
+		2444F6E8102DFBFF0005B1AE /* Composer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Composer.m; sourceTree = "<group>"; };
+		2444F6E9102DFBFF0005B1AE /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		2444F6EA102DFBFF0005B1AE /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		2444F6EB102DFBFF0005B1AE /* Playlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
+		2444F6EC102DFBFF0005B1AE /* Playlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
+		2444F6ED102DFBFF0005B1AE /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		2444F6EE102DFBFF0005B1AE /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		244B7BFE101E2C8E0021C335 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		246ADFFF101997B8009FA983 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		248AE1EF100DC63E001864E6 /* DTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridView.h; sourceTree = "<group>"; };
-		248AE1F0100DC63E001864E6 /* DTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridView.m; sourceTree = "<group>"; };
-		248AE1F1100DC63E001864E6 /* DTGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCell.h; sourceTree = "<group>"; };
-		248AE1F2100DC63E001864E6 /* DTGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewCell.m; sourceTree = "<group>"; };
-		248AE1F3100DC63E001864E6 /* DTGridViewCellInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCellInfoProtocol.h; sourceTree = "<group>"; };
-		248AE241100DCA8D001864E6 /* DTBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockView.h; sourceTree = "<group>"; };
-		248AE242100DCA8D001864E6 /* DTBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockView.m; sourceTree = "<group>"; };
-		248C8BB3101A1CB400F4E8DD /* DTTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTickingLabel.h; sourceTree = "<group>"; };
-		248C8BB4101A1CB400F4E8DD /* DTTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTickingLabel.m; sourceTree = "<group>"; };
-		248CA4AF101C4E2C00B61E2E /* DTBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockScroller.h; sourceTree = "<group>"; };
-		248CA4B0101C4E2C00B61E2E /* DTBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockScroller.m; sourceTree = "<group>"; };
 		248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBlockScroller.h; sourceTree = "<group>"; };
 		248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockScroller.m; sourceTree = "<group>"; };
-		249B93BB1025A22700E5DEE1 /* NSDate+DTComponentExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DTComponentExtension.h"; sourceTree = "<group>"; };
-		249B93BC1025A22700E5DEE1 /* NSDate+DTComponentExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DTComponentExtension.m"; sourceTree = "<group>"; };
-		249B93BD1025A22700E5DEE1 /* NSString+DTPrefixString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DTPrefixString.h"; sourceTree = "<group>"; };
-		249B93BE1025A22700E5DEE1 /* NSString+DTPrefixString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DTPrefixString.m"; sourceTree = "<group>"; };
 		249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTPlayingScreenView.xib; sourceTree = "<group>"; };
 		249E45AA101901DF0084B4E2 /* DTPlayingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlayingScreenViewController.h; sourceTree = "<group>"; };
 		249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPlayingScreenViewController.m; sourceTree = "<group>"; };
+		24A43D5D1025D9E5003E6959 /* DTTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTickingLabel.h; sourceTree = "<group>"; };
+		24A43D5E1025D9E5003E6959 /* DTTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTickingLabel.m; sourceTree = "<group>"; };
+		24A43D621025D9FB003E6959 /* DTBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockScroller.h; sourceTree = "<group>"; };
+		24A43D631025D9FB003E6959 /* DTBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockScroller.m; sourceTree = "<group>"; };
+		24A43D641025D9FB003E6959 /* DTBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockView.h; sourceTree = "<group>"; };
+		24A43D651025D9FB003E6959 /* DTBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockView.m; sourceTree = "<group>"; };
+		24A43D661025D9FB003E6959 /* DTBlockViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockViewCellProtocol.h; sourceTree = "<group>"; };
+		24A43D6C1025DA10003E6959 /* DTClickWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTClickWheelView.h; sourceTree = "<group>"; };
+		24A43D6D1025DA10003E6959 /* DTClickWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTClickWheelView.m; sourceTree = "<group>"; };
+		24A43D7A1025DA28003E6959 /* MPMediaItem+DTTrackNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MPMediaItem+DTTrackNumber.h"; sourceTree = "<group>"; };
+		24A43D7B1025DA28003E6959 /* MPMediaItem+DTTrackNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MPMediaItem+DTTrackNumber.m"; sourceTree = "<group>"; };
+		24A43D7C1025DA28003E6959 /* NSDate+DTComponentExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DTComponentExtension.h"; sourceTree = "<group>"; };
+		24A43D7D1025DA28003E6959 /* NSDate+DTComponentExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DTComponentExtension.m"; sourceTree = "<group>"; };
+		24A43D801025DA28003E6959 /* NSString+DTPrefixString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DTPrefixString.h"; sourceTree = "<group>"; };
+		24A43D811025DA28003E6959 /* NSString+DTPrefixString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DTPrefixString.m"; sourceTree = "<group>"; };
+		24A43D821025DA28003E6959 /* UIDevice+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extras.h"; sourceTree = "<group>"; };
+		24A43D831025DA28003E6959 /* UIDevice+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extras.m"; sourceTree = "<group>"; };
+		24A43D841025DA28003E6959 /* UILabel+DTCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DTCopyLabel.h"; sourceTree = "<group>"; };
+		24A43D851025DA28003E6959 /* UILabel+DTCopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DTCopyLabel.m"; sourceTree = "<group>"; };
 		24F662A91013AF2200437934 /* DTScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTScreenView.xib; sourceTree = "<group>"; };
 		24F96B8910191A0C00829FF9 /* DTPlaybackTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlaybackTimeView.h; sourceTree = "<group>"; };
 		24F96B8A10191A0C00829FF9 /* DTPlaybackTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPlaybackTimeView.m; sourceTree = "<group>"; };
@@ -125,6 +155,7 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				241CBDD2100CD11200180B5F /* MediaPlayer.framework in Frameworks */,
 				241742A7101B485F009759F2 /* AudioToolbox.framework in Frameworks */,
+				2444F3BE102C64470005B1AE /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +165,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2444F7C1102ECF090005B1AE /* List Screens */,
 				1D3623240D0F684500981E51 /* iPodAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iPodAppDelegate.m */,
 				241CB973100BD9E300180B5F /* DTiPodViewController.h */,
@@ -144,17 +176,12 @@
 				241CBA0F100BEEF200180B5F /* DTiPodBackGroundView.m */,
 				241CBA31100BF13500180B5F /* DTiPodScreenView.h */,
 				241CBA32100BF13500180B5F /* DTiPodScreenView.m */,
-				241CBA42100BF3A100180B5F /* DTClickWheelView.h */,
-				241CBA43100BF3A100180B5F /* DTClickWheelView.m */,
 				241CBC49100C96A000180B5F /* DTScreenTableViewController.h */,
 				241CBC4A100C96A000180B5F /* DTScreenTableViewController.m */,
 				241CBCA2100C9B3F00180B5F /* DTiPodNavigationBar.h */,
 				241CBCA3100C9B3F00180B5F /* DTiPodNavigationBar.m */,
 				241CBF67100D414500180B5F /* DTBatteryLevelView.h */,
 				241CBF68100D414500180B5F /* DTBatteryLevelView.m */,
-				248AE241100DCA8D001864E6 /* DTBlockView.h */,
-				248AE242100DCA8D001864E6 /* DTBlockView.m */,
-				241E6115100F1C5F00A2199C /* DTBlockViewCellProtocol.h */,
 				240821A3100F7460006EDE45 /* DTiPodBlockViewCell.h */,
 				240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */,
 				240821B1100F7627006EDE45 /* DTScreenViewController.h */,
@@ -163,10 +190,6 @@
 				249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */,
 				24F96B8910191A0C00829FF9 /* DTPlaybackTimeView.h */,
 				24F96B8A10191A0C00829FF9 /* DTPlaybackTimeView.m */,
-				241741A9101B21F6009759F2 /* MPMediaItem+DTTrackNumber.h */,
-				241741AA101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m */,
-				248CA4AF101C4E2C00B61E2E /* DTBlockScroller.h */,
-				248CA4B0101C4E2C00B61E2E /* DTBlockScroller.m */,
 				248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */,
 				248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */,
 			);
@@ -176,52 +199,103 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Forgy.app */,
+				1D6058910D05DD3D006BFB54 /* Fourgy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		248AE1EE100DC63E001864E6 /* DTGridView */ = {
+		2444F3A6102C5D860005B1AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				248AE1EF100DC63E001864E6 /* DTGridView.h */,
-				248AE1F0100DC63E001864E6 /* DTGridView.m */,
-				248AE1F1100DC63E001864E6 /* DTGridViewCell.h */,
-				248AE1F2100DC63E001864E6 /* DTGridViewCell.m */,
-				248AE1F3100DC63E001864E6 /* DTGridViewCellInfoProtocol.h */,
+				2444F3A9102C5DB20005B1AE /* DTMusicModel.xcdatamodel */,
+				2444F6E1102DFBFF0005B1AE /* Artist.h */,
+				2444F6E2102DFBFF0005B1AE /* Artist.m */,
+				2444F6E3102DFBFF0005B1AE /* Genre.h */,
+				2444F6E4102DFBFF0005B1AE /* Genre.m */,
+				2444F6E5102DFBFF0005B1AE /* DataInformation.h */,
+				2444F6E6102DFBFF0005B1AE /* DataInformation.m */,
+				2444F6E7102DFBFF0005B1AE /* Composer.h */,
+				2444F6E8102DFBFF0005B1AE /* Composer.m */,
+				2444F6E9102DFBFF0005B1AE /* Song.h */,
+				2444F6EA102DFBFF0005B1AE /* Song.m */,
+				2444F6EB102DFBFF0005B1AE /* Playlist.h */,
+				2444F6EC102DFBFF0005B1AE /* Playlist.m */,
+				2444F6ED102DFBFF0005B1AE /* Album.h */,
+				2444F6EE102DFBFF0005B1AE /* Album.m */,
+				2444F3AD102C63950005B1AE /* DTMusicModelController.h */,
+				2444F3AE102C63950005B1AE /* DTMusicModelController.m */,
+				2444F6C5102DFB840005B1AE /* Song+MPMediaItemExtras.h */,
+				2444F6C6102DFB840005B1AE /* Song+MPMediaItemExtras.m */,
 			);
-			name = DTGridView;
-			path = ../DTKit/DTGridView;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2444F7C1102ECF090005B1AE /* List Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "List Screens";
+			sourceTree = "<group>";
+		};
+		24A43D5A1025D9E5003E6959 /* DTLabels */ = {
+			isa = PBXGroup;
+			children = (
+				24A43D5D1025D9E5003E6959 /* DTTickingLabel.h */,
+				24A43D5E1025D9E5003E6959 /* DTTickingLabel.m */,
+			);
+			name = DTLabels;
+			path = ../DTKit/DTLabels;
 			sourceTree = SOURCE_ROOT;
 		};
-		248C8BB2101A1CB400F4E8DD /* DTTickingLabel */ = {
+		24A43D611025D9FB003E6959 /* DTBlockView */ = {
 			isa = PBXGroup;
 			children = (
-				248C8BB3101A1CB400F4E8DD /* DTTickingLabel.h */,
-				248C8BB4101A1CB400F4E8DD /* DTTickingLabel.m */,
+				24A43D621025D9FB003E6959 /* DTBlockScroller.h */,
+				24A43D631025D9FB003E6959 /* DTBlockScroller.m */,
+				24A43D641025D9FB003E6959 /* DTBlockView.h */,
+				24A43D651025D9FB003E6959 /* DTBlockView.m */,
+				24A43D661025D9FB003E6959 /* DTBlockViewCellProtocol.h */,
 			);
-			name = DTTickingLabel;
-			path = ../DTKit/DTTickingLabel;
+			name = DTBlockView;
+			path = ../DTKit/DTBlockView;
 			sourceTree = SOURCE_ROOT;
 		};
-		249B93BA1025A22700E5DEE1 /* DTFoundation */ = {
+		24A43D6B1025DA10003E6959 /* DTClickWheel */ = {
 			isa = PBXGroup;
 			children = (
-				249B93BB1025A22700E5DEE1 /* NSDate+DTComponentExtension.h */,
-				249B93BC1025A22700E5DEE1 /* NSDate+DTComponentExtension.m */,
-				249B93BD1025A22700E5DEE1 /* NSString+DTPrefixString.h */,
-				249B93BE1025A22700E5DEE1 /* NSString+DTPrefixString.m */,
+				24A43D6C1025DA10003E6959 /* DTClickWheelView.h */,
+				24A43D6D1025DA10003E6959 /* DTClickWheelView.m */,
 			);
-			name = DTFoundation;
-			path = "../DTKit Public/DTFoundation";
+			name = DTClickWheel;
+			path = ../DTKit/DTClickWheel;
+			sourceTree = SOURCE_ROOT;
+		};
+		24A43D791025DA28003E6959 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				24A43D7A1025DA28003E6959 /* MPMediaItem+DTTrackNumber.h */,
+				24A43D7B1025DA28003E6959 /* MPMediaItem+DTTrackNumber.m */,
+				24A43D7C1025DA28003E6959 /* NSDate+DTComponentExtension.h */,
+				24A43D7D1025DA28003E6959 /* NSDate+DTComponentExtension.m */,
+				24A43D801025DA28003E6959 /* NSString+DTPrefixString.h */,
+				24A43D811025DA28003E6959 /* NSString+DTPrefixString.m */,
+				24A43D821025DA28003E6959 /* UIDevice+Extras.h */,
+				24A43D831025DA28003E6959 /* UIDevice+Extras.m */,
+				24A43D841025DA28003E6959 /* UILabel+DTCopyLabel.h */,
+				24A43D851025DA28003E6959 /* UILabel+DTCopyLabel.m */,
+			);
+			name = Categories;
+			path = ../DTKit/Categories;
 			sourceTree = SOURCE_ROOT;
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				249B93BA1025A22700E5DEE1 /* DTFoundation */,
-				248C8BB2101A1CB400F4E8DD /* DTTickingLabel */,
-				248AE1EE100DC63E001864E6 /* DTGridView */,
+				24A43D791025DA28003E6959 /* Categories */,
+				24A43D6B1025DA10003E6959 /* DTClickWheel */,
+				24A43D611025D9FB003E6959 /* DTBlockView */,
+				24A43D5A1025D9E5003E6959 /* DTLabels */,
+				2444F3A6102C5D860005B1AE /* Model */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -267,6 +341,7 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				241CBDD1100CD11200180B5F /* MediaPlayer.framework */,
 				241742A6101B485F009759F2 /* AudioToolbox.framework */,
+				2444F3BD102C64470005B1AE /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,7 +363,7 @@
 			);
 			name = Fourgy;
 			productName = iPod;
-			productReference = 1D6058910D05DD3D006BFB54 /* Forgy.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* Fourgy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -338,23 +413,33 @@
 				1D3623260D0F684500981E51 /* iPodAppDelegate.m in Sources */,
 				241CBA10100BEEF200180B5F /* DTiPodBackGroundView.m in Sources */,
 				241CBA33100BF13500180B5F /* DTiPodScreenView.m in Sources */,
-				241CBA44100BF3A100180B5F /* DTClickWheelView.m in Sources */,
 				241CBCA4100C9B3F00180B5F /* DTiPodNavigationBar.m in Sources */,
 				241CBF69100D414500180B5F /* DTBatteryLevelView.m in Sources */,
-				248AE1F8100DC63E001864E6 /* DTGridView.m in Sources */,
-				248AE1F9100DC63E001864E6 /* DTGridViewCell.m in Sources */,
-				248AE243100DCA8D001864E6 /* DTBlockView.m in Sources */,
 				240821A5100F7460006EDE45 /* DTiPodBlockViewCell.m in Sources */,
 				240821AC100F75D3006EDE45 /* DTiPodViewController.m in Sources */,
 				240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */,
 				249E45AC101901DF0084B4E2 /* DTPlayingScreenViewController.m in Sources */,
 				24F96B8B10191A0C00829FF9 /* DTPlaybackTimeView.m in Sources */,
-				248C8BB8101A1CB400F4E8DD /* DTTickingLabel.m in Sources */,
-				241741AB101B21F6009759F2 /* MPMediaItem+DTTrackNumber.m in Sources */,
-				248CA4B1101C4E2C00B61E2E /* DTBlockScroller.m in Sources */,
 				248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */,
-				249B93BF1025A22700E5DEE1 /* NSDate+DTComponentExtension.m in Sources */,
-				249B93C01025A22700E5DEE1 /* NSString+DTPrefixString.m in Sources */,
+				24A43D601025D9E5003E6959 /* DTTickingLabel.m in Sources */,
+				24A43D671025D9FB003E6959 /* DTBlockScroller.m in Sources */,
+				24A43D681025D9FB003E6959 /* DTBlockView.m in Sources */,
+				24A43D6E1025DA10003E6959 /* DTClickWheelView.m in Sources */,
+				24A43D861025DA28003E6959 /* MPMediaItem+DTTrackNumber.m in Sources */,
+				24A43D871025DA28003E6959 /* NSDate+DTComponentExtension.m in Sources */,
+				24A43D891025DA28003E6959 /* NSString+DTPrefixString.m in Sources */,
+				24A43D8A1025DA28003E6959 /* UIDevice+Extras.m in Sources */,
+				24A43D8B1025DA28003E6959 /* UILabel+DTCopyLabel.m in Sources */,
+				2444F3AA102C5DB20005B1AE /* DTMusicModel.xcdatamodel in Sources */,
+				2444F3AF102C63950005B1AE /* DTMusicModelController.m in Sources */,
+				2444F6C7102DFB840005B1AE /* Song+MPMediaItemExtras.m in Sources */,
+				2444F6EF102DFBFF0005B1AE /* Artist.m in Sources */,
+				2444F6F0102DFBFF0005B1AE /* Genre.m in Sources */,
+				2444F6F1102DFBFF0005B1AE /* DataInformation.m in Sources */,
+				2444F6F2102DFBFF0005B1AE /* Composer.m in Sources */,
+				2444F6F3102DFBFF0005B1AE /* Song.m in Sources */,
+				2444F6F4102DFBFF0005B1AE /* Playlist.m in Sources */,
+				2444F6F5102DFBFF0005B1AE /* Album.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +456,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPod_Prefix.pch;
 				INFOPLIST_FILE = "iPod-Info.plist";
-				PRODUCT_NAME = Forgy;
+				PRODUCT_NAME = Fourgy;
 			};
 			name = Debug;
 		};
@@ -383,7 +468,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPod_Prefix.pch;
 				INFOPLIST_FILE = "iPod-Info.plist";
-				PRODUCT_NAME = Forgy;
+				PRODUCT_NAME = Fourgy;
 			};
 			name = Release;
 		};
