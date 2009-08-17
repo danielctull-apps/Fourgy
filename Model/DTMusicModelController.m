@@ -8,10 +8,16 @@
 
 #import "DTMusicModelController.h"
 #import "DataInformation.h"
-#import "Song+MPMediaItemExtras.h"
+#import "Song+Extras.h"
 
 @interface DTMusicModelController () // Private Methods
+
+- (NSArray *)sortDescriptorArrayWithDescriptorWithKey:(NSString *)key;
+
 - (NSArray *)fetchAllEntitiesForName:(NSString *)entityName;
+- (NSArray *)fetchAllEntitiesForName:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
+- (NSArray *)fetchAllEntitiesForName:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors batchSize:(NSUInteger)batchSize;
+
 - (NSManagedObject *)managedObjectOfType:(NSString *)type withPredicate:(NSPredicate *)predicate;
 
 - (void)setupMusicData;
@@ -105,27 +111,27 @@
 #pragma mark Collection Retrieval
 
 - (NSArray *)allSongs {
-	return [self fetchAllEntitiesForName:@"Song"];
+	return [self fetchAllEntitiesForName:@"Song" sortDescriptors:[self sortDescriptorArrayWithDescriptorWithKey:@"title"] batchSize:6];
 }
 
 - (NSArray *)allArtists {
-	return [self fetchAllEntitiesForName:@"Artist"];
+	return [self fetchAllEntitiesForName:@"Artist" sortDescriptors:[self sortDescriptorArrayWithDescriptorWithKey:@"name"] batchSize:6];
 }
 
 - (NSArray *)allAlbums {
-	return [self fetchAllEntitiesForName:@"Album"];
+	return [self fetchAllEntitiesForName:@"Album" sortDescriptors:[self sortDescriptorArrayWithDescriptorWithKey:@"title"] batchSize:6];
 }
 
 - (NSArray *)allComposers {
-	return [self fetchAllEntitiesForName:@"Composer"];
+	return [self fetchAllEntitiesForName:@"Composer" sortDescriptors:[self sortDescriptorArrayWithDescriptorWithKey:@"name"] batchSize:6];
 }
 
 - (NSArray *)allGenres {
-	return [self fetchAllEntitiesForName:@"Genre"];
+	return [self fetchAllEntitiesForName:@"Genre" sortDescriptors:[self sortDescriptorArrayWithDescriptorWithKey:@"name"] batchSize:6];
 }
 
 - (NSArray *)allPlaylists {
-	return [self fetchAllEntitiesForName:@"Playlist"];
+	return [self fetchAllEntitiesForName:@"Playlist" sortDescriptors:[self sortDescriptorArrayWithDescriptorWithKey:@"name"] batchSize:6];
 }
 
 #pragma mark -
@@ -270,11 +276,31 @@
 #pragma mark -
 #pragma mark Generic Core Data Fetching
 
-- (NSArray *)fetchAllEntitiesForName:(NSString *)entityName {
+- (NSArray *)sortDescriptorArrayWithDescriptorWithKey:(NSString *)key {
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key ascending:YES];
+	NSArray *descriptors = [NSArray arrayWithObject:sortDescriptor];
+	[sortDescriptor release];
+	return descriptors;
+}
 
+
+- (NSArray *)fetchAllEntitiesForName:(NSString *)entityName {
+	return [self fetchAllEntitiesForName:entityName sortDescriptors:nil];
+}
+
+- (NSArray *)fetchAllEntitiesForName:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors {
+	return [self fetchAllEntitiesForName:entityName sortDescriptors:nil batchSize:0];
+}
+
+- (NSArray *)fetchAllEntitiesForName:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors batchSize:(NSUInteger)batchSize {
+	
 	NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setEntity:entity];
+	
+	if (batchSize > 0) [request setFetchBatchSize:batchSize];
+	
+	if (sortDescriptors) [request setSortDescriptors:sortDescriptors];
 	
 	NSError *error = nil;
 	NSArray *fetchResult = [self.managedObjectContext executeFetchRequest:request error:&error];

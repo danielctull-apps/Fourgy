@@ -14,7 +14,7 @@
 
 - (void)selected {
 	Album *album = [items objectAtIndex:itemsView.selectedIndex];
-	DTSongsListViewController *slvc = [[DTSongsListViewController alloc] initWithItems:[album.songs allObjects]];
+	DTSongsListViewController *slvc = [[DTSongsListViewController alloc] initWithItems:[[album.songs allObjects] sortedArrayUsingSelector:@selector(compareTrackNumber:)]];
 	[self.navigationController pushViewController:slvc animated:YES];
 	[slvc release];
 }

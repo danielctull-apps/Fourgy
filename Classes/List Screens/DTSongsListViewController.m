@@ -7,11 +7,26 @@
 //
 
 #import "DTSongsListViewController.h"
-
+#import "Song+Extras.h"
+#import "DTPlayingScreenViewController.h"
 
 @implementation DTSongsListViewController
 
 - (void)selected {
+	
+	NSMutableArray *mediaitems = [[NSMutableArray alloc] init];
+	
+	for (Song *s in self.items)
+		[mediaitems addObject:[s mediaItem]];
+	
+	Song *song = (Song *)[self.items objectAtIndex:self.itemsView.selectedIndex];
+		
+	
+	DTPlayingScreenViewController *playing = [[DTPlayingScreenViewController alloc] initWithMediaItem:[song mediaItem]
+																					  mediaCollection:[MPMediaItemCollection collectionWithItems:mediaitems]];
+	
+	[self.navigationController pushViewController:playing animated:YES];
+	[playing release];
 }
 
 - (UIView<DTBlockViewCellProtocol> *)blockView:(DTBlockView *)blockView blockViewCellForRow:(NSInteger)rowIndex {

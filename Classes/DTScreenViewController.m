@@ -244,11 +244,11 @@
 			[self.navigationController pushViewController:table animated:YES];
 			[table release];
 		} else if ([text isEqualToString:@"Playlists"]) {
-			MPMediaQuery *aQuery = [MPMediaQuery playlistsQuery];
-			[aQuery setGroupingType:MPMediaGroupingPlaylist];
-			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaPlaylistPropertyName lastPredicate:nil lastGroupingType:MPMediaGroupingPlaylist];
-			[self.navigationController pushViewController:table animated:YES];
-			[table release];
+			DTMusicModelController *music = [[DTMusicModelController alloc] init];
+			DTPlaylistsListViewController *alvc = [[DTPlaylistsListViewController alloc] initWithItems:[music allPlaylists]];
+			[self.navigationController pushViewController:alvc animated:YES];
+			[alvc release];
+			[music release];
 		} else if ([text isEqualToString:@"Artists"]) {
 			
 			DTMusicModelController *music = [[DTMusicModelController alloc] init];

@@ -17,7 +17,8 @@
 	
 	if (!(self = [self initWithNibName:@"DTScreenView" bundle:nil])) return nil;
 	
-	items = [[someItems sortedArrayUsingSelector:@selector(compare:)] retain];
+	//items = [[someItems sortedArrayUsingSelector:@selector(compare:)] retain];
+	items = [someItems retain];
 	
 	return self;
 }

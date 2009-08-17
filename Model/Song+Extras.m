@@ -38,7 +38,13 @@
 }
 
 - (NSComparisonResult)compareTrackNumber:(Song *)song {
-	return [self.title compare:song.title];
+	
+	NSComparisonResult result = [self.discNumber compare:song.discNumber];
+	
+	if (result == NSOrderedSame)
+		return [self.trackNumber compare:song.trackNumber];
+	else
+		return result;
 }
 
 @end
