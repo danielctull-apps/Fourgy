@@ -9,6 +9,8 @@
 #import "DTArtistsListViewController.h"
 #import "DTAlbumsListViewController.h"
 #import "DTSongsListViewController.h"
+#import "Album+Extras.h"
+#import "Song+Extras.h"
 
 @implementation DTArtistsListViewController
 
@@ -18,11 +20,11 @@
 	
 	if ([albums count] == 1) {
 		Album *album = [albums objectAtIndex:0];
-		DTSongsListViewController *slvc = [[DTSongsListViewController alloc] initWithItems:[album.songs allObjects]];
+		DTSongsListViewController *slvc = [[DTSongsListViewController alloc] initWithItems:[[album.songs allObjects] sortedArrayUsingSelector:@selector(compareTrackNumber:)]];
 		[self.navigationController pushViewController:slvc animated:YES];
 		[slvc release];
 	} else {
-		DTAlbumsListViewController *alvc = [[DTAlbumsListViewController alloc] initWithItems:albums];
+		DTAlbumsListViewController *alvc = [[DTAlbumsListViewController alloc] initWithItems:[albums sortedArrayUsingSelector:@selector(compare:)]];
 		[self.navigationController pushViewController:alvc animated:YES];
 		[alvc release];
 	}
