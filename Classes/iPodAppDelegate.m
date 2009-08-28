@@ -26,11 +26,11 @@
     // Override point for customization after application launch
     [window makeKeyAndVisible];
 	
-	DTMusicModelController *model = [[DTMusicModelController alloc] init];
+	//DTMusicModelController *model = [[DTMusicModelController alloc] init];
 	
-	NSLog(@"%@:%s BEFORE GET ALL ARTISTS", self, _cmd);
-	NSArray *albums = [model allArtists];
-	NSLog(@"%@:%s %@", self, _cmd, [[albums objectAtIndex:0] name]);
+	//NSLog(@"%@:%s BEFORE GET ALL ARTISTS", self, _cmd);
+	//NSArray *albums = [model allArtists];
+	//NSLog(@"%@:%s %@", self, _cmd, [[albums objectAtIndex:0] name]);
 }
 
 

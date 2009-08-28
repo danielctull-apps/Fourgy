@@ -252,6 +252,8 @@
 - (void)clickWheel:(DTClickWheelView *)clickWheel touchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance {
 	
 	if (oldAngle == 500.0) {
+		rotations = 0;
+		rotation360check = 0;
 		//DTScreenTableViewController *tableController = (DTScreenTableViewController *)nav.visibleViewController;
 		//[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 		oldAngle = angle;
@@ -259,6 +261,11 @@
 	}
 	
 	CGFloat diff = angle - oldAngle;
+	
+	if ((rotation360check > 0 && diff < 0) || (rotation360check < 0 && diff > 0)) {
+		rotation360check = 0;
+		rotations = 0;
+	}
 	
 	oldAngle = angle;
 	
@@ -273,12 +280,25 @@
 	
 	difference += diff;
 	
-
+	rotation360check += difference;
+	
+	if (rotation360check > 360 || rotation360check < -360) {
+		rotations++;
+		
+		//if (rotations > 4)
+		//	rotations = 4;
+		
+		rotation360check = 0;
+	}
+	
 	
 	
 	
 	if (difference > 22.5) {
 		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+		
+		for (NSInteger i = 1; i < rotations; i++)
+			[tableController moveDown];
 		
 		if([tableController moveDown])
 			AudioServicesPlaySystemSound(clickSound);
@@ -288,6 +308,9 @@
 	} else if (difference < -22.5) {
 		
 		DTScreenViewController *tableController = (DTScreenViewController *)nav.visibleViewController;
+		
+		for (NSInteger i = 1; i < rotations; i++)
+			[tableController moveUp];
 		
 		if ([tableController moveUp])
 			AudioServicesPlaySystemSound(clickSound);

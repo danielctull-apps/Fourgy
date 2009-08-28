@@ -21,6 +21,9 @@
 	UIView *screenView;
 	UINavigationController *nav;
 	
+	NSInteger rotations;
+	CGFloat rotation360check;
+	
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *screenTable;

@@ -274,10 +274,17 @@
 			[music release];
 			
 		} else if ([text isEqualToString:@"Songs"]) {
+			
+			DTMusicModelController *music = [[DTMusicModelController alloc] init];
+			DTSongsListViewController *alvc = [[DTSongsListViewController alloc] initWithItems:[music allSongs]];
+			[self.navigationController pushViewController:alvc animated:YES];
+			[alvc release];
+			[music release];/*
+			
 			MPMediaQuery *aQuery = [MPMediaQuery songsQuery];
 			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];
 			[self.navigationController pushViewController:table animated:YES];
-			[table release];
+			[table release];*/
 		} else if ([text isEqualToString:@"Podcasts"]) {
 			MPMediaQuery *aQuery = [MPMediaQuery podcastsQuery];
 			DTScreenViewController *table = [[DTScreenViewController alloc] initWithQuery:aQuery property:MPMediaItemPropertyPodcastTitle lastPredicate:nil lastGroupingType:MPMediaGroupingArtist];

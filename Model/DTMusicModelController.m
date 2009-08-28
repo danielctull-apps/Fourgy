@@ -38,7 +38,7 @@
 	
 	if (!(self = [super init]))
 		return nil;
-		
+	
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"DataInformation" inManagedObjectContext:self.managedObjectContext];
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setEntity:entity];	
@@ -140,19 +140,27 @@
 
 - (void)setupMusicData {
 	
-	NSManagedObjectContext *theManagedObjectContext = self.managedObjectContext;
+	
 	
 	self.isSettingUp = YES;
 	NSLog(@"%@:%s starting", self, _cmd);
 	
-	//[self.managedObjectContext reset];
-	/*
 	NSError *removeerror;
-	NSURL *storeURL = [self storeURL];
-	[self.persistentStoreCoordinator removePersistentStore:storeURL error:&removeerror];
-	[[NSFileManager defaultManager] removeItemAtPath:storeURL.path error:&removeerror];
+	NSString *storePath = self.storeURL.path;
+	
+	[[NSFileManager defaultManager] removeItemAtPath:storePath error:&removeerror];
+	[[NSFileManager defaultManager] createFileAtPath:storePath contents:nil attributes:nil];
+	
+	[persistentStoreCoordinator release];
 	persistentStoreCoordinator = nil;
-	*/
+	[managedObjectContext release];
+	managedObjectContext = nil;
+	[managedObjectModel release];
+	managedObjectModel = nil;
+	
+	NSManagedObjectContext *theManagedObjectContext = self.managedObjectContext;
+	
+	
 	
 	MPMediaQuery *mediaQuery = [[MPMediaQuery alloc] init];
 	
@@ -164,6 +172,9 @@
 	NSMutableDictionary *albumsDictionary = [[NSMutableDictionary alloc] init];
 	NSMutableDictionary *songsDictionary = [[NSMutableDictionary alloc] init];
 	
+	NSInteger *total = [items count];
+	NSInteger *itemNumber = 0;
+	
 	for (MPMediaItem *item in items) {
 		
 		Song *song = (Song *)[NSEntityDescription insertNewObjectForEntityForName:@"Song" inManagedObjectContext:theManagedObjectContext];
@@ -173,7 +184,7 @@
 		
 		Artist *artist = nil;
 		NSString *artistName = [item valueForProperty:MPMediaItemPropertyArtist];
-		if (artistName) {
+		if (artistName && ![artistName isEqualToString:@""]) {
 			artist = [artistsDictionary objectForKey:artistName];
 			if (!artist) {
 				artist = (Artist *)[NSEntityDescription insertNewObjectForEntityForName:@"Artist" inManagedObjectContext:theManagedObjectContext];
@@ -184,7 +195,7 @@
 		}
 		
 		NSString *albumTitle = [item valueForProperty:MPMediaItemPropertyAlbumTitle];
-		if (albumTitle) {
+		if (albumTitle && ![albumTitle isEqualToString:@""]) {
 			NSString *albumKey = [NSString stringWithFormat:@"%@%@", artistName, albumTitle];
 			Album *album = [albumsDictionary objectForKey:albumKey];
 			if (!album) {
@@ -200,7 +211,7 @@
 		song.trackNumber = [item valueForProperty:MPMediaItemPropertyAlbumTrackNumber];
 		
 		NSString *genreName = [item valueForProperty:MPMediaItemPropertyGenre];
-		if (genreName) {
+		if (genreName && ![genreName isEqualToString:@""]) {
 			Genre *genre = [genresDictionary objectForKey:genreName];
 			if (!genre) {
 				genre = (Genre *)[NSEntityDescription insertNewObjectForEntityForName:@"Genre" inManagedObjectContext:theManagedObjectContext];
@@ -211,7 +222,7 @@
 		}
 		
 		NSString *composerName = [item valueForProperty:MPMediaItemPropertyComposer];
-		if (composerName) {
+		if (composerName && ![composerName isEqualToString:@""]) {
 			Composer *composer = [composersDictionary objectForKey:composerName];
 			if (!composer) {
 				composer = (Composer *)[NSEntityDescription insertNewObjectForEntityForName:@"Composer" inManagedObjectContext:theManagedObjectContext];
@@ -225,6 +236,9 @@
 		song.discNumber = [item valueForProperty:MPMediaItemPropertyDiscNumber];
 		
 		[songsDictionary setObject:song forKey:song.identifier];
+		
+		NSLog(@"%i/%i", itemNumber++, total);
+		
 	}
 	
 	NSLog(@"%@:%s Done Songs", self, _cmd);
@@ -341,8 +355,8 @@
 	//if (!composer) {
 	Composer *composer = (Composer *)[NSEntityDescription insertNewObjectForEntityForName:@"Composer" inManagedObjectContext:self.managedObjectContext];
 	composer.name = composerName;
-		//[self.managedObjectContext insertObject:composer];
-//	}
+	//[self.managedObjectContext insertObject:composer];
+	//	}
 	
 	return composer;
 	
