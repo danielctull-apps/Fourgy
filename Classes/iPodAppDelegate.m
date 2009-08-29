@@ -20,6 +20,9 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(musicModelUpdateProgress:) name:DTMusicModelUpdatingProgressNotification object:nil];
+	
+	
 	DTiPodViewController *iPodVC = [[DTiPodViewController alloc] init];
 	[window addSubview:iPodVC.view];
 	
@@ -33,6 +36,15 @@
 	//NSLog(@"%@:%s %@", self, _cmd, [[albums objectAtIndex:0] name]);
 }
 
+- (void)musicModelUpdateProgress:(NSNotification *)notification {
+	
+	NSLog(@"%@/%@ %@/%@",
+		  [[notification userInfo] objectForKey:DTMusicModelAmountOfTracksFinishedProcessingKey],
+		  [[notification userInfo] objectForKey:DTMusicModelAmountOfTracksToProcessKey],
+		  [[notification userInfo] objectForKey:DTMusicModelAmountOfPlaylistsFinishedProcessingKey],
+		  [[notification userInfo] objectForKey:DTMusicModelAmountOfPlaylistsToProcessKey]);
+	
+}
 
 - (void)dealloc {
     [window release];

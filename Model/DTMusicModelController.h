@@ -17,6 +17,16 @@
 #import "Playlist.h"
 #import "Composer.h"
 
+extern NSString *DTMusicModelWillBeginUpdatingNotification;
+extern NSString *DTMusicModelDidBeginUpdatingNotification;
+extern NSString *DTMusicModelDidEndUpdatingNotification;
+extern NSString *DTMusicModelUpdatingProgressNotification;
+
+extern NSString *DTMusicModelAmountOfTracksToProcessKey;
+extern NSString *DTMusicModelAmountOfTracksFinishedProcessingKey;
+extern NSString *DTMusicModelAmountOfPlaylistsToProcessKey;
+extern NSString *DTMusicModelAmountOfPlaylistsFinishedProcessingKey;
+
 @interface DTMusicModelController : NSObject {
 	NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    

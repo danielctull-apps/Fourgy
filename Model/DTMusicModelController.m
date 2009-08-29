@@ -10,6 +10,16 @@
 #import "DataInformation.h"
 #import "Song+Extras.h"
 
+NSString *DTMusicModelWillBeginUpdatingNotification = @"DTMusicModelWillBeginUpdatingNotification";
+NSString *DTMusicModelDidBeginUpdatingNotification = @"DTMusicModelDidBeginUpdatingNotification";
+NSString *DTMusicModelDidEndUpdatingNotification = @"DTMusicModelDidEndUpdatingNotification";
+NSString *DTMusicModelUpdatingProgressNotification = @"DTMusicModelUpdatingProgressNotification";
+
+NSString *DTMusicModelAmountOfTracksToProcessKey = @"DTMusicModelAmountOfTracksToProcessKey";
+NSString *DTMusicModelAmountOfTracksFinishedProcessingKey = @"DTMusicModelAmountOfTracksFinishedProcessingKey";
+NSString *DTMusicModelAmountOfPlaylistsToProcessKey = @"DTMusicModelAmountOfPlaylistsToProcessKey";
+NSString *DTMusicModelAmountOfPlaylistsFinishedProcessingKey = @"DTMusicModelAmountOfPlaylistsFinishedProcessingKey";
+
 @interface DTMusicModelController () // Private Methods
 
 - (NSArray *)sortDescriptorArrayWithDescriptorWithKey:(NSString *)key;
@@ -38,7 +48,7 @@
 	
 	if (!(self = [super init]))
 		return nil;
-	
+		
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"DataInformation" inManagedObjectContext:self.managedObjectContext];
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setEntity:entity];	
@@ -59,7 +69,6 @@
 		return nil;
 	}
 	DataInformation *dataInfo = [fetchResult objectAtIndex:0];
-	
 	
 	NSDate *libraryLastModified = [[MPMediaLibrary defaultMediaLibrary] lastModifiedDate];
 	NSDate *dataLastUpdated = dataInfo.lastUpdated;
@@ -136,35 +145,48 @@
 
 #pragma mark -
 #pragma mark Private
-// YOU DON'T NEED THESE
 
 - (void)setupMusicData {
 	
 	
+	//[[NSNotificationCenter defaultCenter] postNotificationName:DTMusicModelDidBeginUpdatingNotification object:self];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:DTMusicModelWillBeginUpdatingNotification object:self];
 	
 	self.isSettingUp = YES;
+	
+	
+	NSInteger progressAmount = 0;
+	
+	
 	NSLog(@"%@:%s starting", self, _cmd);
-	
+		
 	NSError *removeerror;
-	NSString *storePath = self.storeURL.path;
-	
-	[[NSFileManager defaultManager] removeItemAtPath:storePath error:&removeerror];
-	[[NSFileManager defaultManager] createFileAtPath:storePath contents:nil attributes:nil];
-	
+	NSURL *storeURL = [self storeURL];
+	//[self.persistentStoreCoordinator removePersistentStore:[self.persistentStoreCoordinator persistentStoreForURL:storeURL] error:&removeerror];
+	[[NSFileManager defaultManager] removeItemAtPath:storeURL.path error:&removeerror];
+	//[[NSFileManager defaultManager] createFileAtPath:storeURL.path contents:nil attributes:nil];
 	[persistentStoreCoordinator release];
 	persistentStoreCoordinator = nil;
 	[managedObjectContext release];
 	managedObjectContext = nil;
-	[managedObjectModel release];
-	managedObjectModel = nil;
 	
 	NSManagedObjectContext *theManagedObjectContext = self.managedObjectContext;
 	
-	
-	
-	MPMediaQuery *mediaQuery = [[MPMediaQuery alloc] init];
-	
+	MPMediaQuery *mediaQuery = [[MPMediaQuery alloc] init];	
 	NSArray *items = mediaQuery.items;
+	
+	MPMediaQuery *playlistsQuery = [MPMediaQuery playlistsQuery];
+	NSArray *mediaPlaylists = [playlistsQuery collections];
+	
+	NSMutableDictionary *progressDictionary = [[NSMutableDictionary alloc] init];
+	
+	[progressDictionary setObject:[NSNumber numberWithInt:[items count]] forKey:DTMusicModelAmountOfTracksToProcessKey];
+	[progressDictionary setObject:[NSNumber numberWithInt:[mediaPlaylists count]] forKey:DTMusicModelAmountOfPlaylistsToProcessKey];
+	[progressDictionary setObject:[NSNumber numberWithInt:0] forKey:DTMusicModelAmountOfTracksFinishedProcessingKey];
+	[progressDictionary setObject:[NSNumber numberWithInt:0] forKey:DTMusicModelAmountOfPlaylistsFinishedProcessingKey];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:DTMusicModelDidBeginUpdatingNotification object:self userInfo:progressDictionary];
 	
 	NSMutableDictionary *artistsDictionary = [[NSMutableDictionary alloc] init];
 	NSMutableDictionary *composersDictionary = [[NSMutableDictionary alloc] init];
@@ -172,8 +194,7 @@
 	NSMutableDictionary *albumsDictionary = [[NSMutableDictionary alloc] init];
 	NSMutableDictionary *songsDictionary = [[NSMutableDictionary alloc] init];
 	
-	NSInteger *total = [items count];
-	NSInteger *itemNumber = 0;
+	NSLog(@"%@:%s %i", self, _cmd, [items count]);
 	
 	for (MPMediaItem *item in items) {
 		
@@ -237,17 +258,24 @@
 		
 		[songsDictionary setObject:song forKey:song.identifier];
 		
-		NSLog(@"%i/%i", itemNumber++, total);
+		progressAmount++;
 		
+		[progressDictionary setObject:[NSNumber numberWithInt:progressAmount] forKey:DTMusicModelAmountOfTracksFinishedProcessingKey];
+		[[NSNotificationCenter defaultCenter] postNotificationName:DTMusicModelUpdatingProgressNotification object:self userInfo:progressDictionary];
+		
+		NSError *serror = nil;
+		[self.managedObjectContext save:&serror];
+		
+		if (serror)
+			NSLog(@"%@:%s Saving error: %@: %@", self, _cmd, serror, [serror userInfo]);
 	}
+	
+	progressAmount = 0;
 	
 	NSLog(@"%@:%s Done Songs", self, _cmd);
 	
 	[mediaQuery release];
-	
-	MPMediaQuery *playlistsQuery = [MPMediaQuery playlistsQuery];
-	NSArray *mediaPlaylists = [playlistsQuery collections];
-	
+		
 	for (MPMediaPlaylist *mediaPlaylist in mediaPlaylists) {
 		
 		Playlist *playlist = (Playlist *)[NSEntityDescription insertNewObjectForEntityForName:@"Playlist" inManagedObjectContext:theManagedObjectContext];
@@ -263,6 +291,10 @@
 			[playlistSongs addObject:[songsDictionary objectForKey:[item valueForProperty:MPMediaItemPropertyPersistentID]]];
 		
 		playlist.songs = playlistSongs;
+		
+		progressAmount++;
+		[progressDictionary setObject:[NSNumber numberWithInt:progressAmount] forKey:DTMusicModelAmountOfPlaylistsFinishedProcessingKey];
+		[[NSNotificationCenter defaultCenter] postNotificationName:DTMusicModelUpdatingProgressNotification object:self userInfo:progressDictionary];
 	}
 	self.isSettingUp = NO;
 	
@@ -271,8 +303,6 @@
 	
 	NSLog(@"%@:%s finished", self, _cmd);
 	
-	
-	
 	[artistsDictionary release];
 	[songsDictionary release];
 	[genresDictionary release];
@@ -280,10 +310,14 @@
 	[albumsDictionary release];
 	
 	NSError *error = nil;
-	[theManagedObjectContext save:&error];
+	[self.managedObjectContext save:&error];
 	
 	if (error)
-		NSLog(@"%@:%s Saving error", self, _cmd);
+		NSLog(@"%@:%s Saving error: %@ : %@", self, _cmd, error, [error userInfo]);
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:DTMusicModelDidEndUpdatingNotification object:self userInfo:progressDictionary];
+	
+	[progressDictionary release];
 	
 }
 
@@ -355,8 +389,8 @@
 	//if (!composer) {
 	Composer *composer = (Composer *)[NSEntityDescription insertNewObjectForEntityForName:@"Composer" inManagedObjectContext:self.managedObjectContext];
 	composer.name = composerName;
-	//[self.managedObjectContext insertObject:composer];
-	//	}
+		//[self.managedObjectContext insertObject:composer];
+//	}
 	
 	return composer;
 	
@@ -415,19 +449,11 @@
  */
 - (NSManagedObjectContext *)managedObjectContext {
 	
-	//NSLog(@"%@:%s MOC: %@", self, _cmd, managedObjectContext);
-	
-    if (managedObjectContext != nil) {
+    if (managedObjectContext != nil)
         return managedObjectContext;
-    }
 	
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
-	
-	//NSLog(@"%@:%s MOC: %@", self, _cmd, managedObjectContext);
+	managedObjectContext = [[NSManagedObjectContext alloc] init];
+    [managedObjectContext setPersistentStoreCoordinator:self.persistentStoreCoordinator];
 	
     return managedObjectContext;
 }
@@ -443,9 +469,7 @@
 		return managedObjectModel;
 	
 	//managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:[NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"DTMusicModel" ofType:@"xcdatamodel"]]];    
-	managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];   
-	
-	//NSLog(@"%@:%s MOM: %@", self, _cmd, managedObjectModel);
+	managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];
 	
 	return managedObjectModel;
 }
@@ -457,14 +481,30 @@
  */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
 	
-    if (persistentStoreCoordinator != nil) {
+    if (persistentStoreCoordinator != nil)
         return persistentStoreCoordinator;
-    }
+	
+	NSLog(@"%@:%s setup", self, _cmd);
 	
 	NSError *error = nil;
-    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
+	/*
+	if (![[NSFileManager defaultManager] fileExistsAtPath:[self storeURL].path]) {
+		NSLog(@"%@:%s OMG NO FILE STORE", self, _cmd);
+		[[NSFileManager defaultManager] createFileAtPath:[self storeURL].path contents:nil attributes:nil];
+		
+	}
+	
+	if (![[NSFileManager defaultManager] fileExistsAtPath:[self storeURL].path]) {
+		NSLog(@"%@:%s OMG REALLY LOOK AT THIS THERE IS NO FILE STORE", self, _cmd);
+	} else {
+		NSLog(@"%@:%s %@", self, _cmd, [[NSFileManager defaultManager] fileAttributesAtPath:[self storeURL].path traverseLink:NO]);
+		//NSLog(@"%@:%s %@", self, _cmd, [[NSFileManager defaultManager] contentsAtPath:[self storeURL].path]);
+	}
+	*/
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:[self storeURL] options:nil error:&error]) {
 		NSLog(@"%@:%s %@", self, _cmd, error);
+		
     }
 	
     return persistentStoreCoordinator;
