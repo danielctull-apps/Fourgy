@@ -22,13 +22,13 @@
 		241E4CE114A7C2240082697D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		241E4CE314A7C2240082697D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		241E4CE514A7C2240082697D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		241E4CE914A7C2240082697D /* Fourgy-Info.plist */ = {isa = PBXFileReference; path = "Fourgy-Info.plist"; sourceTree = "<group>"; };
+		241E4CE914A7C2240082697D /* Fourgy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fourgy-Info.plist"; sourceTree = "<group>"; };
 		241E4CEB14A7C2240082697D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		241E4CED14A7C2240082697D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		241E4CEF14A7C2240082697D /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
-		241E4CF014A7C2240082697D /* FGYAppDelegate.h */ = {isa = PBXFileReference; path = FGYAppDelegate.h; sourceTree = "<group>"; };
+		241E4CEF14A7C2240082697D /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
+		241E4CF014A7C2240082697D /* FGYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGYAppDelegate.h; sourceTree = "<group>"; };
 		241E4CF114A7C2240082697D /* FGYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGYAppDelegate.m; sourceTree = "<group>"; };
-		241E4CF314A7C2240082697D /* FGYViewController.h */ = {isa = PBXFileReference; path = FGYViewController.h; sourceTree = "<group>"; };
+		241E4CF314A7C2240082697D /* FGYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGYViewController.h; sourceTree = "<group>"; };
 		241E4CF414A7C2240082697D /* FGYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGYViewController.m; sourceTree = "<group>"; };
 		241E4CF714A7C2240082697D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FGYViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +84,8 @@
 				241E4CF614A7C2240082697D /* FGYViewController.xib */,
 				241E4CE814A7C2240082697D /* Supporting Files */,
 			);
-			path = Fourgy;
+			name = Fourgy;
+			path = "Fourgy Demo";
 			sourceTree = "<group>";
 		};
 		241E4CE814A7C2240082697D /* Supporting Files */ = {
@@ -238,8 +239,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
-				INFOPLIST_FILE = "Fourgy/Fourgy-Info.plist";
+				GCC_PREFIX_HEADER = "Fourgy Demo/Fourgy-Prefix.pch";
+				INFOPLIST_FILE = "Fourgy Demo/Fourgy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -249,8 +250,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
-				INFOPLIST_FILE = "Fourgy/Fourgy-Info.plist";
+				GCC_PREFIX_HEADER = "Fourgy Demo/Fourgy-Prefix.pch";
+				INFOPLIST_FILE = "Fourgy Demo/Fourgy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
