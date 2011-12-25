@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		241E4CE214A7C2240082697D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E4CE114A7C2240082697D /* UIKit.framework */; };
+		241E4CE414A7C2240082697D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E4CE314A7C2240082697D /* Foundation.framework */; };
+		241E4CE614A7C2240082697D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E4CE514A7C2240082697D /* CoreGraphics.framework */; };
+		241E4CEC14A7C2240082697D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 241E4CEA14A7C2240082697D /* InfoPlist.strings */; };
+		241E4CEE14A7C2240082697D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E4CED14A7C2240082697D /* main.m */; };
+		241E4CF214A7C2240082697D /* FGYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E4CF114A7C2240082697D /* FGYAppDelegate.m */; };
+		241E4CF514A7C2240082697D /* FGYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E4CF414A7C2240082697D /* FGYViewController.m */; };
+		241E4CF814A7C2240082697D /* FGYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241E4CF614A7C2240082697D /* FGYViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		241E4CDD14A7C2240082697D /* Fourgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fourgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		241E4CE114A7C2240082697D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		241E4CE314A7C2240082697D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		241E4CE514A7C2240082697D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		241E4CE914A7C2240082697D /* Fourgy-Info.plist */ = {isa = PBXFileReference; path = "Fourgy-Info.plist"; sourceTree = "<group>"; };
+		241E4CEB14A7C2240082697D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		241E4CED14A7C2240082697D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		241E4CEF14A7C2240082697D /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
+		241E4CF014A7C2240082697D /* FGYAppDelegate.h */ = {isa = PBXFileReference; path = FGYAppDelegate.h; sourceTree = "<group>"; };
+		241E4CF114A7C2240082697D /* FGYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGYAppDelegate.m; sourceTree = "<group>"; };
+		241E4CF314A7C2240082697D /* FGYViewController.h */ = {isa = PBXFileReference; path = FGYViewController.h; sourceTree = "<group>"; };
+		241E4CF414A7C2240082697D /* FGYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGYViewController.m; sourceTree = "<group>"; };
+		241E4CF714A7C2240082697D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FGYViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		241E4CDA14A7C2240082697D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241E4CE214A7C2240082697D /* UIKit.framework in Frameworks */,
+				241E4CE414A7C2240082697D /* Foundation.framework in Frameworks */,
+				241E4CE614A7C2240082697D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		241E4CD214A7C2240082697D = {
+			isa = PBXGroup;
+			children = (
+				241E4CE714A7C2240082697D /* Fourgy */,
+				241E4CE014A7C2240082697D /* Frameworks */,
+				241E4CDE14A7C2240082697D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		241E4CDE14A7C2240082697D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				241E4CDD14A7C2240082697D /* Fourgy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		241E4CE014A7C2240082697D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				241E4CE114A7C2240082697D /* UIKit.framework */,
+				241E4CE314A7C2240082697D /* Foundation.framework */,
+				241E4CE514A7C2240082697D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		241E4CE714A7C2240082697D /* Fourgy */ = {
+			isa = PBXGroup;
+			children = (
+				241E4CF014A7C2240082697D /* FGYAppDelegate.h */,
+				241E4CF114A7C2240082697D /* FGYAppDelegate.m */,
+				241E4CF314A7C2240082697D /* FGYViewController.h */,
+				241E4CF414A7C2240082697D /* FGYViewController.m */,
+				241E4CF614A7C2240082697D /* FGYViewController.xib */,
+				241E4CE814A7C2240082697D /* Supporting Files */,
+			);
+			path = Fourgy;
+			sourceTree = "<group>";
+		};
+		241E4CE814A7C2240082697D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				241E4CE914A7C2240082697D /* Fourgy-Info.plist */,
+				241E4CEA14A7C2240082697D /* InfoPlist.strings */,
+				241E4CED14A7C2240082697D /* main.m */,
+				241E4CEF14A7C2240082697D /* Fourgy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		241E4CDC14A7C2240082697D /* Fourgy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 241E4CFB14A7C2240082697D /* Build configuration list for PBXNativeTarget "Fourgy" */;
+			buildPhases = (
+				241E4CD914A7C2240082697D /* Sources */,
+				241E4CDA14A7C2240082697D /* Frameworks */,
+				241E4CDB14A7C2240082697D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fourgy;
+			productName = Fourgy;
+			productReference = 241E4CDD14A7C2240082697D /* Fourgy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		241E4CD414A7C2240082697D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Daniel Tull Limited";
+			};
+			buildConfigurationList = 241E4CD714A7C2240082697D /* Build configuration list for PBXProject "Fourgy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 241E4CD214A7C2240082697D;
+			productRefGroup = 241E4CDE14A7C2240082697D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				241E4CDC14A7C2240082697D /* Fourgy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		241E4CDB14A7C2240082697D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241E4CEC14A7C2240082697D /* InfoPlist.strings in Resources */,
+				241E4CF814A7C2240082697D /* FGYViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		241E4CD914A7C2240082697D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241E4CEE14A7C2240082697D /* main.m in Sources */,
+				241E4CF214A7C2240082697D /* FGYAppDelegate.m in Sources */,
+				241E4CF514A7C2240082697D /* FGYViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		241E4CEA14A7C2240082697D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				241E4CEB14A7C2240082697D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		241E4CF614A7C2240082697D /* FGYViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				241E4CF714A7C2240082697D /* en */,
+			);
+			name = FGYViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		241E4CF914A7C2240082697D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		241E4CFA14A7C2240082697D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		241E4CFC14A7C2240082697D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
+				INFOPLIST_FILE = "Fourgy/Fourgy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		241E4CFD14A7C2240082697D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
+				INFOPLIST_FILE = "Fourgy/Fourgy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		241E4CD714A7C2240082697D /* Build configuration list for PBXProject "Fourgy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				241E4CF914A7C2240082697D /* Debug */,
+				241E4CFA14A7C2240082697D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		241E4CFB14A7C2240082697D /* Build configuration list for PBXNativeTarget "Fourgy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				241E4CFC14A7C2240082697D /* Debug */,
+				241E4CFD14A7C2240082697D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 241E4CD414A7C2240082697D /* Project object */;
+}
