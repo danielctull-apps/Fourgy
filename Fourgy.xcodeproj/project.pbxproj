@@ -30,6 +30,11 @@
 		24E8FF7715B7587D00240A87 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF7615B7587D00240A87 /* CoreText.framework */; };
 		24E8FF7815B7588200240A87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF5D15B757B700240A87 /* UIKit.framework */; };
 		24E8FF7915B7588E00240A87 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF7615B7587D00240A87 /* CoreText.framework */; };
+		24E8FF8915B75C5C00240A87 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF8815B75C5C00240A87 /* click.wav */; };
+		24E8FF9015B75CF600240A87 /* _Fourgy.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FF8F15B75CF600240A87 /* _Fourgy.h */; };
+		24E8FF9215B75FFE00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
+		24E8FF9315B7600A00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
+		24E8FF9515B7606E00240A87 /* FGYController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9415B7606000240A87 /* FGYController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,10 @@
 		24E8FF6B15B757B700240A87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		24E8FF6C15B757B700240A87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		24E8FF7615B7587D00240A87 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		24E8FF8815B75C5C00240A87 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		24E8FF8F15B75CF600240A87 /* _Fourgy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Fourgy.h; sourceTree = "<group>"; };
+		24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		24E8FF9415B7606000240A87 /* FGYController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E8FF9215B75FFE00240A87 /* AudioToolbox.framework in Frameworks */,
 				24E8FF7815B7588200240A87 /* UIKit.framework in Frameworks */,
 				24E8FF7715B7587D00240A87 /* CoreText.framework in Frameworks */,
 				24E8FF2415B756C400240A87 /* Foundation.framework in Frameworks */,
@@ -100,6 +110,7 @@
 				24E8FF7415B7586500240A87 /* libFourgy.a in Frameworks */,
 				24E8FF7915B7588E00240A87 /* CoreText.framework in Frameworks */,
 				24E8FF6115B757B700240A87 /* CoreGraphics.framework in Frameworks */,
+				24E8FF9315B7600A00240A87 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +141,7 @@
 		24E8FF2215B756C400240A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */,
 				24E8FF7615B7587D00240A87 /* CoreText.framework */,
 				24E8FF2315B756C400240A87 /* Foundation.framework */,
 				24E8FF4915B7572900240A87 /* CoreFoundation.framework */,
@@ -143,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				24E8FF2815B756C500240A87 /* Fourgy.h */,
+				24E8FF8F15B75CF600240A87 /* _Fourgy.h */,
 				24E8FF2A15B756C500240A87 /* Fourgy.m */,
 				24E8FF3515B756FB00240A87 /* FGYBatteryLevelView.h */,
 				24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */,
@@ -150,6 +163,7 @@
 				24E8FF3815B756FB00240A87 /* FGYClickWheel.m */,
 				24E8FF3915B756FB00240A87 /* FGYController.h */,
 				24E8FF3A15B756FB00240A87 /* FGYController.m */,
+				24E8FF9415B7606000240A87 /* FGYController.xib */,
 				24E8FF2615B756C500240A87 /* Supporting Files */,
 			);
 			path = Fourgy;
@@ -166,6 +180,7 @@
 		24E8FF4B15B7572900240A87 /* FourgyBundle */ = {
 			isa = PBXGroup;
 			children = (
+				24E8FF8815B75C5C00240A87 /* click.wav */,
 				24E8FF5515B7574100240A87 /* Chicago.ttf */,
 				24E8FF4C15B7572900240A87 /* Supporting Files */,
 			);
@@ -214,6 +229,7 @@
 				24E8FF4115B7571000240A87 /* FGYController.h in Headers */,
 				24E8FF4215B7571200240A87 /* FGYBatteryLevelView.h in Headers */,
 				24E8FF4315B7571400240A87 /* FGYClickWheel.h in Headers */,
+				24E8FF9015B75CF600240A87 /* _Fourgy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E8FF5015B7572900240A87 /* InfoPlist.strings in Resources */,
+				24E8FF9515B7606E00240A87 /* FGYController.xib in Resources */,
 				24E8FF5615B7574100240A87 /* Chicago.ttf in Resources */,
+				24E8FF8915B75C5C00240A87 /* click.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +566,7 @@
 				24E8FF5415B7572900240A87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24E8FF6E15B757B700240A87 /* Build configuration list for PBXNativeTarget "FourgyApp" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +575,7 @@
 				24E8FF7015B757B700240A87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

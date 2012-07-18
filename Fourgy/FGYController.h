@@ -8,16 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FGYControllerControl <NSObject>
+- (BOOL)moveUpByAmount:(NSUInteger)amountToMoveUp;
+- (BOOL)moveDownByAmount:(NSUInteger)amountToMoveUp;
+@end
+
 @interface FGYController : UIViewController
 
-- (id)initWithRootViewController:(UIViewController *)rootViewController;
+- (id)initWithRootViewController:(UIViewController<FGYControllerControl> *)rootViewController;
 
 @property (nonatomic, copy) NSArray *viewControllers;
-@property (nonatomic, readonly) UIViewController *topViewController;
+@property (nonatomic, readonly) UIViewController<FGYControllerControl> *topViewController;
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
-- (NSArray *)popToViewController:(UIViewController *)newViewController animated:(BOOL)animated;
-- (UIViewController *)popViewControllerAnimated:(BOOL)animated;
+- (void)pushViewController:(UIViewController<FGYControllerControl> *)viewController animated:(BOOL)animated;
+- (NSArray *)popToViewController:(UIViewController<FGYControllerControl> *)newViewController animated:(BOOL)animated;
+- (UIViewController<FGYControllerControl> *)popViewControllerAnimated:(BOOL)animated;
 - (NSArray *)popToRootViewControllerAnimated:(BOOL)animated;
 
 @end

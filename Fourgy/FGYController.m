@@ -7,48 +7,62 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "FGYController.h"
 #import "FGYBatteryLevelView.h"
 #import "FGYClickWheel.h"
-#import "Fourgy.h"
+#import "_Fourgy.h"
 
 @interface FGYController () <FGYClickWheelDelegate>
+@property (weak) IBOutlet FGYClickWheel *clickWheel;
+@property (weak) IBOutlet UIView *windowView;
+@property (weak) IBOutlet UIView *screenView;
+@property (weak) IBOutlet UILabel *titleLabel;
+@property (weak) IBOutlet UIView *separatorView;
+@property (weak) IBOutlet UIView *contentView;
 @end
 
 @implementation FGYController {
-	__strong FGYClickWheel *clickWheel;
-	__strong UIView *screenView;
-	__strong UILabel *titleLabel;
-	__strong UIView *separatorView;
-	__strong UIView *contentView;
-	
 	__strong NSMutableArray *stack;
+	SystemSoundID _clickSound;
 }
 
-- (id)initWithRootViewController:(UIViewController *)rootViewController {
-	if (!(self = [self init])) return nil;
+- (void)dealloc {
+	AudioServicesDisposeSystemSoundID(_clickSound);
+}
+
+- (id)initWithRootViewController:(UIViewController<FGYControllerControl> *)rootViewController {
+	
+	NSBundle *bundle = [Fourgy bundle];
+	
+	self = [self initWithNibName:@"FGYController" bundle:bundle];
+	if (!self) return nil;
 	
 	stack = [NSMutableArray new];
 	[self pushViewController:rootViewController animated:NO];
 	
+	// Create a system sound object representing the sound file
+	NSURL *clickSoundURL = [bundle URLForResource:@"click" withExtension:@"wav"];
+	AudioServicesCreateSystemSoundID ((__bridge CFURLRef)clickSoundURL, &_clickSound);
+	
 	return self;
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-	
-	[self view];
+- (void)pushViewController:(UIViewController<FGYControllerControl> *)viewController animated:(BOOL)animated {
 	
 	UIViewController *oldViewController = self.topViewController;
-	
 	[stack addObject:viewController];
-	[self addChildViewController:viewController];
-	[contentView addSubview:viewController.view];
 	
-	CGRect frame = contentView.bounds;
-	frame.origin.x = contentView.bounds.size.width;
+	if (![self isViewLoaded]) return;
+	
+	[self addChildViewController:viewController];
+	[self.contentView addSubview:viewController.view];
+	
+	CGRect frame = self.contentView.bounds;
+	frame.origin.x = self.contentView.bounds.size.width;
 	viewController.view.frame = frame;
 	
-	frame.origin.x = -contentView.bounds.size.width;
+	frame.origin.x = -self.contentView.bounds.size.width;
 	
 	NSTimeInterval duration = 0.0f;
 	if (animated) duration = (1.0f/3.0f);
@@ -56,7 +70,7 @@
 	[UIView animateWithDuration:duration animations:^{
 		
 		oldViewController.view.frame = frame;
-		viewController.view.frame = contentView.bounds;
+		viewController.view.frame = self.contentView.bounds;
 		
 	} completion:^(BOOL finished) {
 		
@@ -74,20 +88,20 @@
 	NSArray *viewControllersToPop = [stack subarrayWithRange:range];
 	[stack removeObjectsInRange:range];
 	
-	CGRect frame = contentView.bounds;
-	frame.origin.x = -contentView.bounds.size.width;
+	CGRect frame = self.contentView.bounds;
+	frame.origin.x = -self.contentView.bounds.size.width;
 	newViewController.view.frame = frame;
-	[contentView addSubview:newViewController.view];
+	[self.contentView addSubview:newViewController.view];
 	
 	NSTimeInterval duration = 0.0f;
 	if (animated) duration = (1.0f/3.0f);
 	
-	frame.origin.x = contentView.bounds.size.width;
+	frame.origin.x = self.contentView.bounds.size.width;
 	
 	[UIView animateWithDuration:duration animations:^{
 		
 		oldViewController.view.frame = frame;
-		newViewController.view.frame = contentView.bounds;
+		newViewController.view.frame = self.contentView.bounds;
 		
 	} completion:^(BOOL finished) {
 		
@@ -104,7 +118,7 @@
 	
 	if ([stack count] < 2) return nil;
 	
-	UIViewController *viewControllerToPopTo = [stack objectAtIndex:([stack count]-2)];
+	UIViewController<FGYControllerControl> *viewControllerToPopTo = [stack objectAtIndex:([stack count]-2)];
 	
 	return [[self popToViewController:viewControllerToPopTo animated:animated] lastObject];
 }
@@ -129,44 +143,29 @@
 	return [stack copy];
 }
 
-- (void)loadView {
-	self.view = [[UIView alloc] init];
+- (void)viewDidLoad {
+	
 	self.view.autoresizingMask = (UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleHeight);
 	self.view.layer.cornerRadius = 15.0f;
 	self.view.backgroundColor = [UIColor whiteColor];
 	
-	clickWheel = [[FGYClickWheel alloc] initWithFrame:CGRectMake(45.0f, 233.0f, 231.0f, 231.0f)];
-	clickWheel.delegate = self;
-	[self.view addSubview:clickWheel];
+	self.windowView.layer.cornerRadius = 5.0f;
+	self.windowView.backgroundColor = [UIColor colorWithRed:0.412f green:0.443f blue:0.463f alpha:1.0f];
 	
-	UIView *windowView = [[UIView alloc] initWithFrame:CGRectMake(38.0f, 20.0f, 246.0f, 198.0f)];
-	windowView.layer.cornerRadius = 5.0f;
-	windowView.backgroundColor = [UIColor colorWithRed:0.412f green:0.443f blue:0.463f alpha:1.0f];
-	[self.view addSubview:windowView];
+	self.screenView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
+	self.titleLabel.backgroundColor = self.screenView.backgroundColor;
+	self.titleLabel.font = [Fourgy fontOfSize:12.0f];
+	self.titleLabel.textColor = [UIColor colorWithRed:0.176f green:0.204f blue:0.42f alpha:1.0f];
+	self.titleLabel.text = @"iPod";
 	
-	screenView = [[UIView alloc] initWithFrame:CGRectMake(3.0f, 3.0f, 240.0f, 192.0f)];
-	screenView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
-	[windowView addSubview:screenView];
+	self.separatorView.backgroundColor = self.titleLabel.textColor;
 	
-	FGYBatteryLevelView *batteryView = [[FGYBatteryLevelView alloc] initWithFrame:CGRectMake(200.0f, 5.0f, 35.0f, 16.0f)];
-	[screenView addSubview:batteryView];
+	self.contentView.backgroundColor = self.screenView.backgroundColor;
 	
-	titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40.0f, 1.0f, 160.0f, 26.0f)];
-	titleLabel.textAlignment = NSTextAlignmentCenter;
-	titleLabel.backgroundColor = screenView.backgroundColor;
-	[screenView addSubview:titleLabel];
-	titleLabel.font = [Fourgy fontOfSize:12.0f];
-	titleLabel.textColor = [UIColor colorWithRed:0.176f green:0.204f blue:0.42f alpha:1.0f];
-	titleLabel.text = @"iPod";
-	
-	separatorView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 27.0f, 240.0f, 2.0f)];
-	separatorView.backgroundColor = titleLabel.textColor;
-	[screenView addSubview:separatorView];
-	
-	contentView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 30.0f, 240.0f, 162.0f)];
-	contentView.backgroundColor = screenView.backgroundColor;
-	contentView.clipsToBounds = YES;
-	[screenView addSubview:contentView];
+	if (self.topViewController) {
+		self.topViewController.view.frame = self.contentView.bounds;
+		[self.contentView addSubview:self.topViewController.view];
+	}
 }
 
 #pragma mark - FGYClickWheelDelegate
@@ -235,6 +234,8 @@
 		id<FGYClickWheelDelegate> delegate = (id<FGYClickWheelDelegate>)self.topViewController;
 		[delegate clickWheel:cw touchesMovedToAngle:angle distance:distance];
 	}
+	
+	AudioServicesPlaySystemSound(_clickSound);
 }
 
 @end
