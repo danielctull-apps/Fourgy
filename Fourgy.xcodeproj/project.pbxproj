@@ -35,6 +35,8 @@
 		24E8FF9215B75FFE00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
 		24E8FF9315B7600A00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
 		24E8FF9515B7606E00240A87 /* FGYController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9415B7606000240A87 /* FGYController.xib */; };
+		24E8FF9E15B76D0300240A87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9D15B76D0200240A87 /* Default.png */; };
+		24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9F15B76D0600240A87 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		24E8FF8F15B75CF600240A87 /* _Fourgy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Fourgy.h; sourceTree = "<group>"; };
 		24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		24E8FF9415B7606000240A87 /* FGYController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYController.xib; sourceTree = "<group>"; };
+		24E8FF9D15B76D0200240A87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		24E8FF9F15B76D0600240A87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 		24E8FF6315B757B700240A87 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				24E8FF9D15B76D0200240A87 /* Default.png */,
+				24E8FF9F15B76D0600240A87 /* Default@2x.png */,
 				24E8FF6415B757B700240A87 /* FourgyApp-Info.plist */,
 				24E8FF6515B757B700240A87 /* InfoPlist.strings */,
 				24E8FF6815B757B700240A87 /* main.m */,
@@ -334,6 +340,8 @@
 			files = (
 				24E8FF6715B757B700240A87 /* InfoPlist.strings in Resources */,
 				24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */,
+				24E8FF9E15B76D0300240A87 /* Default.png in Resources */,
+				24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
