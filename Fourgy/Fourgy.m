@@ -13,6 +13,10 @@ static NSBundle *_bundle = nil;
 
 @implementation Fourgy
 
++ (CGFloat)rowHeight {
+	return 27.0f;
+}
+
 + (UIFont *)fontOfSize:(CGFloat)size {
 	
 	static dispatch_once_t fontToken;

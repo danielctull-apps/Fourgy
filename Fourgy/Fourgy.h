@@ -11,4 +11,5 @@
 
 @interface Fourgy : NSObject
 + (UIFont *)fontOfSize:(CGFloat)size;
++ (CGFloat)rowHeight;
 @end

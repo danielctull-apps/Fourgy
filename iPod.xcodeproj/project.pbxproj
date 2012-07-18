@@ -14,7 +14,6 @@
 		240821A5100F7460006EDE45 /* DTiPodBlockViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */; };
 		240821AC100F75D3006EDE45 /* DTiPodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CB974100BD9E300180B5F /* DTiPodViewController.m */; };
 		240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 240821B2100F7627006EDE45 /* DTScreenViewController.m */; };
-		2417429F101B481B009759F2 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2417429E101B481B009759F2 /* click.wav */; };
 		241742A7101B485F009759F2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241742A6101B485F009759F2 /* AudioToolbox.framework */; };
 		241CB979100BDA0700180B5F /* DTiPodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CB978100BDA0700180B5F /* DTiPodView.xib */; };
 		241CB99D100BE45800180B5F /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 241CB99C100BE45800180B5F /* wheel.png */; };
@@ -77,7 +76,6 @@
 		240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockViewCell.m; sourceTree = "<group>"; };
 		240821B1100F7627006EDE45 /* DTScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScreenViewController.h; sourceTree = "<group>"; };
 		240821B2100F7627006EDE45 /* DTScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScreenViewController.m; sourceTree = "<group>"; };
-		2417429E101B481B009759F2 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 		241742A6101B485F009759F2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		241CB973100BD9E300180B5F /* DTiPodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodViewController.h; sourceTree = "<group>"; };
 		241CB974100BD9E300180B5F /* DTiPodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodViewController.m; sourceTree = "<group>"; };
@@ -368,7 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				244B7BFE101E2C8E0021C335 /* Entitlements.plist */,
-				2417429E101B481B009759F2 /* click.wav */,
 				246ADFFF101997B8009FA983 /* Icon.png */,
 				241CB99C100BE45800180B5F /* wheel.png */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -451,7 +448,6 @@
 				24F662AA1013AF2200437934 /* DTScreenView.xib in Resources */,
 				249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */,
 				246AE000101997B8009FA983 /* Icon.png in Resources */,
-				2417429F101B481B009759F2 /* click.wav in Resources */,
 				244B7BFF101E2C8E0021C335 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

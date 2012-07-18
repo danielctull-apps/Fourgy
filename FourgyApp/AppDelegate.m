@@ -19,7 +19,7 @@
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-	UIViewController *vc = [UIViewController new];
+	UIViewController<FGYControllerControl> *vc = (UIViewController<FGYControllerControl> *)[UIViewController new];
 	vc.view.backgroundColor = [UIColor greenColor];
 	
 	fourgyController = [[FGYController alloc] initWithRootViewController:vc];
