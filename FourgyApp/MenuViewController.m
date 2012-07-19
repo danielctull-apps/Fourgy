@@ -43,7 +43,7 @@
 	}
 	
 	if (viewControllerClass) {
-		fetchRequest.fetchBatchSize = 6;		
+		fetchRequest.fetchBatchSize = 6;
 		NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
 																			  managedObjectContext:self.managedObjectContext
 																				sectionNameKeyPath:nil
