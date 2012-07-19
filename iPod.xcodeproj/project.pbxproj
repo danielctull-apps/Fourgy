@@ -50,8 +50,6 @@
 		246AE000101997B8009FA983 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 246ADFFF101997B8009FA983 /* Icon.png */; };
 		248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */; };
 		249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */; };
-		249E45AC101901DF0084B4E2 /* DTPlayingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */; };
-		24A43D601025D9E5003E6959 /* DTTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D5E1025D9E5003E6959 /* DTTickingLabel.m */; };
 		24A43D671025D9FB003E6959 /* DTBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D631025D9FB003E6959 /* DTBlockScroller.m */; };
 		24A43D681025D9FB003E6959 /* DTBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D651025D9FB003E6959 /* DTBlockView.m */; };
 		24A43D6E1025DA10003E6959 /* DTClickWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D6D1025DA10003E6959 /* DTClickWheelView.m */; };
@@ -143,10 +141,6 @@
 		248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBlockScroller.h; sourceTree = "<group>"; };
 		248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockScroller.m; sourceTree = "<group>"; };
 		249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTPlayingScreenView.xib; sourceTree = "<group>"; };
-		249E45AA101901DF0084B4E2 /* DTPlayingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlayingScreenViewController.h; sourceTree = "<group>"; };
-		249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPlayingScreenViewController.m; sourceTree = "<group>"; };
-		24A43D5D1025D9E5003E6959 /* DTTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTickingLabel.h; sourceTree = "<group>"; };
-		24A43D5E1025D9E5003E6959 /* DTTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTickingLabel.m; sourceTree = "<group>"; };
 		24A43D621025D9FB003E6959 /* DTBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockScroller.h; sourceTree = "<group>"; };
 		24A43D631025D9FB003E6959 /* DTBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockScroller.m; sourceTree = "<group>"; };
 		24A43D641025D9FB003E6959 /* DTBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockView.h; sourceTree = "<group>"; };
@@ -216,8 +210,6 @@
 				240821A4100F7460006EDE45 /* DTiPodBlockViewCell.m */,
 				240821B1100F7627006EDE45 /* DTScreenViewController.h */,
 				240821B2100F7627006EDE45 /* DTScreenViewController.m */,
-				249E45AA101901DF0084B4E2 /* DTPlayingScreenViewController.h */,
-				249E45AB101901DF0084B4E2 /* DTPlayingScreenViewController.m */,
 				24F96B8910191A0C00829FF9 /* DTPlaybackTimeView.h */,
 				24F96B8A10191A0C00829FF9 /* DTPlaybackTimeView.m */,
 				248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */,
@@ -287,16 +279,6 @@
 			path = "List Screens";
 			sourceTree = "<group>";
 		};
-		24A43D5A1025D9E5003E6959 /* DTLabels */ = {
-			isa = PBXGroup;
-			children = (
-				24A43D5D1025D9E5003E6959 /* DTTickingLabel.h */,
-				24A43D5E1025D9E5003E6959 /* DTTickingLabel.m */,
-			);
-			name = DTLabels;
-			path = ../DTKit/DTLabels;
-			sourceTree = SOURCE_ROOT;
-		};
 		24A43D611025D9FB003E6959 /* DTBlockView */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,7 +326,6 @@
 				24A43D791025DA28003E6959 /* Categories */,
 				24A43D6B1025DA10003E6959 /* DTClickWheel */,
 				24A43D611025D9FB003E6959 /* DTBlockView */,
-				24A43D5A1025D9E5003E6959 /* DTLabels */,
 				2444F3A6102C5D860005B1AE /* Model */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -472,10 +453,8 @@
 				240821A5100F7460006EDE45 /* DTiPodBlockViewCell.m in Sources */,
 				240821AC100F75D3006EDE45 /* DTiPodViewController.m in Sources */,
 				240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */,
-				249E45AC101901DF0084B4E2 /* DTPlayingScreenViewController.m in Sources */,
 				24F96B8B10191A0C00829FF9 /* DTPlaybackTimeView.m in Sources */,
 				248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */,
-				24A43D601025D9E5003E6959 /* DTTickingLabel.m in Sources */,
 				24A43D671025D9FB003E6959 /* DTBlockScroller.m in Sources */,
 				24A43D681025D9FB003E6959 /* DTBlockView.m in Sources */,
 				24A43D6E1025DA10003E6959 /* DTClickWheelView.m in Sources */,
