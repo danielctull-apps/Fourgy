@@ -13,6 +13,8 @@
 #import "SongsViewController.h"
 #import "ArtistsViewController.h"
 
+#import "NowPlayingViewController.h"
+
 @implementation MenuViewController {
 	__strong DCTArrayTableViewDataSource *_dataSource;
 	__strong NSIndexPath *_selectedIndexPath;
@@ -22,10 +24,17 @@
 	self = [self init];
 	if (!self) return nil;
 	_managedObjectContext = managedObjectContext;
+	self.title = @"Fourgy";
 	return self;
 }
 
 - (void)clickWheelCenterButtonTapped {
+	
+	
+	NowPlayingViewController *vc = [NowPlayingViewController new];
+	[self.fgy_controller pushViewController:vc animated:YES];
+	return;
+	
 	_selectedIndexPath = [self.tableView indexPathForSelectedRow];
 	NSString *title = [_dataSource objectAtIndexPath:_selectedIndexPath];
 	

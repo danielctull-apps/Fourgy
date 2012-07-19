@@ -180,6 +180,7 @@
 }
 
 - (void)_setupViewController:(UIViewController *)viewController {
+	self.titleLabel.text = viewController.title;
 	viewController.view.backgroundColor = self.contentView.backgroundColor;
 	if ([viewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]) {
 		self.clickWheel.delegate = (id<FGYClickWheelDelegate>)viewController;

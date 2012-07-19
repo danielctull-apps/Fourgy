@@ -10,6 +10,7 @@
 #import <DCTTableViewDataSources/DCTTableViewDataSources.h>
 #import <Fourgy/Fourgy.h>
 #import <DCTMusicModel/DCTMusicModel.h>
+#import "NowPlayingViewController.h"
 
 @implementation SongsViewController {
 	__strong DCTFetchedResultsTableViewDataSource *_dataSource;
@@ -49,6 +50,13 @@
 		cell.textLabel.highlightedTextColor = [Fourgy backgroundColor];
 		cell.textLabel.text = song.title;
 	}];
+}
+
+- (void)clickWheelCenterButtonTapped {
+	
+	NowPlayingViewController *vc = [NowPlayingViewController new];
+	[self.fgy_controller pushViewController:vc animated:YES];
+	
 }
 
 @end

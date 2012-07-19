@@ -10,6 +10,5 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface NowPlayingViewController : UIViewController
-- (id)initWithMediaItem:(MPMediaItem *)theItem mediaCollection:(MPMediaItemCollection *)aCollection;
-@property (nonatomic, strong) MPMediaItem *nowPlaying;
+- (id)initWithMediaItem:(MPMediaItem *)item collection:(MPMediaItemCollection *)collection;
 @end
