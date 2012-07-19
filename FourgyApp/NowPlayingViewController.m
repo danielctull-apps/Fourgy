@@ -7,7 +7,6 @@
 //
 
 #import "NowPlayingViewController.h"
-#import <Fourgy/Fourgy.h>
 
 @interface NowPlayingViewController ()
 @property (weak, nonatomic) IBOutlet FGYTickingLabel *trackNameLabel;
@@ -94,7 +93,7 @@ void* NowPlayingViewControllerCurrentPlaybackTimeObservingContext = &NowPlayingV
 - (void)trackChanged:(NSNotification *)notification {
 
 	if (_iPod.playbackState == MPMusicPlaybackStateStopped) {
-		[self.navigationController popToRootViewControllerAnimated:YES];
+		[self.fgy_controller popToRootViewControllerAnimated:YES];
 		return;
 	}
 	
@@ -139,5 +138,26 @@ void* NowPlayingViewControllerCurrentPlaybackTimeObservingContext = &NowPlayingV
 	return [NSString stringWithFormat:@"%@%@%@", hoursString, minutesString, secondsString];
 }
 
+- (void)clickWheelMenuButtonTapped {
+	[self.fgy_controller popViewControllerAnimated:YES];
+}
+
+- (void)clickWheelPreviousButtonTapped {
+	if (_iPod.currentPlaybackTime < 5)
+		[_iPod skipToPreviousItem];
+	else
+		[_iPod skipToBeginning];
+}
+
+- (void)clickWheelNextButtonTapped {
+	[_iPod skipToNextItem];
+}
+
+- (void)clickWheelPlayButtonTapped {
+	if (_iPod.playbackState == MPMusicPlaybackStatePlaying)
+		[_iPod pause];
+	else
+		[_iPod play];
+}
 
 @end

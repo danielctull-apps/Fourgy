@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <Fourgy/Fourgy.h>
 
-@interface NowPlayingViewController : UIViewController
+@interface NowPlayingViewController : UIViewController <FGYClickWheelDelegate>
 - (id)initWithMediaItem:(MPMediaItem *)item collection:(MPMediaItemCollection *)collection;
 @end
