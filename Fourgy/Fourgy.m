@@ -17,6 +17,14 @@ static NSBundle *_bundle = nil;
 	return 27.0f;
 }
 
++ (UIColor *)foregroundColor {
+	return [UIColor colorWithRed:0.176f green:0.204f blue:0.42f alpha:1.0f];
+}
+
++ (UIColor *)backgroundColor {
+	return [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
+}
+
 + (UIFont *)fontOfSize:(CGFloat)size {
 	
 	static dispatch_once_t fontToken;

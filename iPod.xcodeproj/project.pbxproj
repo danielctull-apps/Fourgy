@@ -60,6 +60,7 @@
 		24A43D891025DA28003E6959 /* NSString+DTPrefixString.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D811025DA28003E6959 /* NSString+DTPrefixString.m */; };
 		24A43D8A1025DA28003E6959 /* UIDevice+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D831025DA28003E6959 /* UIDevice+Extras.m */; };
 		24A43D8B1025DA28003E6959 /* UILabel+DTCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D851025DA28003E6959 /* UILabel+DTCopyLabel.m */; };
+		24E8FFA915B775CE00240A87 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FFA815B775CE00240A87 /* click.wav */; };
 		24F662AA1013AF2200437934 /* DTScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F662A91013AF2200437934 /* DTScreenView.xib */; };
 		24F96B8B10191A0C00829FF9 /* DTPlaybackTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F96B8A10191A0C00829FF9 /* DTPlaybackTimeView.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -163,6 +164,7 @@
 		24A43D831025DA28003E6959 /* UIDevice+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extras.m"; sourceTree = "<group>"; };
 		24A43D841025DA28003E6959 /* UILabel+DTCopyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DTCopyLabel.h"; sourceTree = "<group>"; };
 		24A43D851025DA28003E6959 /* UILabel+DTCopyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DTCopyLabel.m"; sourceTree = "<group>"; };
+		24E8FFA815B775CE00240A87 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click.wav; path = FourgyBundle/click.wav; sourceTree = "<group>"; };
 		24F662A91013AF2200437934 /* DTScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTScreenView.xib; sourceTree = "<group>"; };
 		24F96B8910191A0C00829FF9 /* DTPlaybackTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlaybackTimeView.h; sourceTree = "<group>"; };
 		24F96B8A10191A0C00829FF9 /* DTPlaybackTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPlaybackTimeView.m; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24E8FFA815B775CE00240A87 /* click.wav */,
 				244B7BFE101E2C8E0021C335 /* Entitlements.plist */,
 				246ADFFF101997B8009FA983 /* Icon.png */,
 				241CB99C100BE45800180B5F /* wheel.png */,
@@ -449,6 +452,7 @@
 				249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */,
 				246AE000101997B8009FA983 /* Icon.png in Resources */,
 				244B7BFF101E2C8E0021C335 /* Entitlements.plist in Resources */,
+				24E8FFA915B775CE00240A87 /* click.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +514,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -517,6 +523,9 @@
 				GCC_PREFIX_HEADER = iPod_Prefix.pch;
 				INFOPLIST_FILE = "iPod-Info.plist";
 				PRODUCT_NAME = Fourgy;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -524,11 +533,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPod_Prefix.pch;
 				INFOPLIST_FILE = "iPod-Info.plist";
 				PRODUCT_NAME = Fourgy;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -558,6 +572,7 @@
 				INFOPLIST_FILE = "iPod-Info.plist";
 				PRODUCT_NAME = Fourgy;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
 			};
 			name = "Ad Hoc";
 		};

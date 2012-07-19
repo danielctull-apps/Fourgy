@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Fourgy/Fourgy.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import "MediaItemsViewController.h"
 
 @implementation AppDelegate {
 	__strong FGYController *fourgyController;
@@ -19,11 +21,11 @@
 	
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-	UIViewController<FGYControllerControl> *vc = (UIViewController<FGYControllerControl> *)[UIViewController new];
-	vc.view.backgroundColor = [UIColor greenColor];
+	MPMediaQuery *mediaQuery = [MPMediaQuery artistsQuery];
+	MediaItemsViewController *vc = [[MediaItemsViewController alloc] initWithMediaQuery:mediaQuery
+																			   property:MPMediaItemPropertyArtist];
 	
 	fourgyController = [[FGYController alloc] initWithRootViewController:vc];
-	
 	self.window.rootViewController = fourgyController;
     [self.window makeKeyAndVisible];
     return YES;

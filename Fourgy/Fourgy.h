@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FGYController.h"
+#import "FGYClickWheel.h"
 
 @interface Fourgy : NSObject
 + (UIFont *)fontOfSize:(CGFloat)size;
 + (CGFloat)rowHeight;
++ (UIColor *)foregroundColor;
++ (UIColor *)backgroundColor;
 @end

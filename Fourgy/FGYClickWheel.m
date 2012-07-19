@@ -6,7 +6,7 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "FGYClickWheel.h"
+#import "_FGYClickWheel.h"
 
 @implementation FGYClickWheel
 
@@ -93,8 +93,8 @@
 	
 	[super touchesBegan:touches withEvent:event];
 	
-	if ([self.delegate respondsToSelector:@selector(clickWheelTouchesBegan:)])
-		[self.delegate clickWheelTouchesBegan:self];
+	if ([self.delegate respondsToSelector:@selector(clickWheelTouchesBegan)])
+		[self.delegate clickWheelTouchesBegan];
 	
 }
 
@@ -114,53 +114,53 @@
 			tapPoint.x < 2.0f * thirdwidth && 
 			tapPoint.y < 2.0f * thirdwidth) {
 			
-			if ([self.delegate respondsToSelector:@selector(clickWheelCenterButtonTapped:)])
-				[self.delegate clickWheelCenterButtonTapped:self];
+			if ([self.delegate respondsToSelector:@selector(clickWheelCenterButtonTapped)])
+				[self.delegate clickWheelCenterButtonTapped];
 			
 		} else if (tapPoint.x > thirdwidth && 
 				   tapPoint.y > 0.0f && 
 				   tapPoint.x < 2.0f * thirdwidth && 
 				   tapPoint.y < thirdwidth) {
 			
-			if ([self.delegate respondsToSelector:@selector(clickWheelMenuButtonTapped:)])
-				[self.delegate clickWheelMenuButtonTapped:self];
+			if ([self.delegate respondsToSelector:@selector(clickWheelMenuButtonTapped)])
+				[self.delegate clickWheelMenuButtonTapped];
 			
 		} else if (tapPoint.x > thirdwidth && 
 				   tapPoint.y > 2.0f * thirdwidth &&
 				   tapPoint.x < 2.0f * thirdwidth && 
 				   tapPoint.y < 3.0f * thirdwidth) {
 			
-			if ([self.delegate respondsToSelector:@selector(clickWheelPlayButtonTapped:)])
-				[self.delegate clickWheelPlayButtonTapped:self];
+			if ([self.delegate respondsToSelector:@selector(clickWheelPlayButtonTapped)])
+				[self.delegate clickWheelPlayButtonTapped];
 			
 		} else if (tapPoint.x > 0.0f &&
 				   tapPoint.y > thirdwidth && 
 				   tapPoint.x < thirdwidth && 
 				   tapPoint.y < 2.0f * thirdwidth) {
 			
-			if ([self.delegate respondsToSelector:@selector(clickWheelPreviousButtonTapped:)])
-				[self.delegate clickWheelPreviousButtonTapped:self];
+			if ([self.delegate respondsToSelector:@selector(clickWheelPreviousButtonTapped)])
+				[self.delegate clickWheelPreviousButtonTapped];
 			
 		} else if (tapPoint.x > 2.0f * thirdwidth &&
 				   tapPoint.y > thirdwidth && 
 				   tapPoint.x < 3.0f * thirdwidth && 
 				   tapPoint.y < 2.0f * thirdwidth) {
 			
-			if ([self.delegate respondsToSelector:@selector(clickWheelNextButtonTapped:)])
-				[self.delegate clickWheelNextButtonTapped:self];
+			if ([self.delegate respondsToSelector:@selector(clickWheelNextButtonTapped)])
+				[self.delegate clickWheelNextButtonTapped];
 			
 		}
     } else {
 		
-		if ([self.delegate respondsToSelector:@selector(clickWheelTouchesEnded:)])
-			[self.delegate clickWheelTouchesEnded:self];
+		if ([self.delegate respondsToSelector:@selector(clickWheelTouchesEnded)])
+			[self.delegate clickWheelTouchesEnded];
 		
 	}
 	
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	
+
 	CGPoint point = [[touches anyObject] locationInView:self];
 	
 	CGFloat x = point.x - (self.frame.size.width/2.0f);
@@ -180,8 +180,8 @@
 	
 	CGFloat distance = ((CGFloat)sqrt((x * x) + (y * y)));
 	
-	if ([self.delegate respondsToSelector:@selector(clickWheel:touchesMovedToAngle:distance:)])
-		[self.delegate clickWheel:self touchesMovedToAngle:rotation distance:distance];
+	if ([self.delegate respondsToSelector:@selector(clickWheelTouchesMovedToAngle:distance:)])
+		[self.delegate clickWheelTouchesMovedToAngle:rotation distance:distance];
 }
 
 @end

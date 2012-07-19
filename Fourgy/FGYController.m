@@ -10,7 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "FGYController.h"
 #import "FGYBatteryLevelView.h"
-#import "FGYClickWheel.h"
+#import "_FGYClickWheel.h"
 #import "_Fourgy.h"
 
 @interface FGYController () <FGYClickWheelDelegate>
@@ -31,7 +31,7 @@
 	AudioServicesDisposeSystemSoundID(_clickSound);
 }
 
-- (id)initWithRootViewController:(UIViewController<FGYControllerControl> *)rootViewController {
+- (id)initWithRootViewController:(UIViewController *)rootViewController {
 	
 	NSBundle *bundle = [Fourgy bundle];
 	
@@ -48,7 +48,7 @@
 	return self;
 }
 
-- (void)pushViewController:(UIViewController<FGYControllerControl> *)viewController animated:(BOOL)animated {
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
 	
 	UIViewController *oldViewController = self.topViewController;
 	[stack addObject:viewController];
@@ -66,6 +66,8 @@
 	
 	NSTimeInterval duration = 0.0f;
 	if (animated) duration = (1.0f/3.0f);
+	
+	[self _setupViewController:viewController];
 	
 	[UIView animateWithDuration:duration animations:^{
 		
@@ -98,6 +100,8 @@
 	
 	frame.origin.x = self.contentView.bounds.size.width;
 	
+	[self _setupViewController:newViewController];
+	
 	[UIView animateWithDuration:duration animations:^{
 		
 		oldViewController.view.frame = frame;
@@ -118,7 +122,7 @@
 	
 	if ([stack count] < 2) return nil;
 	
-	UIViewController<FGYControllerControl> *viewControllerToPopTo = [stack objectAtIndex:([stack count]-2)];
+	UIViewController *viewControllerToPopTo = [stack objectAtIndex:([stack count]-2)];
 	
 	return [[self popToViewController:viewControllerToPopTo animated:animated] lastObject];
 }
@@ -152,90 +156,46 @@
 	self.windowView.layer.cornerRadius = 5.0f;
 	self.windowView.backgroundColor = [UIColor colorWithRed:0.412f green:0.443f blue:0.463f alpha:1.0f];
 	
-	self.screenView.backgroundColor = [UIColor colorWithRed:0.8 green:0.867 blue:0.937 alpha:1.0];
-	self.titleLabel.backgroundColor = self.screenView.backgroundColor;
+	self.screenView.backgroundColor = [Fourgy backgroundColor];
+	self.titleLabel.backgroundColor = [Fourgy backgroundColor];
 	self.titleLabel.font = [Fourgy fontOfSize:12.0f];
-	self.titleLabel.textColor = [UIColor colorWithRed:0.176f green:0.204f blue:0.42f alpha:1.0f];
+	self.titleLabel.textColor = [Fourgy foregroundColor];
 	self.titleLabel.text = @"iPod";
 	
-	self.separatorView.backgroundColor = self.titleLabel.textColor;
-	
-	self.contentView.backgroundColor = self.screenView.backgroundColor;
+	self.separatorView.backgroundColor = [Fourgy foregroundColor];
+	self.contentView.backgroundColor = [Fourgy backgroundColor];
 	
 	if (self.topViewController) {
 		self.topViewController.view.frame = self.contentView.bounds;
 		[self.contentView addSubview:self.topViewController.view];
+		[self _setupViewController:self.topViewController];
 	}
 }
 
-#pragma mark - FGYClickWheelDelegate
-
-- (void)clickWheelMenuButtonTapped:(FGYClickWheel *)cw {
-	[self popViewControllerAnimated:YES];
-	
-	if ([self.topViewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]
-		&& [self.topViewController respondsToSelector:_cmd]) {
-		
-		id<FGYClickWheelDelegate> delegate = (id<FGYClickWheelDelegate>)self.topViewController;
-		[delegate clickWheelMenuButtonTapped:cw];
-	}
-}
-
-- (void)clickWheelCenterButtonTapped:(FGYClickWheel *)cw {
-	
-	if ([self.topViewController.view isKindOfClass:[UITableView class]] 
-		&& [self.topViewController conformsToProtocol:@protocol(UITableViewDelegate)]
-		&& [self.topViewController respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
-	
-		UITableView *tv = (UITableView *)self.topViewController.view;
-		id<UITableViewDelegate> delegate = (id<UITableViewDelegate>)self.topViewController;
-		[delegate tableView:tv didSelectRowAtIndexPath:[tv indexPathForSelectedRow]];
-	}
-	
-	if ([self.topViewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]
-		&& [self.topViewController respondsToSelector:_cmd]) {
-		
-		id<FGYClickWheelDelegate> delegate = (id<FGYClickWheelDelegate>)self.topViewController;
-		[delegate clickWheelCenterButtonTapped:cw];
-	}
-}
-
-- (void)clickWheelNextButtonTapped:(FGYClickWheel *)cw {
-	if ([self.topViewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]
-		&& [self.topViewController respondsToSelector:_cmd]) {
-		
-		id<FGYClickWheelDelegate> delegate = (id<FGYClickWheelDelegate>)self.topViewController;
-		[delegate clickWheelNextButtonTapped:cw];
-	}
-}
-
-- (void)clickWheelPlayButtonTapped:(FGYClickWheel *)cw {
-	if ([self.topViewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]
-		&& [self.topViewController respondsToSelector:_cmd]) {
-		
-		id<FGYClickWheelDelegate> delegate = (id<FGYClickWheelDelegate>)self.topViewController;
-		[delegate clickWheelPlayButtonTapped:cw];
-	}
-}
-
-- (void)clickWheelPreviousButtonTapped:(FGYClickWheel *)cw {
-	if ([self.topViewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]
-		&& [self.topViewController respondsToSelector:_cmd]) {
-		
-		id<FGYClickWheelDelegate> delegate = (id<FGYClickWheelDelegate>)self.topViewController;
-		[delegate clickWheelPreviousButtonTapped:cw];
-	}
-}
-
-- (void)clickWheel:(FGYClickWheel *)cw touchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance {
-	if ([self.topViewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]
-		&& [self.topViewController respondsToSelector:_cmd]) {
-		
-		id<FGYClickWheelDelegate> delegate = (id<FGYClickWheelDelegate>)self.topViewController;
-		[delegate clickWheel:cw touchesMovedToAngle:angle distance:distance];
-	}
-	
+- (void)click {
 	AudioServicesPlaySystemSound(_clickSound);
 }
 
+- (void)_setupViewController:(UIViewController *)viewController {
+	viewController.view.backgroundColor = self.contentView.backgroundColor;
+	if ([viewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]) {
+		self.clickWheel.delegate = (id<FGYClickWheelDelegate>)viewController;
+		NSLog(@"%@:%@ %@", self, NSStringFromSelector(_cmd), self.clickWheel.delegate);
+	}
+}
+
 @end
+
+
+@implementation UIViewController (FGYController)
+
+- (FGYController *)fgy_controller {
+	
+	if ([self isKindOfClass:[FGYController class]])
+		return (FGYController *)self;
+	
+	return [self.parentViewController fgy_controller];
+}
+
+@end
+
