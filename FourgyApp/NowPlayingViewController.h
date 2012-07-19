@@ -9,13 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface DTPlayingScreenViewController : UIViewController
-
-@property (nonatomic, strong) MPMediaItem *nowPlaying;
-
+@interface NowPlayingViewController : UIViewController
 - (id)initWithMediaItem:(MPMediaItem *)theItem mediaCollection:(MPMediaItemCollection *)aCollection;
-- (void)refreshPlaying;
-- (void)selected;
-- (BOOL)moveUp;
-- (BOOL)moveDown;
+@property (nonatomic, strong) MPMediaItem *nowPlaying;
 @end

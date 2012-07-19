@@ -64,18 +64,14 @@
 	shouldDealloc = NO;
 	
 	[label1 removeFromSuperview];
-	[label1 release];
-	label1 = nil;
-	label1 = [[self pureLabel:self] retain];
+	label1 = [self pureLabel:self];
 	
 	label1.frame = frame1;
 	
 	[self addSubview:label1];
 	
 	[label2 removeFromSuperview];
-	[label2 release];
-	label2 = nil;
-	label2 = [[self pureLabel:self] retain];
+	label2 = [self pureLabel:self];
 	label2.frame = frame2;	
 	[self addSubview:label2];
 	
@@ -124,7 +120,7 @@
 	
 	returnLabel.backgroundColor = aLabel.backgroundColor;
 	
-	return [returnLabel autorelease];
+	return returnLabel;
 }
 
 - (void)animate {
@@ -140,14 +136,6 @@
 	label2.frame = frame1;
 	
 	[UIView commitAnimations];
-	
-}
-
-- (void)dealloc {
-	[label1 release];
-	[label2 release];
-	[super dealloc];
-	
 	
 }
 
