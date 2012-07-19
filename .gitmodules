@@ -1,0 +1,3 @@
+[submodule "DCTKit"]
+	path = DCTKit
+	url = git://github.com/danielctull/DCTKit.git
