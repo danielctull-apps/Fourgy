@@ -55,7 +55,7 @@
 	CGContextAddArcToPoint(context, indent, indent, radius, indent, radius-indent);
 	
 	CGContextSetLineWidth(context, 2.0);
-	[[Fourgy foregroundColor] setFill];
+	[[Fourgy foregroundColor] setStroke];
 	CGContextStrokePath(context);
 }
 
