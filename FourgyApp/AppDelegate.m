@@ -8,10 +8,11 @@
 
 #import "AppDelegate.h"
 #import <Fourgy/Fourgy.h>
-#import <MediaPlayer/MediaPlayer.h>
-#import "MediaItemsViewController.h"
+#import <DCTMusicModel/DCTMusicModel.h>
+#import "MenuViewController.h"
 
 @implementation AppDelegate {
+	__strong DCTMusicModel *_musicModel;
 	__strong FGYController *fourgyController;
 }
 
@@ -19,13 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-	MPMediaQuery *mediaQuery = [MPMediaQuery artistsQuery];
-	MediaItemsViewController *vc = [[MediaItemsViewController alloc] initWithMediaQuery:mediaQuery
-																			   property:MPMediaItemPropertyArtist];
+	_musicModel = [DCTMusicModel new];
 	
+	MenuViewController *vc = [[MenuViewController alloc] initWithManagedObjectContext:_musicModel.managedObjectContext];
 	fourgyController = [[FGYController alloc] initWithRootViewController:vc];
+	
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = fourgyController;
     [self.window makeKeyAndVisible];
     return YES;

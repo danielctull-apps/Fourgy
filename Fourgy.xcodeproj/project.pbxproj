@@ -13,6 +13,9 @@
 		24700BF815B83EDF00FA5843 /* DCTKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24700BD515B83EA300FA5843 /* DCTKit.bundle */; };
 		24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BF915B83EF400FA5843 /* CoreData.framework */; };
 		24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BFB15B83F0400FA5843 /* QuartzCore.framework */; };
+		24B967AA15B85C40009F142C /* libDCTMusicModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9679C15B85BB0009F142C /* libDCTMusicModel.a */; };
+		24B967AB15B85C45009F142C /* DCTMusicModel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24B9679E15B85BB0009F142C /* DCTMusicModel.bundle */; };
+		24B967AE15B85D0B009F142C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B967AD15B85D0B009F142C /* MenuViewController.m */; };
 		24E8FF2415B756C400240A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2315B756C400240A87 /* Foundation.framework */; };
 		24E8FF2B15B756C500240A87 /* Fourgy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF2A15B756C500240A87 /* Fourgy.m */; };
 		24E8FF3B15B756FB00240A87 /* FGYBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */; };
@@ -62,6 +65,27 @@
 			remoteGlobalIDString = 24700BB015B83DCF00FA5843;
 			remoteInfo = DCTKitBundle;
 		};
+		24B9679B15B85BB0009F142C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24700CA215B843E200FA5843;
+			remoteInfo = DCTMusicModel;
+		};
+		24B9679D15B85BB0009F142C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24700CB615B8495000FA5843;
+			remoteInfo = DCTMusicModelBundle;
+		};
+		24B9679F15B85BB0009F142C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24700D7915B8579C00FA5843;
+			remoteInfo = DCTMusicModelApp;
+		};
 		24E8FF7A15B758A600240A87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24E8FF1715B756C400240A87 /* Project object */;
@@ -77,6 +101,9 @@
 		24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DCTKit.xcodeproj; path = DCTKit/DCTKit.xcodeproj; sourceTree = "<group>"; };
 		24700BF915B83EF400FA5843 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		24700BFB15B83F0400FA5843 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DCTMusicModel.xcodeproj; path = DCTMusicModel/DCTMusicModel.xcodeproj; sourceTree = "<group>"; };
+		24B967AC15B85D0B009F142C /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		24B967AD15B85D0B009F142C /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		24E8FF2015B756C400240A87 /* libFourgy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFourgy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E8FF2315B756C400240A87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24E8FF2715B756C500240A87 /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
@@ -139,13 +166,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */,
+				24B967AA15B85C40009F142C /* libDCTMusicModel.a in Frameworks */,
+				24E8FF7415B7586500240A87 /* libFourgy.a in Frameworks */,
 				24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */,
 				24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */,
 				24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */,
 				24E8FF5E15B757B700240A87 /* UIKit.framework in Frameworks */,
 				24E8FF5F15B757B700240A87 /* Foundation.framework in Frameworks */,
-				24E8FF7415B7586500240A87 /* libFourgy.a in Frameworks */,
-				24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */,
 				24E8FF7915B7588E00240A87 /* CoreText.framework in Frameworks */,
 				24E8FF6115B757B700240A87 /* CoreGraphics.framework in Frameworks */,
 				24E8FF9315B7600A00240A87 /* AudioToolbox.framework in Frameworks */,
@@ -164,6 +192,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		24B9678A15B85BB0009F142C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24B9679C15B85BB0009F142C /* libDCTMusicModel.a */,
+				24B9679E15B85BB0009F142C /* DCTMusicModel.bundle */,
+				24B967A015B85BB0009F142C /* DCTMusicModelApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		24E8FF1515B756C400240A87 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +211,7 @@
 				24E8FF2215B756C400240A87 /* Frameworks */,
 				24E8FF2115B756C400240A87 /* Products */,
 				24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */,
+				24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +294,8 @@
 			children = (
 				24E8FF6B15B757B700240A87 /* AppDelegate.h */,
 				24E8FF6C15B757B700240A87 /* AppDelegate.m */,
+				24B967AC15B85D0B009F142C /* MenuViewController.h */,
+				24B967AD15B85D0B009F142C /* MenuViewController.m */,
 				24E8FFAC15B7793300240A87 /* MediaItemsViewController.h */,
 				24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */,
 				24E8FF6315B757B700240A87 /* Supporting Files */,
@@ -370,6 +411,10 @@
 					ProductGroup = 24700BC215B83EA300FA5843 /* Products */;
 					ProjectRef = 24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */;
 				},
+				{
+					ProductGroup = 24B9678A15B85BB0009F142C /* Products */;
+					ProjectRef = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -395,6 +440,27 @@
 			remoteRef = 24700BD415B83EA300FA5843 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		24B9679C15B85BB0009F142C /* libDCTMusicModel.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDCTMusicModel.a;
+			remoteRef = 24B9679B15B85BB0009F142C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		24B9679E15B85BB0009F142C /* DCTMusicModel.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DCTMusicModel.bundle;
+			remoteRef = 24B9679D15B85BB0009F142C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		24B967A015B85BB0009F142C /* DCTMusicModelApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DCTMusicModelApp.app;
+			remoteRef = 24B9679F15B85BB0009F142C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -414,8 +480,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E8FF6715B757B700240A87 /* InfoPlist.strings in Resources */,
-				24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */,
 				24700BF815B83EDF00FA5843 /* DCTKit.bundle in Resources */,
+				24B967AB15B85C45009F142C /* DCTMusicModel.bundle in Resources */,
+				24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */,
 				24E8FF9E15B76D0300240A87 /* Default.png in Resources */,
 				24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */,
 			);
@@ -450,6 +517,7 @@
 				24E8FF6915B757B700240A87 /* main.m in Sources */,
 				24E8FF6D15B757B700240A87 /* AppDelegate.m in Sources */,
 				24E8FFAE15B7793300240A87 /* MediaItemsViewController.m in Sources */,
+				24B967AE15B85D0B009F142C /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,3 +1,6 @@
 [submodule "DCTKit"]
 	path = DCTKit
 	url = git://github.com/danielctull/DCTKit.git
+[submodule "DCTMusicModel"]
+	path = DCTMusicModel
+	url = git://github.com/danielctull/DCTMusicModel.git
