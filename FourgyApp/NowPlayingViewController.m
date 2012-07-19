@@ -43,11 +43,11 @@ void* NowPlayingViewControllerCurrentPlaybackTimeObservingContext = &NowPlayingV
 	self.title = @"Now Playing";
 		
 	_iPod = [MPMusicPlayerController iPodMusicPlayer];
-	_timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(timer:) userInfo:nil repeats:YES];
+	_timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(_updatePositionTimer:) userInfo:nil repeats:YES];
 		
 	[_iPod beginGeneratingPlaybackNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(trackChanged:)
+											 selector:@selector(_trackDidChange:)
 												 name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification
 											   object:_iPod];
 	
@@ -87,10 +87,10 @@ void* NowPlayingViewControllerCurrentPlaybackTimeObservingContext = &NowPlayingV
 	self.timeLabel.font = [Fourgy fontOfSize:12.0f];
 	self.timeRemainingLabel.font = [Fourgy fontOfSize:12.0f];
 	
-	[self trackChanged:nil];
+	[self _trackDidChange:nil];
 }
 
-- (void)trackChanged:(NSNotification *)notification {
+- (void)_trackDidChange:(NSNotification *)notification {
 
 	if (_iPod.playbackState == MPMusicPlaybackStateStopped) {
 		[self.fgy_controller popToRootViewControllerAnimated:YES];
@@ -101,9 +101,10 @@ void* NowPlayingViewControllerCurrentPlaybackTimeObservingContext = &NowPlayingV
 	self.trackNameLabel.text = [_iPod.nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
 	self.albumLabel.text = [_iPod.nowPlayingItem valueForProperty:MPMediaItemPropertyAlbumTitle];
 	self.trackNumberLabel.text = [NSString stringWithFormat:@"%i of %i", _iPod.indexOfNowPlayingItem, [_musicQueue count]];
+	[self _updatePositionTimer:nil];
 }
 
-- (void)timer:(NSTimer *)timer {
+- (void)_updatePositionTimer:(NSTimer *)timer {
 	NSInteger time = (NSInteger)_iPod.currentPlaybackTime;
 	CGFloat duration = [[_iPod.nowPlayingItem valueForProperty:MPMediaItemPropertyPlaybackDuration] floatValue];
 	NSInteger remaining = (NSInteger)duration - time;

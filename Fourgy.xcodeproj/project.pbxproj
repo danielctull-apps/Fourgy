@@ -59,6 +59,8 @@
 		24E8FFAE15B7793300240A87 /* MediaItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */; };
 		24FEF28115B88C6E00ADF18D /* FGYProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28015B88C6E00ADF18D /* FGYProgressView.m */; };
+		24FEF28615B8A9CA00ADF18D /* ImportingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28415B8A9CA00ADF18D /* ImportingViewController.m */; };
+		24FEF28715B8A9CA00ADF18D /* ImportingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FEF28515B8A9CA00ADF18D /* ImportingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,9 @@
 		24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaItemsViewController.m; sourceTree = "<group>"; };
 		24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYProgressView.h; sourceTree = "<group>"; };
 		24FEF28015B88C6E00ADF18D /* FGYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYProgressView.m; sourceTree = "<group>"; };
+		24FEF28315B8A9CA00ADF18D /* ImportingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportingViewController.h; sourceTree = "<group>"; };
+		24FEF28415B8A9CA00ADF18D /* ImportingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportingViewController.m; sourceTree = "<group>"; };
+		24FEF28515B8A9CA00ADF18D /* ImportingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +340,9 @@
 				24B9682315B88350009F142C /* NowPlayingViewController.h */,
 				24B9682415B88350009F142C /* NowPlayingViewController.m */,
 				24B9682B15B8848D009F142C /* NowPlayingViewController.xib */,
+				24FEF28315B8A9CA00ADF18D /* ImportingViewController.h */,
+				24FEF28415B8A9CA00ADF18D /* ImportingViewController.m */,
+				24FEF28515B8A9CA00ADF18D /* ImportingViewController.xib */,
 				24B9689715B8878E009F142C /* PlaybackTimeView.h */,
 				24B9689815B8878E009F142C /* PlaybackTimeView.m */,
 				24E8FF6315B757B700240A87 /* Supporting Files */,
@@ -531,6 +539,7 @@
 				24B967D515B87601009F142C /* Icon.png in Resources */,
 				24B967D715B87604009F142C /* Icon@2x.png in Resources */,
 				24B9682C15B8848D009F142C /* NowPlayingViewController.xib in Resources */,
+				24FEF28715B8A9CA00ADF18D /* ImportingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +579,7 @@
 				24B967D115B86E04009F142C /* ArtistsViewController.m in Sources */,
 				24B9682515B88350009F142C /* NowPlayingViewController.m in Sources */,
 				24B9689915B8878E009F142C /* PlaybackTimeView.m in Sources */,
+				24FEF28615B8A9CA00ADF18D /* ImportingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

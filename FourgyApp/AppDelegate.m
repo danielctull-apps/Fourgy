@@ -10,6 +10,7 @@
 #import <Fourgy/Fourgy.h>
 #import <DCTMusicModel/DCTMusicModel.h>
 #import "MenuViewController.h"
+#import "ImportingViewController.h"
 
 @implementation AppDelegate {
 	__strong DCTMusicModel *_musicModel;
@@ -24,6 +25,11 @@
 	
 	MenuViewController *vc = [[MenuViewController alloc] initWithManagedObjectContext:_musicModel.managedObjectContext];
 	fourgyController = [[FGYController alloc] initWithRootViewController:vc];
+	
+	if (_musicModel.importing) {
+		ImportingViewController *importingVC = [[ImportingViewController alloc] initWithMusicModel:_musicModel];
+		[fourgyController pushViewController:importingVC animated:NO];
+	}
 	
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = fourgyController;

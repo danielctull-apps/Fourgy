@@ -29,12 +29,7 @@
 }
 
 - (void)clickWheelCenterButtonTapped {
-	
-	
-	NowPlayingViewController *vc = [NowPlayingViewController new];
-	[self.fgy_controller pushViewController:vc animated:YES];
-	return;
-	
+		
 	_selectedIndexPath = [self.tableView indexPathForSelectedRow];
 	NSString *title = [_dataSource objectAtIndexPath:_selectedIndexPath];
 	
