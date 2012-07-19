@@ -9,9 +9,13 @@
 #import "MenuViewController.h"
 #import <Fourgy/Fourgy.h>
 #import <DCTTableViewDataSources/DCTTableViewDataSources.h>
+#import <DCTMusicModel/DCTMusicModel.h>
+#import "SongsViewController.h"
+#import "ArtistsViewController.h"
 
 @implementation MenuViewController {
 	__strong DCTArrayTableViewDataSource *_dataSource;
+	__strong NSIndexPath *_selectedIndexPath;
 }
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
@@ -21,10 +25,51 @@
 	return self;
 }
 
+- (void)clickWheelCenterButtonTapped {
+	_selectedIndexPath = [self.tableView indexPathForSelectedRow];
+	NSString *title = [_dataSource objectAtIndexPath:_selectedIndexPath];
+	
+	Class viewControllerClass = NULL;
+	NSFetchRequest *fetchRequest = [NSFetchRequest new];
+	
+	if ([title isEqualToString:@"Artists"]) {
+		fetchRequest.entity = [DCTArtist entityInManagedObjectContext:self.managedObjectContext];
+		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTArtistAttributes.name ascending:YES]];
+		viewControllerClass = [ArtistsViewController class];
+	} else if ([title isEqualToString:@"Songs"]) {
+		fetchRequest.entity = [DCTSong entityInManagedObjectContext:self.managedObjectContext];
+		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTSongAttributes.title ascending:YES]];
+		viewControllerClass = [SongsViewController class];
+	}
+	
+	if (viewControllerClass) {
+		fetchRequest.fetchBatchSize = 6;		
+		NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+																			  managedObjectContext:self.managedObjectContext
+																				sectionNameKeyPath:nil
+																						 cacheName:nil];
+		
+		UIViewController *vc = [[viewControllerClass alloc] initWithFetchedResultsController:frc];
+		[self.fgy_controller pushViewController:vc animated:YES];
+	}
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[self.tableView selectRowAtIndexPath:_selectedIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+	
+	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:_selectedIndexPath];
+	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+	cell.selectedBackgroundView = [UIView new];
+	cell.selectedBackgroundView.backgroundColor = [Fourgy foregroundColor];
+	
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	self.tableView.rowHeight = [Fourgy rowHeight];
+	_selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 	
 	_dataSource = [DCTArrayTableViewDataSource new];
 	_dataSource.array = @[@"Artists", @"Albums", @"Songs", @"Playlists", @"Genres", @"Composers"];
@@ -37,16 +82,9 @@
 		cell.textLabel.backgroundColor = [Fourgy backgroundColor];
 		cell.contentView.backgroundColor = [Fourgy backgroundColor];
 		cell.backgroundColor = [Fourgy backgroundColor];
-		cell.selectedBackgroundView = [UIView new];
-		cell.selectedBackgroundView.backgroundColor = [Fourgy foregroundColor];
 		cell.textLabel.highlightedTextColor = [Fourgy backgroundColor];
 		cell.textLabel.text = title;
 	}];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 @end

@@ -29,19 +29,6 @@
 	return handler;
 }
 
-- (void)clickWheelTouchesBegan {
-	
-}
-
-- (void)clickWheelCenterButtonTapped {
-	
-	UITableView *tableView = self.tableView;
-	id<UITableViewDelegate> delegate = tableView.delegate;
-		
-	if ([delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)])
-		[delegate tableView:tableView didSelectRowAtIndexPath:[tableView indexPathForSelectedRow]];
-}
-
 - (void)clickWheelMenuButtonTapped {
 	[self.fgy_controller popViewControllerAnimated:YES];
 }
@@ -141,13 +128,17 @@
 
 - (BOOL)moveSelectionFromOldIndexPath:(NSIndexPath *)oldIndexPath newIndexPath:(NSIndexPath *)newIndexPath {
 	
+	if (!newIndexPath) return NO;
+	if (!oldIndexPath) return NO;
 	if ([oldIndexPath isEqual:newIndexPath]) return NO;
 	
 	if ([newIndexPath compare:[NSIndexPath indexPathForRow:0 inSection:0]] == NSOrderedAscending)
 		return NO;
 	
 	NSInteger lastSection = [_tableViewController.tableView numberOfSections] - 1;
+	if (lastSection < 0) lastSection = 0;
 	NSInteger lastRow = [_tableViewController.tableView numberOfRowsInSection:lastSection] - 1;
+	if (lastRow < 0) lastRow = 0;
 	if ([newIndexPath compare:[NSIndexPath indexPathForRow:lastRow inSection:lastSection]] == NSOrderedDescending)
 		return NO;
 	

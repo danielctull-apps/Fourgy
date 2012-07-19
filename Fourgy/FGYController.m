@@ -93,6 +93,8 @@
 	CGRect frame = self.contentView.bounds;
 	frame.origin.x = -self.contentView.bounds.size.width;
 	newViewController.view.frame = frame;
+	
+	[self addChildViewController:newViewController];
 	[self.contentView addSubview:newViewController.view];
 	
 	NSTimeInterval duration = 0.0f;
@@ -167,6 +169,7 @@
 	
 	if (self.topViewController) {
 		self.topViewController.view.frame = self.contentView.bounds;
+		[self addChildViewController:self.topViewController];
 		[self.contentView addSubview:self.topViewController.view];
 		[self _setupViewController:self.topViewController];
 	}
