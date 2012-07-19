@@ -24,7 +24,6 @@
 		24B9682815B8837A009F142C /* FGYTickingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B9682615B8837A009F142C /* FGYTickingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24B9682915B8837A009F142C /* FGYTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682715B8837A009F142C /* FGYTickingLabel.m */; };
 		24B9682C15B8848D009F142C /* NowPlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9682B15B8848D009F142C /* NowPlayingViewController.xib */; };
-		24B9689915B8878E009F142C /* PlaybackTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9689815B8878E009F142C /* PlaybackTimeView.m */; };
 		24E8FF2415B756C400240A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2315B756C400240A87 /* Foundation.framework */; };
 		24E8FF2B15B756C500240A87 /* Fourgy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF2A15B756C500240A87 /* Fourgy.m */; };
 		24E8FF3B15B756FB00240A87 /* FGYBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */; };
@@ -128,8 +127,6 @@
 		24B9682615B8837A009F142C /* FGYTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTickingLabel.h; sourceTree = "<group>"; };
 		24B9682715B8837A009F142C /* FGYTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTickingLabel.m; sourceTree = "<group>"; };
 		24B9682B15B8848D009F142C /* NowPlayingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NowPlayingViewController.xib; sourceTree = "<group>"; };
-		24B9689715B8878E009F142C /* PlaybackTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackTimeView.h; sourceTree = "<group>"; };
-		24B9689815B8878E009F142C /* PlaybackTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackTimeView.m; sourceTree = "<group>"; };
 		24E8FF2015B756C400240A87 /* libFourgy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFourgy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E8FF2315B756C400240A87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24E8FF2715B756C500240A87 /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
@@ -343,8 +340,6 @@
 				24FEF28315B8A9CA00ADF18D /* ImportingViewController.h */,
 				24FEF28415B8A9CA00ADF18D /* ImportingViewController.m */,
 				24FEF28515B8A9CA00ADF18D /* ImportingViewController.xib */,
-				24B9689715B8878E009F142C /* PlaybackTimeView.h */,
-				24B9689815B8878E009F142C /* PlaybackTimeView.m */,
 				24E8FF6315B757B700240A87 /* Supporting Files */,
 			);
 			path = FourgyApp;
@@ -578,7 +573,6 @@
 				24B967CE15B86168009F142C /* SongsViewController.m in Sources */,
 				24B967D115B86E04009F142C /* ArtistsViewController.m in Sources */,
 				24B9682515B88350009F142C /* NowPlayingViewController.m in Sources */,
-				24B9689915B8878E009F142C /* PlaybackTimeView.m in Sources */,
 				24FEF28615B8A9CA00ADF18D /* ImportingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
