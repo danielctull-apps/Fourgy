@@ -57,6 +57,8 @@
 		24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FFA615B7707400240A87 /* _FGYClickWheel.h */; };
 		24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FFAA15B776A000240A87 /* MediaPlayer.framework */; };
 		24E8FFAE15B7793300240A87 /* MediaItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */; };
+		24FEF28115B88C6E00ADF18D /* FGYProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28015B88C6E00ADF18D /* FGYProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,8 @@
 		24E8FFAA15B776A000240A87 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		24E8FFAC15B7793300240A87 /* MediaItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaItemsViewController.h; sourceTree = "<group>"; };
 		24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaItemsViewController.m; sourceTree = "<group>"; };
+		24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYProgressView.h; sourceTree = "<group>"; };
+		24FEF28015B88C6E00ADF18D /* FGYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +284,8 @@
 				24700B2A15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.m */,
 				24B9682615B8837A009F142C /* FGYTickingLabel.h */,
 				24B9682715B8837A009F142C /* FGYTickingLabel.m */,
+				24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */,
+				24FEF28015B88C6E00ADF18D /* FGYProgressView.m */,
 				24E8FF2615B756C500240A87 /* Supporting Files */,
 			);
 			path = Fourgy;
@@ -362,6 +368,7 @@
 				24E8FF4115B7571000240A87 /* FGYController.h in Headers */,
 				24E8FF4315B7571400240A87 /* FGYClickWheel.h in Headers */,
 				24B9682815B8837A009F142C /* FGYTickingLabel.h in Headers */,
+				24FEF28115B88C6E00ADF18D /* FGYProgressView.h in Headers */,
 				24E8FF4215B7571200240A87 /* FGYBatteryLevelView.h in Headers */,
 				24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */,
 				24700B2B15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.h in Headers */,
@@ -540,6 +547,7 @@
 				24E8FF3D15B756FB00240A87 /* FGYController.m in Sources */,
 				24700B2C15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.m in Sources */,
 				24B9682915B8837A009F142C /* FGYTickingLabel.m in Sources */,
+				24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

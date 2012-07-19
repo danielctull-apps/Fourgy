@@ -10,10 +10,11 @@
 #import <Fourgy/Fourgy.h>
 
 @interface NowPlayingViewController ()
-@property (nonatomic, weak) IBOutlet FGYTickingLabel *trackNameLabel;
-@property (nonatomic, weak) IBOutlet UILabel *artistLabel;
-@property (nonatomic, weak) IBOutlet UILabel *albumLabel;
-@property (nonatomic, weak) IBOutlet UILabel *trackNumberLabel;
+@property (weak) IBOutlet FGYTickingLabel *trackNameLabel;
+@property (weak) IBOutlet UILabel *artistLabel;
+@property (weak) IBOutlet UILabel *albumLabel;
+@property (weak) IBOutlet UILabel *trackNumberLabel;
+@property (weak) IBOutlet FGYProgressView *progressView;
 @end
 
 @implementation NowPlayingViewController {
@@ -63,8 +64,18 @@
 }
 
 - (void)viewDidLoad {
+	
+	self.progressView.progress = 0.5f;
+	
 	self.trackNameLabel.speed = 30.0;
 	self.trackNameLabel.delay = 5.0;
+	
+	self.trackNameLabel.font = [Fourgy fontOfSize:12.0f];
+	self.trackNumberLabel.font = [Fourgy fontOfSize:8.0f];
+	self.artistLabel.font = [Fourgy fontOfSize:12.0f];
+	self.albumLabel.font = [Fourgy fontOfSize:12.0f];
+	
+	
     [super viewDidLoad];
 	[self refreshPlaying];
 }

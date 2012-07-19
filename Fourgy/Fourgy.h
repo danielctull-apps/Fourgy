@@ -10,6 +10,7 @@
 #import "FGYController.h"
 #import "FGYClickWheel.h"
 #import "FGYTickingLabel.h"
+#import "FGYProgressView.h"
 
 @interface Fourgy : NSObject
 + (NSBundle *)bundle;
