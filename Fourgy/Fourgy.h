@@ -11,6 +11,7 @@
 #import "FGYClickWheel.h"
 
 @interface Fourgy : NSObject
++ (NSBundle *)bundle;
 + (UIFont *)fontOfSize:(CGFloat)size;
 + (CGFloat)rowHeight;
 + (UIColor *)foregroundColor;

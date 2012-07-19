@@ -11,7 +11,7 @@
 #import "FGYController.h"
 #import "FGYBatteryLevelView.h"
 #import "_FGYClickWheel.h"
-#import "_Fourgy.h"
+#import "Fourgy.h"
 
 @interface FGYController () <FGYClickWheelDelegate>
 @property (weak) IBOutlet FGYClickWheel *clickWheel;

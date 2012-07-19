@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		24700B2B15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 24700B2915B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.h */; };
 		24700B2C15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24700B2A15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.m */; };
+		24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BD315B83EA300FA5843 /* libDCTKit.a */; };
+		24700BF815B83EDF00FA5843 /* DCTKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24700BD515B83EA300FA5843 /* DCTKit.bundle */; };
+		24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BF915B83EF400FA5843 /* CoreData.framework */; };
+		24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BFB15B83F0400FA5843 /* QuartzCore.framework */; };
 		24E8FF2415B756C400240A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2315B756C400240A87 /* Foundation.framework */; };
 		24E8FF2B15B756C500240A87 /* Fourgy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF2A15B756C500240A87 /* Fourgy.m */; };
 		24E8FF3B15B756FB00240A87 /* FGYBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */; };
@@ -33,7 +37,6 @@
 		24E8FF7815B7588200240A87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF5D15B757B700240A87 /* UIKit.framework */; };
 		24E8FF7915B7588E00240A87 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF7615B7587D00240A87 /* CoreText.framework */; };
 		24E8FF8915B75C5C00240A87 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF8815B75C5C00240A87 /* click.wav */; };
-		24E8FF9015B75CF600240A87 /* _Fourgy.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FF8F15B75CF600240A87 /* _Fourgy.h */; };
 		24E8FF9215B75FFE00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
 		24E8FF9315B7600A00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
 		24E8FF9515B7606E00240A87 /* FGYController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9415B7606000240A87 /* FGYController.xib */; };
@@ -45,6 +48,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		24700BD215B83EA300FA5843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2435B53D15A5CD3800F38962;
+			remoteInfo = DCTKit;
+		};
+		24700BD415B83EA300FA5843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24700BB015B83DCF00FA5843;
+			remoteInfo = DCTKitBundle;
+		};
 		24E8FF7A15B758A600240A87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24E8FF1715B756C400240A87 /* Project object */;
@@ -57,6 +74,9 @@
 /* Begin PBXFileReference section */
 		24700B2915B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+_FGYClickWheelDelegate.h"; sourceTree = "<group>"; };
 		24700B2A15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+_FGYClickWheelDelegate.m"; sourceTree = "<group>"; };
+		24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DCTKit.xcodeproj; path = DCTKit/DCTKit.xcodeproj; sourceTree = "<group>"; };
+		24700BF915B83EF400FA5843 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		24700BFB15B83F0400FA5843 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		24E8FF2015B756C400240A87 /* libFourgy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFourgy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E8FF2315B756C400240A87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24E8FF2715B756C500240A87 /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
@@ -85,7 +105,6 @@
 		24E8FF6C15B757B700240A87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		24E8FF7615B7587D00240A87 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		24E8FF8815B75C5C00240A87 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
-		24E8FF8F15B75CF600240A87 /* _Fourgy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Fourgy.h; sourceTree = "<group>"; };
 		24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		24E8FF9415B7606000240A87 /* FGYController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYController.xib; sourceTree = "<group>"; };
 		24E8FF9D15B76D0200240A87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
@@ -120,10 +139,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */,
+				24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */,
 				24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */,
 				24E8FF5E15B757B700240A87 /* UIKit.framework in Frameworks */,
 				24E8FF5F15B757B700240A87 /* Foundation.framework in Frameworks */,
 				24E8FF7415B7586500240A87 /* libFourgy.a in Frameworks */,
+				24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */,
 				24E8FF7915B7588E00240A87 /* CoreText.framework in Frameworks */,
 				24E8FF6115B757B700240A87 /* CoreGraphics.framework in Frameworks */,
 				24E8FF9315B7600A00240A87 /* AudioToolbox.framework in Frameworks */,
@@ -133,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24700BC215B83EA300FA5843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24700BD315B83EA300FA5843 /* libDCTKit.a */,
+				24700BD515B83EA300FA5843 /* DCTKit.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		24E8FF1515B756C400240A87 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +172,7 @@
 				24E8FF6215B757B700240A87 /* FourgyApp */,
 				24E8FF2215B756C400240A87 /* Frameworks */,
 				24E8FF2115B756C400240A87 /* Products */,
+				24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +189,8 @@
 		24E8FF2215B756C400240A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24700BFB15B83F0400FA5843 /* QuartzCore.framework */,
+				24700BF915B83EF400FA5843 /* CoreData.framework */,
 				24E8FFAA15B776A000240A87 /* MediaPlayer.framework */,
 				24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */,
 				24E8FF7615B7587D00240A87 /* CoreText.framework */,
@@ -172,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				24E8FF2815B756C500240A87 /* Fourgy.h */,
-				24E8FF8F15B75CF600240A87 /* _Fourgy.h */,
 				24E8FF2A15B756C500240A87 /* Fourgy.m */,
 				24E8FF3515B756FB00240A87 /* FGYBatteryLevelView.h */,
 				24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */,
@@ -253,7 +286,6 @@
 				24E8FF4115B7571000240A87 /* FGYController.h in Headers */,
 				24E8FF4315B7571400240A87 /* FGYClickWheel.h in Headers */,
 				24E8FF4215B7571200240A87 /* FGYBatteryLevelView.h in Headers */,
-				24E8FF9015B75CF600240A87 /* _Fourgy.h in Headers */,
 				24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */,
 				24700B2B15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.h in Headers */,
 			);
@@ -333,6 +365,12 @@
 			mainGroup = 24E8FF1515B756C400240A87;
 			productRefGroup = 24E8FF2115B756C400240A87 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 24700BC215B83EA300FA5843 /* Products */;
+					ProjectRef = 24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				24E8FF1F15B756C400240A87 /* Fourgy */,
@@ -341,6 +379,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		24700BD315B83EA300FA5843 /* libDCTKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDCTKit.a;
+			remoteRef = 24700BD215B83EA300FA5843 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		24700BD515B83EA300FA5843 /* DCTKit.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DCTKit.bundle;
+			remoteRef = 24700BD415B83EA300FA5843 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		24E8FF4615B7572900240A87 /* Resources */ = {
@@ -360,6 +415,7 @@
 			files = (
 				24E8FF6715B757B700240A87 /* InfoPlist.strings in Resources */,
 				24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */,
+				24700BF815B83EDF00FA5843 /* DCTKit.bundle in Resources */,
 				24E8FF9E15B76D0300240A87 /* Default.png in Resources */,
 				24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */,
 			);
