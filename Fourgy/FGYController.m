@@ -180,7 +180,6 @@
 	viewController.view.backgroundColor = self.contentView.backgroundColor;
 	if ([viewController conformsToProtocol:@protocol(FGYClickWheelDelegate)]) {
 		self.clickWheel.delegate = (id<FGYClickWheelDelegate>)viewController;
-		NSLog(@"%@:%@ %@", self, NSStringFromSelector(_cmd), self.clickWheel.delegate);
 	}
 }
 
