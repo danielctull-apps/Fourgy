@@ -6,9 +6,9 @@
 //  Copyright 2008 Daniel Tull. All rights reserved.
 //
 
-#import "DTTickingLabel.h"
+#import "FGYTickingLabel.h"
 
-@implementation DTTickingLabel
+@implementation FGYTickingLabel
 
 @synthesize isAnimating, speed, separatingDistance, delay;
 

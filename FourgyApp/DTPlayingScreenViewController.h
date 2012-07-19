@@ -8,21 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import "DTTickingLabel.h"
 
-@interface DTPlayingScreenViewController : UIViewController {
-	DTTickingLabel *trackNameLabel;
-	UILabel *artistLabel, *albumLabel, *trackNumberLabel;
-	
-	MPMediaItem *nowPlaying;
-	MPMusicPlayerController *iPod;
-	MPMediaItemCollection *musicQueue;
-	
-}
+@interface DTPlayingScreenViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet DTTickingLabel *trackNameLabel;
-@property (nonatomic, retain) IBOutlet UILabel *artistLabel, *albumLabel, *trackNumberLabel;
-@property (nonatomic, retain) MPMediaItem *nowPlaying;
+@property (nonatomic, strong) MPMediaItem *nowPlaying;
 
 - (id)initWithMediaItem:(MPMediaItem *)theItem mediaCollection:(MPMediaItemCollection *)aCollection;
 - (void)refreshPlaying;

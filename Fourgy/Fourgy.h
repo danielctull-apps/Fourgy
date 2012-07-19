@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FGYController.h"
 #import "FGYClickWheel.h"
+#import "FGYTickingLabel.h"
 
 @interface Fourgy : NSObject
 + (NSBundle *)bundle;

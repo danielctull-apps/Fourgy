@@ -7,11 +7,22 @@
 //
 
 #import "DTPlayingScreenViewController.h"
-#import <MediaPlayer/MediaPlayer.h>
+#import <Fourgy/Fourgy.h>
 
-@implementation DTPlayingScreenViewController
+@interface DTPlayingScreenViewController ()
+@property (nonatomic, weak) IBOutlet FGYTickingLabel *trackNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *artistLabel;
+@property (nonatomic, weak) IBOutlet UILabel *albumLabel;
+@property (nonatomic, weak) IBOutlet UILabel *trackNumberLabel;
+@end
 
-@synthesize artistLabel, albumLabel, trackNameLabel, trackNumberLabel, nowPlaying;
+@implementation DTPlayingScreenViewController {
+	
+	MPMediaItem *nowPlaying;
+	MPMusicPlayerController *iPod;
+	MPMediaItemCollection *musicQueue;
+	
+}
 
 - (id)initWithMediaItem:(MPMediaItem *)theItem mediaCollection:(MPMediaItemCollection *)aCollection {
 	if (!(self = [self initWithNibName:@"DTPlayingScreenView" bundle:nil])) return nil;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DTTickingLabel : UILabel {
+@interface FGYTickingLabel : UILabel {
 	/*
 	NSString *text;
 	UILabel *label;

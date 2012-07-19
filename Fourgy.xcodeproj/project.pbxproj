@@ -21,8 +21,9 @@
 		24B967D515B87601009F142C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B967D415B87601009F142C /* Icon.png */; };
 		24B967D715B87604009F142C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B967D615B87604009F142C /* Icon@2x.png */; };
 		24B9682515B88350009F142C /* DTPlayingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682415B88350009F142C /* DTPlayingScreenViewController.m */; };
-		24B9682815B8837A009F142C /* DTTickingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B9682615B8837A009F142C /* DTTickingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24B9682915B8837A009F142C /* DTTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682715B8837A009F142C /* DTTickingLabel.m */; };
+		24B9682815B8837A009F142C /* FGYTickingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B9682615B8837A009F142C /* FGYTickingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24B9682915B8837A009F142C /* FGYTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682715B8837A009F142C /* FGYTickingLabel.m */; };
+		24B9682C15B8848D009F142C /* DTPlayingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9682B15B8848D009F142C /* DTPlayingScreenView.xib */; };
 		24E8FF2415B756C400240A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2315B756C400240A87 /* Foundation.framework */; };
 		24E8FF2B15B756C500240A87 /* Fourgy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF2A15B756C500240A87 /* Fourgy.m */; };
 		24E8FF3B15B756FB00240A87 /* FGYBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */; };
@@ -119,8 +120,9 @@
 		24B967D615B87604009F142C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		24B9682315B88350009F142C /* DTPlayingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlayingScreenViewController.h; sourceTree = "<group>"; };
 		24B9682415B88350009F142C /* DTPlayingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPlayingScreenViewController.m; sourceTree = "<group>"; };
-		24B9682615B8837A009F142C /* DTTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTickingLabel.h; sourceTree = "<group>"; };
-		24B9682715B8837A009F142C /* DTTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTickingLabel.m; sourceTree = "<group>"; };
+		24B9682615B8837A009F142C /* FGYTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTickingLabel.h; sourceTree = "<group>"; };
+		24B9682715B8837A009F142C /* FGYTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTickingLabel.m; sourceTree = "<group>"; };
+		24B9682B15B8848D009F142C /* DTPlayingScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTPlayingScreenView.xib; sourceTree = "<group>"; };
 		24E8FF2015B756C400240A87 /* libFourgy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFourgy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E8FF2315B756C400240A87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24E8FF2715B756C500240A87 /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
@@ -273,8 +275,8 @@
 				24E8FF9415B7606000240A87 /* FGYController.xib */,
 				24700B2915B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.h */,
 				24700B2A15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.m */,
-				24B9682615B8837A009F142C /* DTTickingLabel.h */,
-				24B9682715B8837A009F142C /* DTTickingLabel.m */,
+				24B9682615B8837A009F142C /* FGYTickingLabel.h */,
+				24B9682715B8837A009F142C /* FGYTickingLabel.m */,
 				24E8FF2615B756C500240A87 /* Supporting Files */,
 			);
 			path = Fourgy;
@@ -323,6 +325,7 @@
 				24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */,
 				24B9682315B88350009F142C /* DTPlayingScreenViewController.h */,
 				24B9682415B88350009F142C /* DTPlayingScreenViewController.m */,
+				24B9682B15B8848D009F142C /* DTPlayingScreenView.xib */,
 				24E8FF6315B757B700240A87 /* Supporting Files */,
 			);
 			path = FourgyApp;
@@ -353,7 +356,7 @@
 				24E8FF4015B7570D00240A87 /* Fourgy.h in Headers */,
 				24E8FF4115B7571000240A87 /* FGYController.h in Headers */,
 				24E8FF4315B7571400240A87 /* FGYClickWheel.h in Headers */,
-				24B9682815B8837A009F142C /* DTTickingLabel.h in Headers */,
+				24B9682815B8837A009F142C /* FGYTickingLabel.h in Headers */,
 				24E8FF4215B7571200240A87 /* FGYBatteryLevelView.h in Headers */,
 				24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */,
 				24700B2B15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.h in Headers */,
@@ -515,6 +518,7 @@
 				24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */,
 				24B967D515B87601009F142C /* Icon.png in Resources */,
 				24B967D715B87604009F142C /* Icon@2x.png in Resources */,
+				24B9682C15B8848D009F142C /* DTPlayingScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +534,7 @@
 				24E8FF3C15B756FB00240A87 /* FGYClickWheel.m in Sources */,
 				24E8FF3D15B756FB00240A87 /* FGYController.m in Sources */,
 				24700B2C15B8229D00FA5843 /* UITableViewController+_FGYClickWheelDelegate.m in Sources */,
-				24B9682915B8837A009F142C /* DTTickingLabel.m in Sources */,
+				24B9682915B8837A009F142C /* FGYTickingLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

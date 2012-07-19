@@ -49,7 +49,6 @@
 		244B7BFF101E2C8E0021C335 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244B7BFE101E2C8E0021C335 /* Entitlements.plist */; };
 		246AE000101997B8009FA983 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 246ADFFF101997B8009FA983 /* Icon.png */; };
 		248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */; };
-		249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */; };
 		24A43D671025D9FB003E6959 /* DTBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D631025D9FB003E6959 /* DTBlockScroller.m */; };
 		24A43D681025D9FB003E6959 /* DTBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D651025D9FB003E6959 /* DTBlockView.m */; };
 		24A43D6E1025DA10003E6959 /* DTClickWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D6D1025DA10003E6959 /* DTClickWheelView.m */; };
@@ -140,7 +139,6 @@
 		246ADFFF101997B8009FA983 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBlockScroller.h; sourceTree = "<group>"; };
 		248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockScroller.m; sourceTree = "<group>"; };
-		249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTPlayingScreenView.xib; sourceTree = "<group>"; };
 		24A43D621025D9FB003E6959 /* DTBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockScroller.h; sourceTree = "<group>"; };
 		24A43D631025D9FB003E6959 /* DTBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockScroller.m; sourceTree = "<group>"; };
 		24A43D641025D9FB003E6959 /* DTBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockView.h; sourceTree = "<group>"; };
@@ -359,7 +357,6 @@
 				241CBEB1100CFEF800180B5F /* MainMenu.plist */,
 				241CBEB5100CFF2F00180B5F /* MusicMenu.plist */,
 				24F662A91013AF2200437934 /* DTScreenView.xib */,
-				249E45A4101900150084B4E2 /* DTPlayingScreenView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -430,7 +427,6 @@
 				241CBEB2100CFEF800180B5F /* MainMenu.plist in Resources */,
 				241CBEB6100CFF2F00180B5F /* MusicMenu.plist in Resources */,
 				24F662AA1013AF2200437934 /* DTScreenView.xib in Resources */,
-				249E45A5101900150084B4E2 /* DTPlayingScreenView.xib in Resources */,
 				246AE000101997B8009FA983 /* Icon.png in Resources */,
 				244B7BFF101E2C8E0021C335 /* Entitlements.plist in Resources */,
 				24E8FFA915B775CE00240A87 /* click.wav in Resources */,
