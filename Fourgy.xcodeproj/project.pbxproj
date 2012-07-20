@@ -7,15 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240819FF15B94EF30056B402 /* _FGYScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 240819FD15B94EF30056B402 /* _FGYScroller.h */; };
-		24081A0015B94EF30056B402 /* _FGYScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 240819FE15B94EF30056B402 /* _FGYScroller.m */; };
-		24081A0415B9697F0056B402 /* FGYTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 24081A0215B9697F0056B402 /* FGYTableViewCell.h */; };
-		24081A0515B9697F0056B402 /* FGYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24081A0315B9697F0056B402 /* FGYTableViewCell.m */; };
-		241AD6A715B947C70036F9D7 /* FGYTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 241AD6A415B947C70036F9D7 /* FGYTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		241AD6A815B947C70036F9D7 /* FGYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241AD6A515B947C70036F9D7 /* FGYTableViewController.m */; };
 		241AD6A915B94BDF0036F9D7 /* FGYTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */; };
-		24700B2B15B8229D00FA5843 /* _FGYTableViewScrollHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 24700B2915B8229D00FA5843 /* _FGYTableViewScrollHandler.h */; };
-		24700B2C15B8229D00FA5843 /* _FGYTableViewScrollHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 24700B2A15B8229D00FA5843 /* _FGYTableViewScrollHandler.m */; };
 		24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BD315B83EA300FA5843 /* libDCTKit.a */; };
 		24700BF815B83EDF00FA5843 /* DCTKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24700BD515B83EA300FA5843 /* DCTKit.bundle */; };
 		24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BF915B83EF400FA5843 /* CoreData.framework */; };
@@ -28,18 +20,26 @@
 		24B967D515B87601009F142C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B967D415B87601009F142C /* Icon.png */; };
 		24B967D715B87604009F142C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B967D615B87604009F142C /* Icon@2x.png */; };
 		24B9682515B88350009F142C /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682415B88350009F142C /* NowPlayingViewController.m */; };
-		24B9682815B8837A009F142C /* FGYTickingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B9682615B8837A009F142C /* FGYTickingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24B9682915B8837A009F142C /* FGYTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682715B8837A009F142C /* FGYTickingLabel.m */; };
 		24B9682C15B8848D009F142C /* NowPlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9682B15B8848D009F142C /* NowPlayingViewController.xib */; };
-		24E8FF2415B756C400240A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2315B756C400240A87 /* Foundation.framework */; };
-		24E8FF2B15B756C500240A87 /* Fourgy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF2A15B756C500240A87 /* Fourgy.m */; };
-		24E8FF3B15B756FB00240A87 /* FGYBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */; };
-		24E8FF3C15B756FB00240A87 /* FGYClickWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3815B756FB00240A87 /* FGYClickWheel.m */; };
-		24E8FF3D15B756FB00240A87 /* FGYController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3A15B756FB00240A87 /* FGYController.m */; };
-		24E8FF4015B7570D00240A87 /* Fourgy.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FF2815B756C500240A87 /* Fourgy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24E8FF4115B7571000240A87 /* FGYController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FF3915B756FB00240A87 /* FGYController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24E8FF4215B7571200240A87 /* FGYBatteryLevelView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FF3515B756FB00240A87 /* FGYBatteryLevelView.h */; };
-		24E8FF4315B7571400240A87 /* FGYClickWheel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FF3715B756FB00240A87 /* FGYClickWheel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24DAAB1415B988AE002EA948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2315B756C400240A87 /* Foundation.framework */; };
+		24DAAB2015B988D6002EA948 /* Fourgy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF2A15B756C500240A87 /* Fourgy.m */; };
+		24DAAB2215B988D6002EA948 /* FGYBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */; };
+		24DAAB2515B988D6002EA948 /* FGYClickWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3815B756FB00240A87 /* FGYClickWheel.m */; };
+		24DAAB2715B988D6002EA948 /* FGYController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3A15B756FB00240A87 /* FGYController.m */; };
+		24DAAB2A15B988D6002EA948 /* _FGYTableViewScrollHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 24700B2A15B8229D00FA5843 /* _FGYTableViewScrollHandler.m */; };
+		24DAAB2C15B988D6002EA948 /* FGYTickingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682715B8837A009F142C /* FGYTickingLabel.m */; };
+		24DAAB2E15B988D6002EA948 /* FGYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28015B88C6E00ADF18D /* FGYProgressView.m */; };
+		24DAAB3015B988D6002EA948 /* FGYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241AD6A515B947C70036F9D7 /* FGYTableViewController.m */; };
+		24DAAB3315B988D6002EA948 /* _FGYScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 240819FE15B94EF30056B402 /* _FGYScroller.m */; };
+		24DAAB3515B988D6002EA948 /* FGYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24081A0315B9697F0056B402 /* FGYTableViewCell.m */; };
+		24DAAB3615B988D8002EA948 /* Fourgy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24E8FF2815B756C500240A87 /* Fourgy.h */; };
+		24DAAB3A15B988D8002EA948 /* FGYClickWheel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24E8FF3715B756FB00240A87 /* FGYClickWheel.h */; };
+		24DAAB3D15B988D8002EA948 /* FGYController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24E8FF3915B756FB00240A87 /* FGYController.h */; };
+		24DAAB4215B988D8002EA948 /* FGYTickingLabel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24B9682615B8837A009F142C /* FGYTickingLabel.h */; };
+		24DAAB4415B988D8002EA948 /* FGYProgressView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */; };
+		24DAAB4615B988D8002EA948 /* FGYTableViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 241AD6A415B947C70036F9D7 /* FGYTableViewController.h */; };
+		24DAAB4B15B988D8002EA948 /* FGYTableViewCell.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 24081A0215B9697F0056B402 /* FGYTableViewCell.h */; };
+		24DAAB4F15B98948002EA948 /* libFourgy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAAB1315B988AE002EA948 /* libFourgy.a */; };
 		24E8FF4A15B7572900240A87 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF4915B7572900240A87 /* CoreFoundation.framework */; };
 		24E8FF5015B7572900240A87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF4E15B7572900240A87 /* InfoPlist.strings */; };
 		24E8FF5615B7574100240A87 /* Chicago.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF5515B7574100240A87 /* Chicago.ttf */; };
@@ -49,18 +49,13 @@
 		24E8FF6715B757B700240A87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF6515B757B700240A87 /* InfoPlist.strings */; };
 		24E8FF6915B757B700240A87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF6815B757B700240A87 /* main.m */; };
 		24E8FF6D15B757B700240A87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF6C15B757B700240A87 /* AppDelegate.m */; };
-		24E8FF7415B7586500240A87 /* libFourgy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2015B756C400240A87 /* libFourgy.a */; };
 		24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF4815B7572900240A87 /* Fourgy.bundle */; };
-		24E8FF7715B7587D00240A87 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF7615B7587D00240A87 /* CoreText.framework */; };
-		24E8FF7815B7588200240A87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF5D15B757B700240A87 /* UIKit.framework */; };
 		24E8FF7915B7588E00240A87 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF7615B7587D00240A87 /* CoreText.framework */; };
 		24E8FF8915B75C5C00240A87 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF8815B75C5C00240A87 /* click.wav */; };
-		24E8FF9215B75FFE00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
 		24E8FF9315B7600A00240A87 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF9115B75FFE00240A87 /* AudioToolbox.framework */; };
 		24E8FF9515B7606E00240A87 /* FGYController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9415B7606000240A87 /* FGYController.xib */; };
 		24E8FF9E15B76D0300240A87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9D15B76D0200240A87 /* Default.png */; };
 		24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E8FF9F15B76D0600240A87 /* Default@2x.png */; };
-		24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FFA615B7707400240A87 /* _FGYClickWheel.h */; };
 		24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FFAA15B776A000240A87 /* MediaPlayer.framework */; };
 		24E8FFAE15B7793300240A87 /* MediaItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */; };
 		24EBAADB15B8CDC300A53811 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAADA15B8CDC300A53811 /* ItemsViewController.m */; };
@@ -68,8 +63,6 @@
 		24EBAAE115B8D76300A53811 /* PlaylistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE015B8D76300A53811 /* PlaylistsViewController.m */; };
 		24EBAAE415B8D7DD00A53811 /* GenresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE315B8D7DD00A53811 /* GenresViewController.m */; };
 		24EBAAE715B8D8A200A53811 /* ComposersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE615B8D8A200A53811 /* ComposersViewController.m */; };
-		24FEF28115B88C6E00ADF18D /* FGYProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28015B88C6E00ADF18D /* FGYProgressView.m */; };
 		24FEF28615B8A9CA00ADF18D /* ImportingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28415B8A9CA00ADF18D /* ImportingViewController.m */; };
 		24FEF28715B8A9CA00ADF18D /* ImportingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FEF28515B8A9CA00ADF18D /* ImportingViewController.xib */; };
 /* End PBXBuildFile section */
@@ -110,7 +103,7 @@
 			remoteGlobalIDString = 24700D7915B8579C00FA5843;
 			remoteInfo = DCTMusicModelApp;
 		};
-		24E8FF7A15B758A600240A87 /* PBXContainerItemProxy */ = {
+		24DAAB4D15B98924002EA948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24E8FF1715B756C400240A87 /* Project object */;
 			proxyType = 1;
@@ -118,6 +111,25 @@
 			remoteInfo = FourgyBundle;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		24DAAB1115B988AE002EA948 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				24DAAB3615B988D8002EA948 /* Fourgy.h in CopyFiles */,
+				24DAAB3A15B988D8002EA948 /* FGYClickWheel.h in CopyFiles */,
+				24DAAB3D15B988D8002EA948 /* FGYController.h in CopyFiles */,
+				24DAAB4215B988D8002EA948 /* FGYTickingLabel.h in CopyFiles */,
+				24DAAB4415B988D8002EA948 /* FGYProgressView.h in CopyFiles */,
+				24DAAB4615B988D8002EA948 /* FGYTableViewController.h in CopyFiles */,
+				24DAAB4B15B988D8002EA948 /* FGYTableViewCell.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		240819FD15B94EF30056B402 /* _FGYScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FGYScroller.h; sourceTree = "<group>"; };
@@ -146,7 +158,7 @@
 		24B9682615B8837A009F142C /* FGYTickingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTickingLabel.h; sourceTree = "<group>"; };
 		24B9682715B8837A009F142C /* FGYTickingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTickingLabel.m; sourceTree = "<group>"; };
 		24B9682B15B8848D009F142C /* NowPlayingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NowPlayingViewController.xib; sourceTree = "<group>"; };
-		24E8FF2015B756C400240A87 /* libFourgy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFourgy.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		24DAAB1315B988AE002EA948 /* libFourgy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFourgy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E8FF2315B756C400240A87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24E8FF2715B756C500240A87 /* Fourgy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fourgy-Prefix.pch"; sourceTree = "<group>"; };
 		24E8FF2815B756C500240A87 /* Fourgy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fourgy.h; sourceTree = "<group>"; };
@@ -200,14 +212,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		24E8FF1D15B756C400240A87 /* Frameworks */ = {
+		24DAAB1015B988AE002EA948 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E8FF9215B75FFE00240A87 /* AudioToolbox.framework in Frameworks */,
-				24E8FF7815B7588200240A87 /* UIKit.framework in Frameworks */,
-				24E8FF7715B7587D00240A87 /* CoreText.framework in Frameworks */,
-				24E8FF2415B756C400240A87 /* Foundation.framework in Frameworks */,
+				24DAAB1415B988AE002EA948 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,9 +232,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DAAB4F15B98948002EA948 /* libFourgy.a in Frameworks */,
 				24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */,
 				24B967AA15B85C40009F142C /* libDCTMusicModel.a in Frameworks */,
-				24E8FF7415B7586500240A87 /* libFourgy.a in Frameworks */,
 				24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */,
 				24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */,
 				24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */,
@@ -275,9 +284,9 @@
 		24E8FF2115B756C400240A87 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24E8FF2015B756C400240A87 /* libFourgy.a */,
 				24E8FF4815B7572900240A87 /* Fourgy.bundle */,
 				24E8FF5B15B757B700240A87 /* Fourgy.app */,
+				24DAAB1315B988AE002EA948 /* libFourgy.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -408,44 +417,23 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		24E8FF3F15B7570700240A87 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24E8FF4015B7570D00240A87 /* Fourgy.h in Headers */,
-				24E8FF4115B7571000240A87 /* FGYController.h in Headers */,
-				24E8FF4315B7571400240A87 /* FGYClickWheel.h in Headers */,
-				24B9682815B8837A009F142C /* FGYTickingLabel.h in Headers */,
-				241AD6A715B947C70036F9D7 /* FGYTableViewController.h in Headers */,
-				24FEF28115B88C6E00ADF18D /* FGYProgressView.h in Headers */,
-				24E8FF4215B7571200240A87 /* FGYBatteryLevelView.h in Headers */,
-				24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */,
-				24700B2B15B8229D00FA5843 /* _FGYTableViewScrollHandler.h in Headers */,
-				240819FF15B94EF30056B402 /* _FGYScroller.h in Headers */,
-				24081A0415B9697F0056B402 /* FGYTableViewCell.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		24E8FF1F15B756C400240A87 /* Fourgy */ = {
+		24DAAB1215B988AE002EA948 /* Fourgy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24E8FF2E15B756C500240A87 /* Build configuration list for PBXNativeTarget "Fourgy" */;
+			buildConfigurationList = 24DAAB1C15B988AE002EA948 /* Build configuration list for PBXNativeTarget "Fourgy" */;
 			buildPhases = (
-				24E8FF1C15B756C400240A87 /* Sources */,
-				24E8FF1D15B756C400240A87 /* Frameworks */,
-				24E8FF3F15B7570700240A87 /* Headers */,
+				24DAAB0F15B988AE002EA948 /* Sources */,
+				24DAAB1015B988AE002EA948 /* Frameworks */,
+				24DAAB1115B988AE002EA948 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				24E8FF7B15B758A600240A87 /* PBXTargetDependency */,
+				24DAAB4E15B98924002EA948 /* PBXTargetDependency */,
 			);
 			name = Fourgy;
 			productName = Fourgy;
-			productReference = 24E8FF2015B756C400240A87 /* libFourgy.a */;
+			productReference = 24DAAB1315B988AE002EA948 /* libFourgy.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		24E8FF4715B7572900240A87 /* FourgyBundle */ = {
@@ -514,7 +502,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				24E8FF1F15B756C400240A87 /* Fourgy */,
+				24DAAB1215B988AE002EA948 /* Fourgy */,
 				24E8FF4715B7572900240A87 /* FourgyBundle */,
 				24E8FF5A15B757B700240A87 /* FourgyApp */,
 			);
@@ -609,20 +597,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		24E8FF1C15B756C400240A87 /* Sources */ = {
+		24DAAB0F15B988AE002EA948 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E8FF2B15B756C500240A87 /* Fourgy.m in Sources */,
-				24E8FF3B15B756FB00240A87 /* FGYBatteryLevelView.m in Sources */,
-				24E8FF3C15B756FB00240A87 /* FGYClickWheel.m in Sources */,
-				24E8FF3D15B756FB00240A87 /* FGYController.m in Sources */,
-				24700B2C15B8229D00FA5843 /* _FGYTableViewScrollHandler.m in Sources */,
-				24B9682915B8837A009F142C /* FGYTickingLabel.m in Sources */,
-				24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */,
-				241AD6A815B947C70036F9D7 /* FGYTableViewController.m in Sources */,
-				24081A0015B94EF30056B402 /* _FGYScroller.m in Sources */,
-				24081A0515B9697F0056B402 /* FGYTableViewCell.m in Sources */,
+				24DAAB2015B988D6002EA948 /* Fourgy.m in Sources */,
+				24DAAB2215B988D6002EA948 /* FGYBatteryLevelView.m in Sources */,
+				24DAAB2515B988D6002EA948 /* FGYClickWheel.m in Sources */,
+				24DAAB2715B988D6002EA948 /* FGYController.m in Sources */,
+				24DAAB2A15B988D6002EA948 /* _FGYTableViewScrollHandler.m in Sources */,
+				24DAAB2C15B988D6002EA948 /* FGYTickingLabel.m in Sources */,
+				24DAAB2E15B988D6002EA948 /* FGYProgressView.m in Sources */,
+				24DAAB3015B988D6002EA948 /* FGYTableViewController.m in Sources */,
+				24DAAB3315B988D6002EA948 /* _FGYScroller.m in Sources */,
+				24DAAB3515B988D6002EA948 /* FGYTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,10 +644,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		24E8FF7B15B758A600240A87 /* PBXTargetDependency */ = {
+		24DAAB4E15B98924002EA948 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24E8FF4715B7572900240A87 /* FourgyBundle */;
-			targetProxy = 24E8FF7A15B758A600240A87 /* PBXContainerItemProxy */;
+			targetProxy = 24DAAB4D15B98924002EA948 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -683,6 +671,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		24DAAB1D15B988AE002EA948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/Fourgy.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		24DAAB1E15B988AE002EA948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/Fourgy.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		24E8FF2C15B756C500240A87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -724,34 +742,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		24E8FF2F15B756C500240A87 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/Fourgy.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		24E8FF3015B756C500240A87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/Fourgy.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -841,20 +831,19 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		24DAAB1C15B988AE002EA948 /* Build configuration list for PBXNativeTarget "Fourgy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24DAAB1D15B988AE002EA948 /* Debug */,
+				24DAAB1E15B988AE002EA948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		24E8FF1A15B756C400240A87 /* Build configuration list for PBXProject "Fourgy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24E8FF2C15B756C500240A87 /* Debug */,
 				24E8FF2D15B756C500240A87 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		24E8FF2E15B756C500240A87 /* Build configuration list for PBXNativeTarget "Fourgy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24E8FF2F15B756C500240A87 /* Debug */,
-				24E8FF3015B756C500240A87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
