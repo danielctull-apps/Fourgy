@@ -6,42 +6,12 @@
 //  Copyright (c) 2012 Daniel Tull. All rights reserved.
 //
 
-#import "UITableViewController+_FGYClickWheelDelegate.h"
-#import "FGYController.h"
+#import "_FGYTableViewScrollHandler.h"
 #import <objc/runtime.h>
 
-@interface FGYTableViewControllerScrollHandler : NSObject
-- (id)initWithTableViewController:(UITableViewController *)tableViewController;
-- (void)clickWheelTouchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance;
-@end
-
-@implementation UITableViewController (_FGYClickWheelDelegate)
-
-- (FGYTableViewControllerScrollHandler *)fgy_scrollHandler {
-	
-	FGYTableViewControllerScrollHandler *handler = objc_getAssociatedObject(self, _cmd);
-	
-	if (!handler) {
-		handler = [[FGYTableViewControllerScrollHandler alloc] initWithTableViewController:self];
-		objc_setAssociatedObject(self, _cmd, handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-	}
-	
-	return handler;
-}
-
-- (void)clickWheelMenuButtonTapped {
-	[self.fgy_controller popViewControllerAnimated:YES];
-}
-
-- (void)clickWheelTouchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance {
-	[[self fgy_scrollHandler] clickWheelTouchesMovedToAngle:angle distance:distance];
-}
-
-@end
-
-@implementation FGYTableViewControllerScrollHandler {
-	__weak UITableViewController *_tableViewController;
-	
+@implementation _FGYTableViewScrollHandler {
+	__strong UITableView *_tableView;
+	__weak FGYController *_fourgyController;
 	
 	CGFloat oldAngle;
 	CGFloat difference;
@@ -49,10 +19,11 @@
 	CGFloat rotation360check;
 }
 
-- (id)initWithTableViewController:(UITableViewController *)tableViewController {
+- (id)initWithTableView:(UITableView *)tableView fourgyController:(FGYController *)fourgyController {
 	self = [self init];
 	if (!self) return nil;
-	_tableViewController = tableViewController;
+	_tableView = tableView;
+	_fourgyController = fourgyController;
 	return self;
 }
 
@@ -108,7 +79,7 @@
 			[self moveDown];
 		
 		if([self moveDown])
-			[_tableViewController.fgy_controller click];
+			[_fourgyController click];
 		
 		difference = 0.0;
 		
@@ -118,7 +89,7 @@
 			[self moveUp];
 		
 		if ([self moveUp])
-			[_tableViewController.fgy_controller click];
+			[_fourgyController click];
 		
 		difference = 0.0;
 		
@@ -135,15 +106,15 @@
 	if ([newIndexPath compare:[NSIndexPath indexPathForRow:0 inSection:0]] == NSOrderedAscending)
 		return NO;
 	
-	NSInteger lastSection = [_tableViewController.tableView numberOfSections] - 1;
+	NSInteger lastSection = [_tableView numberOfSections] - 1;
 	if (lastSection < 0) lastSection = 0;
-	NSInteger lastRow = [_tableViewController.tableView numberOfRowsInSection:lastSection] - 1;
+	NSInteger lastRow = [_tableView numberOfRowsInSection:lastSection] - 1;
 	if (lastRow < 0) lastRow = 0;
 	if ([newIndexPath compare:[NSIndexPath indexPathForRow:lastRow inSection:lastSection]] == NSOrderedDescending)
 		return NO;
 	
 	UITableViewScrollPosition position = UITableViewScrollPositionNone;
-	NSArray *visibleIndexPaths = [_tableViewController.tableView indexPathsForVisibleRows];
+	NSArray *visibleIndexPaths = [_tableView indexPathsForVisibleRows];
 	if (![visibleIndexPaths containsObject:newIndexPath]) {
 		
 		NSComparisonResult result = [oldIndexPath compare:newIndexPath];
@@ -162,14 +133,14 @@
 		}
 	}
 	
-	UITableViewCell *oldCell = [_tableViewController.tableView cellForRowAtIndexPath:oldIndexPath];
+	UITableViewCell *oldCell = [_tableView cellForRowAtIndexPath:oldIndexPath];
 	UIView *bg = oldCell.selectedBackgroundView;
 	oldCell.selectionStyle = UITableViewCellSelectionStyleNone;
 	oldCell.selectedBackgroundView = nil;
 	
-	[_tableViewController.tableView selectRowAtIndexPath:newIndexPath animated:NO scrollPosition:position];
+	[_tableView selectRowAtIndexPath:newIndexPath animated:NO scrollPosition:position];
 	
-	UITableViewCell *newCell = [_tableViewController.tableView cellForRowAtIndexPath:newIndexPath];
+	UITableViewCell *newCell = [_tableView cellForRowAtIndexPath:newIndexPath];
 	newCell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	newCell.selectedBackgroundView = bg;
 	
@@ -177,13 +148,13 @@
 }
 
 - (BOOL)moveDown {
-	NSIndexPath *oldIndexPath = [_tableViewController.tableView indexPathForSelectedRow];
+	NSIndexPath *oldIndexPath = [_tableView indexPathForSelectedRow];
 	NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:oldIndexPath.row+1 inSection:oldIndexPath.section];
 	return [self moveSelectionFromOldIndexPath:oldIndexPath newIndexPath:newIndexPath];
 }
 
 - (BOOL)moveUp {
-	NSIndexPath *oldIndexPath = [_tableViewController.tableView indexPathForSelectedRow];
+	NSIndexPath *oldIndexPath = [_tableView indexPathForSelectedRow];
 	NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:oldIndexPath.row-1 inSection:oldIndexPath.section];
 	return [self moveSelectionFromOldIndexPath:oldIndexPath newIndexPath:newIndexPath];
 }

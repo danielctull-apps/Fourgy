@@ -49,7 +49,6 @@
 		244B7BFF101E2C8E0021C335 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244B7BFE101E2C8E0021C335 /* Entitlements.plist */; };
 		246AE000101997B8009FA983 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 246ADFFF101997B8009FA983 /* Icon.png */; };
 		248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */; };
-		24A43D671025D9FB003E6959 /* DTBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D631025D9FB003E6959 /* DTBlockScroller.m */; };
 		24A43D681025D9FB003E6959 /* DTBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D651025D9FB003E6959 /* DTBlockView.m */; };
 		24A43D6E1025DA10003E6959 /* DTClickWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D6D1025DA10003E6959 /* DTClickWheelView.m */; };
 		24A43D861025DA28003E6959 /* MPMediaItem+DTTrackNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A43D7B1025DA28003E6959 /* MPMediaItem+DTTrackNumber.m */; };
@@ -139,8 +138,6 @@
 		246ADFFF101997B8009FA983 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		248CA51F101C5BCF00B61E2E /* DTiPodBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTiPodBlockScroller.h; sourceTree = "<group>"; };
 		248CA520101C5BCF00B61E2E /* DTiPodBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTiPodBlockScroller.m; sourceTree = "<group>"; };
-		24A43D621025D9FB003E6959 /* DTBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockScroller.h; sourceTree = "<group>"; };
-		24A43D631025D9FB003E6959 /* DTBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockScroller.m; sourceTree = "<group>"; };
 		24A43D641025D9FB003E6959 /* DTBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockView.h; sourceTree = "<group>"; };
 		24A43D651025D9FB003E6959 /* DTBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockView.m; sourceTree = "<group>"; };
 		24A43D661025D9FB003E6959 /* DTBlockViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockViewCellProtocol.h; sourceTree = "<group>"; };
@@ -280,8 +277,6 @@
 		24A43D611025D9FB003E6959 /* DTBlockView */ = {
 			isa = PBXGroup;
 			children = (
-				24A43D621025D9FB003E6959 /* DTBlockScroller.h */,
-				24A43D631025D9FB003E6959 /* DTBlockScroller.m */,
 				24A43D641025D9FB003E6959 /* DTBlockView.h */,
 				24A43D651025D9FB003E6959 /* DTBlockView.m */,
 				24A43D661025D9FB003E6959 /* DTBlockViewCellProtocol.h */,
@@ -451,7 +446,6 @@
 				240821B3100F7627006EDE45 /* DTScreenViewController.m in Sources */,
 				24F96B8B10191A0C00829FF9 /* DTPlaybackTimeView.m in Sources */,
 				248CA521101C5BCF00B61E2E /* DTiPodBlockScroller.m in Sources */,
-				24A43D671025D9FB003E6959 /* DTBlockScroller.m in Sources */,
 				24A43D681025D9FB003E6959 /* DTBlockView.m in Sources */,
 				24A43D6E1025DA10003E6959 /* DTClickWheelView.m in Sources */,
 				24A43D861025DA28003E6959 /* MPMediaItem+DTTrackNumber.m in Sources */,

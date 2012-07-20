@@ -11,7 +11,7 @@
 #import <DCTMusicModel/DCTMusicModel.h>
 #import <Fourgy/Fourgy.h>
 
-@interface ItemsViewController : UITableViewController
+@interface ItemsViewController : FGYTableViewController
 - (id)initWithItems:(NSArray *)items;
 - (NSString *)titleForItem:(id)item;
 @property (nonatomic, readonly) DCTArrayTableViewDataSource *dataSource;

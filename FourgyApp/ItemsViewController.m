@@ -10,7 +10,6 @@
 #import <Fourgy/Fourgy.h>
 
 @implementation ItemsViewController {
-	__strong NSIndexPath *_selectedIndexPath;
 	__strong NSArray *_items;
 	__strong NSManagedObjectContext *_managedObjectContext;
 }
@@ -22,28 +21,8 @@
 	return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[self.tableView selectRowAtIndexPath:_selectedIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
-	
-	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:_selectedIndexPath];
-	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-	cell.selectedBackgroundView = [UIView new];
-	cell.selectedBackgroundView.backgroundColor = [Fourgy foregroundColor];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-	_selectedIndexPath = [self.tableView indexPathForSelectedRow];
-}
-
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	self.tableView.rowHeight = [Fourgy rowHeight];
-	self.tableView.showsVerticalScrollIndicator = NO;
-	self.tableView.showsHorizontalScrollIndicator = NO;
-	_selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 	
 	_dataSource = [DCTArrayTableViewDataSource new];
 	_dataSource.array = _items;
