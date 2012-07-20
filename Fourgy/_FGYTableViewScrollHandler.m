@@ -11,7 +11,6 @@
 
 @implementation _FGYTableViewScrollHandler {
 	__strong UITableView *_tableView;
-	__weak FGYController *_fourgyController;
 	
 	CGFloat oldAngle;
 	CGFloat difference;
@@ -19,16 +18,15 @@
 	CGFloat rotation360check;
 }
 
-- (id)initWithTableView:(UITableView *)tableView fourgyController:(FGYController *)fourgyController {
+- (id)initWithTableView:(UITableView *)tableView {
 	self = [self init];
 	if (!self) return nil;
 	_tableView = tableView;
-	_fourgyController = fourgyController;
 	return self;
 }
 
 
-- (void)clickWheelTouchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance {
+- (BOOL)clickWheelTouchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance {
 	
 	if (oldAngle == 500.0) {
 		rotations = 0;
@@ -36,7 +34,7 @@
 		//DTScreenTableViewController *tableController = (DTScreenTableViewController *)nav.visibleViewController;
 		//[tableController.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 		oldAngle = angle;
-		return;
+		return NO;
 	}
 	
 	CGFloat diff = angle - oldAngle;
@@ -69,32 +67,27 @@
 		
 		rotation360check = 0;
 	}
-	
-	
-	
-	
+		
 	if (difference > 22.5) {
 		
 		for (NSInteger i = 1; i < rotations; i++)
 			[self moveDown];
 		
-		if([self moveDown])
-			[_fourgyController click];
-		
 		difference = 0.0;
+		
+		return [self moveDown];
 		
 	} else if (difference < -22.5) {
 		
 		for (NSInteger i = 1; i < rotations; i++)
 			[self moveUp];
 		
-		if ([self moveUp])
-			[_fourgyController click];
-		
 		difference = 0.0;
 		
+		return [self moveUp];
 	}
 	
+	return NO;
 }
 
 - (BOOL)moveSelectionFromOldIndexPath:(NSIndexPath *)oldIndexPath newIndexPath:(NSIndexPath *)newIndexPath {

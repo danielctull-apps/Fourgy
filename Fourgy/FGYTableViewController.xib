@@ -35,6 +35,22 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
+					<object class="IBUIView" id="571354777">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">273</int>
+						<string key="NSFrame">{{300, -3}, {20, 463}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="872717097">
+								<int key="NSID">2</int>
+							</object>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
 					<object class="IBUITableView" id="209602635">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
@@ -57,23 +73,6 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
-					</object>
-					<object class="IBUIView" id="571354777">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">273</int>
-						<string key="NSFrame">{{300, 0}, {20, 460}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="872717097">
-								<int key="NSID">2</int>
-							</object>
-						</object>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -106,6 +105,22 @@
 					</object>
 					<int key="connectionID">9</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">scroller</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="571354777"/>
+					</object>
+					<int key="connectionID">21</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">tableView</string>
+						<reference key="source" ref="571354777"/>
+						<reference key="destination" ref="209602635"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -119,8 +134,8 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="209602635"/>
 							<reference ref="571354777"/>
+							<reference ref="209602635"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -153,6 +168,7 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="10.CustomClassName">_FGYScroller</string>
 				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -160,13 +176,35 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">FGYTableViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="scroller">_FGYScroller</string>
+						<string key="tableView">UITableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="scroller">
+							<string key="name">scroller</string>
+							<string key="candidateClassName">_FGYScroller</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tableView">
+							<string key="name">tableView</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/FGYTableViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">_FGYScroller</string>
+					<string key="superclassName">UIView</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">tableView</string>
 						<string key="NS.object.0">UITableView</string>
@@ -180,7 +218,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/FGYTableViewController.h</string>
+						<string key="minorKey">./Classes/_FGYScroller.h</string>
 					</object>
 				</object>
 			</array>

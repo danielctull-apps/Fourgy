@@ -7,62 +7,53 @@
 //
 
 #import "_FGYScroller.h"
-
+#import "Fourgy.h"
 
 @implementation _FGYScroller
 
-@synthesize numberOfitems, numberOfItemsOnScreen, currentItemNumber, knobInsets, scrollerInsets;
-
-- (id)initWithFrame:(CGRect)frame {
-    if (!(self = [super initWithFrame:frame])) return nil;
-	
-	scrollerInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-	knobInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-	numberOfitems = 1;
-	numberOfItemsOnScreen = 1;
-	currentItemNumber = 0;
-	
-    return self;
-}
-
-
 - (void)drawRect:(CGRect)aRect {
 	
-	CGRect rect = CGRectMake(aRect.origin.x + self.scrollerInsets.left,
-							 aRect.origin.y + self.scrollerInsets.top,
-							 aRect.size.width - self.scrollerInsets.left - self.scrollerInsets.right,
-							 aRect.size.height - self.scrollerInsets.top - self.scrollerInsets.bottom);
+	CGRect rect = self.bounds;
 	
-	[self drawBackgroundInRect:rect];
-	
-	CGFloat scrollerHeight = rect.size.height - knobInsets.top - knobInsets.bottom;
-	
-	CGFloat knobHeight = (CGFloat)(NSInteger)(scrollerHeight * numberOfItemsOnScreen / numberOfitems);
-	
-	CGFloat knobPosition = (CGFloat)(NSInteger)(scrollerHeight * self.currentItemNumber / self.numberOfitems);
-	
-	[self drawKnobInRect:CGRectMake(knobInsets.left,
-									knobPosition + knobInsets.top,
-									rect.size.width - knobInsets.left - knobInsets.right, 
-									knobHeight + 1.0)];
-}
-
-- (void)drawBackgroundInRect:(CGRect)rect {
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	CGContextSetGrayFillColor(context, 0.5, 1.0);
+	
+	[[Fourgy foregroundColor] setFill];
 	CGContextFillRect(context, rect);
-}
-
-- (void)drawKnobInRect:(CGRect)rect {
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	CGContextSetGrayFillColor(context, 0.0, 1.0);
+	
+	[[Fourgy backgroundColor] setFill];
+	rect = CGRectInset(rect, 2.0f, 2.0f);
 	CGContextFillRect(context, rect);
+	
+	rect = CGRectInset(rect, 1.0f, 1.0f);
+	
+	CGFloat trackHeight = rect.size.height;
+	
+	NSUInteger numberOfItemsOnScreen = [self.tableView.visibleCells count];
+	
+	NSInteger numberOfitems = 0;
+	NSInteger currentItemNumber = 0;
+	
+	NSIndexPath *currentIndexPath = [self.tableView indexPathForSelectedRow];
+	NSInteger numberOfSections = [self.tableView numberOfSections];
+	for (NSInteger i = 0; i < numberOfSections; i++) {
+		NSInteger numberOfRowsInSection = [self.tableView numberOfRowsInSection:i];
+		numberOfitems += numberOfRowsInSection;
+		if (currentIndexPath.section < i)
+			currentItemNumber += numberOfRowsInSection;
+	}
+	currentItemNumber += currentIndexPath.row;
+	
+	NSInteger knobHeight = (NSInteger)(trackHeight * numberOfItemsOnScreen / numberOfitems--);
+	if (knobHeight < 10) knobHeight = 10;
+	
+	NSInteger knobPosition = (NSInteger)((trackHeight-knobHeight) * currentItemNumber / numberOfitems);
+	
+	CGRect knobRect = rect;
+	knobRect.size.height = knobHeight;
+	knobRect.origin.y += knobPosition;
+	
+	[[Fourgy foregroundColor] setFill];
+	CGContextFillRect(context, knobRect);
 }
-
-- (void)setCurrentItemNumber:(NSInteger)anInteger {
-	currentItemNumber = anInteger;
-	[self setNeedsDisplay];
-}
-
 
 @end

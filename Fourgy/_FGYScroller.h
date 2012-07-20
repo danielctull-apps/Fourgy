@@ -8,15 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface _FGYScroller : UIView {
-	NSInteger numberOfitems, numberOfItemsOnScreen, currentItemNumber;
-	UIEdgeInsets knobInsets, scrollerInsets;
-}
-@property (nonatomic, assign) NSInteger numberOfitems, numberOfItemsOnScreen, currentItemNumber;
-@property (nonatomic, assign) UIEdgeInsets knobInsets, scrollerInsets;
-
-- (void)drawBackgroundInRect:(CGRect)rect;
-- (void)drawKnobInRect:(CGRect)rect;
-
+@interface _FGYScroller : UIView
+@property (nonatomic, assign) IBOutlet UITableView *tableView;
 @end

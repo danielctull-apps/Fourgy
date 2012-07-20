@@ -7,15 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FGYClickWheel.h"
-#import "FGYTableViewController.h"
-#import "FGYController.h"
 
 @interface _FGYTableViewScrollHandler : NSObject
-
-- (id)initWithTableView:(UITableView *)tableView
-	   fourgyController:(FGYController *)fourgyController;
-
-- (void)clickWheelTouchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance;
-
+- (id)initWithTableView:(UITableView *)tableView;
+- (BOOL)clickWheelTouchesMovedToAngle:(CGFloat)angle distance:(CGFloat)distance;
 @end

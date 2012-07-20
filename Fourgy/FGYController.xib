@@ -134,7 +134,6 @@
 											<int key="NSColorSpace">3</int>
 											<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
 										</object>
-										<bool key="IBUIClipsSubviews">YES</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									</object>
 								</array>
@@ -147,6 +146,7 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
 								</object>
+								<bool key="IBUIClipsSubviews">YES</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
