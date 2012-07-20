@@ -90,17 +90,11 @@ void* NowPlayingViewControllerCurrentPlaybackTimeObservingContext = &NowPlayingV
 	[self _trackDidChange:nil];
 }
 
-- (void)_trackDidChange:(NSNotification *)notification {
-
-	if (_iPod.playbackState == MPMusicPlaybackStateStopped) {
-		[self.fgy_controller popToRootViewControllerAnimated:YES];
-		return;
-	}
-	
+- (void)_trackDidChange:(NSNotification *)notification {	
 	self.artistLabel.text = [_iPod.nowPlayingItem valueForProperty:MPMediaItemPropertyArtist];
 	self.trackNameLabel.text = [_iPod.nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
 	self.albumLabel.text = [_iPod.nowPlayingItem valueForProperty:MPMediaItemPropertyAlbumTitle];
-	self.trackNumberLabel.text = [NSString stringWithFormat:@"%i of %i", _iPod.indexOfNowPlayingItem, [_musicQueue count]];
+	self.trackNumberLabel.text = [NSString stringWithFormat:@"%i of %i", _iPod.indexOfNowPlayingItem+1, [_musicQueue count]];
 	[self _updatePositionTimer:nil];
 }
 

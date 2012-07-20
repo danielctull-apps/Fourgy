@@ -16,7 +16,16 @@
 }
 
 - (void)clickWheelCenterButtonTapped {
-	NowPlayingViewController *vc = [NowPlayingViewController new];
+	
+	NSMutableArray *mediaitems = [[NSMutableArray alloc] init];
+	[self.dataSource.array enumerateObjectsUsingBlock:^(DCTSong *song, NSUInteger idx, BOOL *stop) {
+		[mediaitems addObject:[song mediaItem]];
+	}];
+	
+	DCTSong *song = [self.dataSource objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
+	MPMediaItem *mediaItem = [song mediaItem];
+	MPMediaItemCollection *collection = [MPMediaItemCollection collectionWithItems:mediaitems];
+	NowPlayingViewController *vc = [[NowPlayingViewController alloc] initWithMediaItem:mediaItem collection:collection];
 	[self.fgy_controller pushViewController:vc animated:YES];
 }
 

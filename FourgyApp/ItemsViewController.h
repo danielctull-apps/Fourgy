@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <DCTTableViewDataSources/DCTTableViewDataSources.h>
 #import <DCTMusicModel/DCTMusicModel.h>
+#import <Fourgy/Fourgy.h>
 
 @interface ItemsViewController : UITableViewController
 - (id)initWithItems:(NSArray *)items;
