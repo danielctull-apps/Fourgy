@@ -40,4 +40,27 @@
 	return [item description];
 }
 
+#pragma mark - FGYClickWheelDelegate
+
+- (void)clickWheelPreviousButtonTapped {
+	MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+	if (iPod.currentPlaybackTime < 5)
+		[iPod skipToPreviousItem];
+	else
+		[iPod skipToBeginning];
+}
+
+- (void)clickWheelNextButtonTapped {
+	MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+	[iPod skipToNextItem];
+}
+
+- (void)clickWheelPlayButtonTapped {
+	MPMusicPlayerController *iPod = [MPMusicPlayerController iPodMusicPlayer];
+	if (iPod.playbackState == MPMusicPlaybackStatePlaying)
+		[iPod pause];
+	else
+		[iPod play];
+}
+
 @end

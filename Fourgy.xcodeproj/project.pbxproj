@@ -469,6 +469,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24E8FF6E15B757B700240A87 /* Build configuration list for PBXNativeTarget "FourgyApp" */;
 			buildPhases = (
+				2437B59C15B970C100750117 /* Update Bundle Version Number */,
 				24E8FF5715B757B700240A87 /* Sources */,
 				24E8FF5815B757B700240A87 /* Frameworks */,
 				24E8FF5915B757B700240A87 /* Resources */,
@@ -589,6 +590,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2437B59C15B970C100750117 /* Update Bundle Version Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Bundle Version Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "touch InfoPlist.h\ngit=`sh /etc/profile; which git`\ncount=`$git log --oneline | wc -l`\necho -e \"#define GIT_COMMIT_COUNT $count\" > InfoPlist.h";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24E8FF1C15B756C400240A87 /* Sources */ = {
@@ -785,6 +803,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FourgyApp/FourgyApp-Prefix.pch";
 				INFOPLIST_FILE = "FourgyApp/FourgyApp-Info.plist";
+				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -804,6 +824,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FourgyApp/FourgyApp-Prefix.pch";
 				INFOPLIST_FILE = "FourgyApp/FourgyApp-Info.plist";
+				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
