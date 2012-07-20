@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'iPod' target in the 'iPod' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif

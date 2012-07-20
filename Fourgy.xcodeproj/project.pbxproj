@@ -809,8 +809,8 @@
 		24E8FF7015B757B700240A87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FourgyApp/FourgyApp-Prefix.pch";
 				INFOPLIST_FILE = "FourgyApp/FourgyApp-Info.plist";
@@ -824,6 +824,7 @@
 				);
 				PRODUCT_NAME = Fourgy;
 				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -838,6 +839,7 @@
 				24DAAB1E15B988AE002EA948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24E8FF1A15B756C400240A87 /* Build configuration list for PBXProject "Fourgy" */ = {
 			isa = XCConfigurationList;
