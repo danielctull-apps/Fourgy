@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240819FF15B94EF30056B402 /* DTBlockScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 240819FD15B94EF30056B402 /* DTBlockScroller.h */; };
-		24081A0015B94EF30056B402 /* DTBlockScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 240819FE15B94EF30056B402 /* DTBlockScroller.m */; };
+		240819FF15B94EF30056B402 /* _FGYScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 240819FD15B94EF30056B402 /* _FGYScroller.h */; };
+		24081A0015B94EF30056B402 /* _FGYScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 240819FE15B94EF30056B402 /* _FGYScroller.m */; };
 		241AD6A715B947C70036F9D7 /* FGYTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 241AD6A415B947C70036F9D7 /* FGYTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		241AD6A815B947C70036F9D7 /* FGYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241AD6A515B947C70036F9D7 /* FGYTableViewController.m */; };
 		241AD6A915B94BDF0036F9D7 /* FGYTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */; };
@@ -118,8 +118,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		240819FD15B94EF30056B402 /* DTBlockScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBlockScroller.h; sourceTree = "<group>"; };
-		240819FE15B94EF30056B402 /* DTBlockScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBlockScroller.m; sourceTree = "<group>"; };
+		240819FD15B94EF30056B402 /* _FGYScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FGYScroller.h; sourceTree = "<group>"; };
+		240819FE15B94EF30056B402 /* _FGYScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FGYScroller.m; sourceTree = "<group>"; };
 		241AD6A415B947C70036F9D7 /* FGYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewController.h; sourceTree = "<group>"; };
 		241AD6A515B947C70036F9D7 /* FGYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewController.m; sourceTree = "<group>"; };
 		241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYTableViewController.xib; sourceTree = "<group>"; };
@@ -317,8 +317,8 @@
 				241AD6A415B947C70036F9D7 /* FGYTableViewController.h */,
 				241AD6A515B947C70036F9D7 /* FGYTableViewController.m */,
 				241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */,
-				240819FD15B94EF30056B402 /* DTBlockScroller.h */,
-				240819FE15B94EF30056B402 /* DTBlockScroller.m */,
+				240819FD15B94EF30056B402 /* _FGYScroller.h */,
+				240819FE15B94EF30056B402 /* _FGYScroller.m */,
 			);
 			path = Fourgy;
 			sourceTree = "<group>";
@@ -416,7 +416,7 @@
 				24E8FF4215B7571200240A87 /* FGYBatteryLevelView.h in Headers */,
 				24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */,
 				24700B2B15B8229D00FA5843 /* _FGYTableViewScrollHandler.h in Headers */,
-				240819FF15B94EF30056B402 /* DTBlockScroller.h in Headers */,
+				240819FF15B94EF30056B402 /* _FGYScroller.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,7 +596,7 @@
 				24B9682915B8837A009F142C /* FGYTickingLabel.m in Sources */,
 				24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */,
 				241AD6A815B947C70036F9D7 /* FGYTableViewController.m in Sources */,
-				24081A0015B94EF30056B402 /* DTBlockScroller.m in Sources */,
+				24081A0015B94EF30056B402 /* _FGYScroller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
