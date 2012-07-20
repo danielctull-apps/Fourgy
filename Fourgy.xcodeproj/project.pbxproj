@@ -56,6 +56,11 @@
 		24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E8FFA615B7707400240A87 /* _FGYClickWheel.h */; };
 		24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FFAA15B776A000240A87 /* MediaPlayer.framework */; };
 		24E8FFAE15B7793300240A87 /* MediaItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */; };
+		24EBAADB15B8CDC300A53811 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAADA15B8CDC300A53811 /* ItemsViewController.m */; };
+		24EBAADE15B8D6D100A53811 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAADD15B8D6D100A53811 /* AlbumsViewController.m */; };
+		24EBAAE115B8D76300A53811 /* PlaylistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE015B8D76300A53811 /* PlaylistsViewController.m */; };
+		24EBAAE415B8D7DD00A53811 /* GenresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE315B8D7DD00A53811 /* GenresViewController.m */; };
+		24EBAAE715B8D8A200A53811 /* ComposersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE615B8D8A200A53811 /* ComposersViewController.m */; };
 		24FEF28115B88C6E00ADF18D /* FGYProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28015B88C6E00ADF18D /* FGYProgressView.m */; };
 		24FEF28615B8A9CA00ADF18D /* ImportingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28415B8A9CA00ADF18D /* ImportingViewController.m */; };
@@ -163,6 +168,16 @@
 		24E8FFAA15B776A000240A87 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		24E8FFAC15B7793300240A87 /* MediaItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaItemsViewController.h; sourceTree = "<group>"; };
 		24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaItemsViewController.m; sourceTree = "<group>"; };
+		24EBAAD915B8CDC300A53811 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
+		24EBAADA15B8CDC300A53811 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
+		24EBAADC15B8D6D100A53811 /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
+		24EBAADD15B8D6D100A53811 /* AlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
+		24EBAADF15B8D76300A53811 /* PlaylistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistsViewController.h; sourceTree = "<group>"; };
+		24EBAAE015B8D76300A53811 /* PlaylistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistsViewController.m; sourceTree = "<group>"; };
+		24EBAAE215B8D7DD00A53811 /* GenresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenresViewController.h; sourceTree = "<group>"; };
+		24EBAAE315B8D7DD00A53811 /* GenresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenresViewController.m; sourceTree = "<group>"; };
+		24EBAAE515B8D8A200A53811 /* ComposersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposersViewController.h; sourceTree = "<group>"; };
+		24EBAAE615B8D8A200A53811 /* ComposersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposersViewController.m; sourceTree = "<group>"; };
 		24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYProgressView.h; sourceTree = "<group>"; };
 		24FEF28015B88C6E00ADF18D /* FGYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYProgressView.m; sourceTree = "<group>"; };
 		24FEF28315B8A9CA00ADF18D /* ImportingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportingViewController.h; sourceTree = "<group>"; };
@@ -326,12 +341,22 @@
 			children = (
 				24E8FF6B15B757B700240A87 /* AppDelegate.h */,
 				24E8FF6C15B757B700240A87 /* AppDelegate.m */,
+				24EBAAD915B8CDC300A53811 /* ItemsViewController.h */,
+				24EBAADA15B8CDC300A53811 /* ItemsViewController.m */,
 				24B967AC15B85D0B009F142C /* MenuViewController.h */,
 				24B967AD15B85D0B009F142C /* MenuViewController.m */,
-				24B967CC15B86168009F142C /* SongsViewController.h */,
-				24B967CD15B86168009F142C /* SongsViewController.m */,
 				24B967CF15B86E04009F142C /* ArtistsViewController.h */,
 				24B967D015B86E04009F142C /* ArtistsViewController.m */,
+				24EBAADC15B8D6D100A53811 /* AlbumsViewController.h */,
+				24EBAADD15B8D6D100A53811 /* AlbumsViewController.m */,
+				24B967CC15B86168009F142C /* SongsViewController.h */,
+				24B967CD15B86168009F142C /* SongsViewController.m */,
+				24EBAADF15B8D76300A53811 /* PlaylistsViewController.h */,
+				24EBAAE015B8D76300A53811 /* PlaylistsViewController.m */,
+				24EBAAE215B8D7DD00A53811 /* GenresViewController.h */,
+				24EBAAE315B8D7DD00A53811 /* GenresViewController.m */,
+				24EBAAE515B8D8A200A53811 /* ComposersViewController.h */,
+				24EBAAE615B8D8A200A53811 /* ComposersViewController.m */,
 				24E8FFAC15B7793300240A87 /* MediaItemsViewController.h */,
 				24E8FFAD15B7793300240A87 /* MediaItemsViewController.m */,
 				24B9682315B88350009F142C /* NowPlayingViewController.h */,
@@ -574,6 +599,11 @@
 				24B967D115B86E04009F142C /* ArtistsViewController.m in Sources */,
 				24B9682515B88350009F142C /* NowPlayingViewController.m in Sources */,
 				24FEF28615B8A9CA00ADF18D /* ImportingViewController.m in Sources */,
+				24EBAADB15B8CDC300A53811 /* ItemsViewController.m in Sources */,
+				24EBAADE15B8D6D100A53811 /* AlbumsViewController.m in Sources */,
+				24EBAAE115B8D76300A53811 /* PlaylistsViewController.m in Sources */,
+				24EBAAE415B8D7DD00A53811 /* GenresViewController.m in Sources */,
+				24EBAAE715B8D8A200A53811 /* ComposersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

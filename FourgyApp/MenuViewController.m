@@ -9,86 +9,78 @@
 #import "MenuViewController.h"
 #import <Fourgy/Fourgy.h>
 #import <DCTTableViewDataSources/DCTTableViewDataSources.h>
-#import <DCTMusicModel/DCTMusicModel.h>
+
 #import "SongsViewController.h"
 #import "ArtistsViewController.h"
+#import "AlbumsViewController.h"
+#import "PlaylistsViewController.h"
+#import "GenresViewController.h"
+#import "ComposersViewController.h"
 
 #import "NowPlayingViewController.h"
 
 @implementation MenuViewController {
-	__strong DCTArrayTableViewDataSource *_dataSource;
 	__strong NSIndexPath *_selectedIndexPath;
+	__strong NSManagedObjectContext *_managedObjectContext;
 }
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
-	self = [self init];
+	self = [super initWithItems:@[@"Artists", @"Albums", @"Songs", @"Playlists", @"Genres", @"Composers"]];
 	if (!self) return nil;
 	_managedObjectContext = managedObjectContext;
 	self.title = @"Fourgy";
 	return self;
 }
 
+- (NSString *)titleForItem:(NSString *)title {
+	return title;
+}
+
 - (void)clickWheelCenterButtonTapped {
-		
 	_selectedIndexPath = [self.tableView indexPathForSelectedRow];
-	NSString *title = [_dataSource objectAtIndexPath:_selectedIndexPath];
+	NSString *title = [self.dataSource objectAtIndexPath:_selectedIndexPath];
 	
 	Class viewControllerClass = NULL;
 	NSFetchRequest *fetchRequest = [NSFetchRequest new];
+	fetchRequest.fetchBatchSize = 6;
 	
 	if ([title isEqualToString:@"Artists"]) {
-		fetchRequest.entity = [DCTArtist entityInManagedObjectContext:self.managedObjectContext];
+		fetchRequest.entity = [DCTArtist entityInManagedObjectContext:_managedObjectContext];
 		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTArtistAttributes.name ascending:YES]];
 		viewControllerClass = [ArtistsViewController class];
+		
 	} else if ([title isEqualToString:@"Songs"]) {
-		fetchRequest.entity = [DCTSong entityInManagedObjectContext:self.managedObjectContext];
+		fetchRequest.entity = [DCTSong entityInManagedObjectContext:_managedObjectContext];
 		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTSongAttributes.title ascending:YES]];
 		viewControllerClass = [SongsViewController class];
+	
+	} else if ([title isEqualToString:@"Albums"]) {
+		fetchRequest.entity = [DCTAlbum entityInManagedObjectContext:_managedObjectContext];
+		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTAlbumAttributes.title ascending:YES]];
+		viewControllerClass = [AlbumsViewController class];
+	
+	} else if ([title isEqualToString:@"Playlists"]) {
+		fetchRequest.entity = [DCTPlaylist entityInManagedObjectContext:_managedObjectContext];
+		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTPlaylistAttributes.name ascending:YES]];
+		viewControllerClass = [PlaylistsViewController class];
+	
+	} else if ([title isEqualToString:@"Genres"]) {
+		fetchRequest.entity = [DCTGenre entityInManagedObjectContext:_managedObjectContext];
+		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTGenreAttributes.name ascending:YES]];
+		viewControllerClass = [GenresViewController class];
+	
+	} else if ([title isEqualToString:@"Composers"]) {
+		fetchRequest.entity = [DCTComposer entityInManagedObjectContext:_managedObjectContext];
+		fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTComposerAttributes.name ascending:YES]];
+		viewControllerClass = [ComposersViewController class];
 	}
 	
 	if (viewControllerClass) {
-		fetchRequest.fetchBatchSize = 6;
-		NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-																			  managedObjectContext:self.managedObjectContext
-																				sectionNameKeyPath:nil
-																						 cacheName:nil];
-		
-		UIViewController *vc = [[viewControllerClass alloc] initWithFetchedResultsController:frc];
+		NSArray *items = [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
+		UIViewController *vc = [[viewControllerClass alloc] initWithItems:items];
+		vc.title = title;
 		[self.fgy_controller pushViewController:vc animated:YES];
 	}
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	[self.tableView selectRowAtIndexPath:_selectedIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
-	
-	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:_selectedIndexPath];
-	cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-	cell.selectedBackgroundView = [UIView new];
-	cell.selectedBackgroundView.backgroundColor = [Fourgy foregroundColor];
-	
-}
-
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	self.tableView.rowHeight = [Fourgy rowHeight];
-	_selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-	
-	_dataSource = [DCTArrayTableViewDataSource new];
-	_dataSource.array = @[@"Artists", @"Albums", @"Songs", @"Playlists", @"Genres", @"Composers"];
-	_dataSource.tableView = self.tableView;
-	self.tableView.dataSource = _dataSource;
-	
-	[_dataSource setCellConfigurer:^(UITableViewCell *cell, NSIndexPath *indexPath, NSString *title) {
-		cell.textLabel.font = [Fourgy fontOfSize:12.0f];
-		cell.textLabel.textColor = [Fourgy foregroundColor];
-		cell.textLabel.backgroundColor = [Fourgy backgroundColor];
-		cell.contentView.backgroundColor = [Fourgy backgroundColor];
-		cell.backgroundColor = [Fourgy backgroundColor];
-		cell.textLabel.highlightedTextColor = [Fourgy backgroundColor];
-		cell.textLabel.text = title;
-	}];
 }
 
 @end

@@ -6,10 +6,7 @@
 //  Copyright (c) 2012 Daniel Tull. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
+#import "ItemsViewController.h"
 
-@interface ArtistsViewController : UITableViewController
-- (id)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController;
-@property (readonly) NSFetchedResultsController *fetchedResultsController;
+@interface ArtistsViewController : ItemsViewController
 @end

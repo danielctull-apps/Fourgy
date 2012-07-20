@@ -6,9 +6,8 @@
 //  Copyright (c) 2012 Daniel Tull. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ItemsViewController.h"
 
-@interface MenuViewController : UITableViewController
+@interface MenuViewController : ItemsViewController
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
-@property (readonly) NSManagedObjectContext *managedObjectContext;
 @end
