@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		240819FF15B94EF30056B402 /* _FGYScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 240819FD15B94EF30056B402 /* _FGYScroller.h */; };
 		24081A0015B94EF30056B402 /* _FGYScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 240819FE15B94EF30056B402 /* _FGYScroller.m */; };
+		24081A0415B9697F0056B402 /* FGYTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 24081A0215B9697F0056B402 /* FGYTableViewCell.h */; };
+		24081A0515B9697F0056B402 /* FGYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24081A0315B9697F0056B402 /* FGYTableViewCell.m */; };
 		241AD6A715B947C70036F9D7 /* FGYTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 241AD6A415B947C70036F9D7 /* FGYTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		241AD6A815B947C70036F9D7 /* FGYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241AD6A515B947C70036F9D7 /* FGYTableViewController.m */; };
 		241AD6A915B94BDF0036F9D7 /* FGYTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */; };
@@ -120,6 +122,8 @@
 /* Begin PBXFileReference section */
 		240819FD15B94EF30056B402 /* _FGYScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FGYScroller.h; sourceTree = "<group>"; };
 		240819FE15B94EF30056B402 /* _FGYScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FGYScroller.m; sourceTree = "<group>"; };
+		24081A0215B9697F0056B402 /* FGYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewCell.h; sourceTree = "<group>"; };
+		24081A0315B9697F0056B402 /* FGYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewCell.m; sourceTree = "<group>"; };
 		241AD6A415B947C70036F9D7 /* FGYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewController.h; sourceTree = "<group>"; };
 		241AD6A515B947C70036F9D7 /* FGYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewController.m; sourceTree = "<group>"; };
 		241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYTableViewController.xib; sourceTree = "<group>"; };
@@ -319,6 +323,8 @@
 				241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */,
 				240819FD15B94EF30056B402 /* _FGYScroller.h */,
 				240819FE15B94EF30056B402 /* _FGYScroller.m */,
+				24081A0215B9697F0056B402 /* FGYTableViewCell.h */,
+				24081A0315B9697F0056B402 /* FGYTableViewCell.m */,
 			);
 			path = Fourgy;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				24E8FFA715B7707400240A87 /* _FGYClickWheel.h in Headers */,
 				24700B2B15B8229D00FA5843 /* _FGYTableViewScrollHandler.h in Headers */,
 				240819FF15B94EF30056B402 /* _FGYScroller.h in Headers */,
+				24081A0415B9697F0056B402 /* FGYTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +604,7 @@
 				24FEF28215B88C6E00ADF18D /* FGYProgressView.m in Sources */,
 				241AD6A815B947C70036F9D7 /* FGYTableViewController.m in Sources */,
 				24081A0015B94EF30056B402 /* _FGYScroller.m in Sources */,
+				24081A0515B9697F0056B402 /* FGYTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

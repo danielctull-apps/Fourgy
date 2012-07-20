@@ -12,6 +12,7 @@
 #import "FGYTickingLabel.h"
 #import "FGYProgressView.h"
 #import "FGYTableViewController.h"
+#import "FGYTableViewCell.h"
 
 @interface Fourgy : NSObject
 + (NSBundle *)bundle;
