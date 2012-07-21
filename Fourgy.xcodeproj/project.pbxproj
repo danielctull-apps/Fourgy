@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2417506615BB1528005E56F8 /* DCTMusicModel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2417506515BB1528005E56F8 /* DCTMusicModel.bundle */; };
 		241AD6A915B94BDF0036F9D7 /* FGYTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */; };
 		24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BF915B83EF400FA5843 /* CoreData.framework */; };
 		24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BFB15B83F0400FA5843 /* QuartzCore.framework */; };
@@ -100,6 +101,7 @@
 		240819FE15B94EF30056B402 /* _FGYScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FGYScroller.m; sourceTree = "<group>"; };
 		24081A0215B9697F0056B402 /* FGYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewCell.h; sourceTree = "<group>"; };
 		24081A0315B9697F0056B402 /* FGYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewCell.m; sourceTree = "<group>"; };
+		2417506515BB1528005E56F8 /* DCTMusicModel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = DCTMusicModel.bundle; path = "/Volumes/RAM Disk/Fourgy-gpzgxecitglijohcwtmrknwovqam/Build/Products/Debug-iphoneos/DCTMusicModel.bundle"; sourceTree = "<absolute>"; };
 		241AD6A415B947C70036F9D7 /* FGYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewController.h; sourceTree = "<group>"; };
 		241AD6A515B947C70036F9D7 /* FGYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewController.m; sourceTree = "<group>"; };
 		241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYTableViewController.xib; sourceTree = "<group>"; };
@@ -166,9 +168,9 @@
 		24EBAAE315B8D7DD00A53811 /* GenresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenresViewController.m; sourceTree = "<group>"; };
 		24EBAAE515B8D8A200A53811 /* ComposersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposersViewController.h; sourceTree = "<group>"; };
 		24EBAAE615B8D8A200A53811 /* ComposersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposersViewController.m; sourceTree = "<group>"; };
-		24FCFAC715BB110200D58EA9 /* libDCTCoreDataStack.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libDCTCoreDataStack.a; path = "DCTKit/DCTCoreDataStack/build/Release-iphoneos/libDCTCoreDataStack.a"; sourceTree = "<group>"; };
-		24FCFAC815BB110200D58EA9 /* libDCTMusicModel.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libDCTMusicModel.a; path = "DCTMusicModel/build/Release-iphoneos/libDCTMusicModel.a"; sourceTree = "<group>"; };
-		24FCFAC915BB110200D58EA9 /* libDCTTableViewDataSources.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libDCTTableViewDataSources.a; path = "DCTKit/DCTTableViewDataSources/build/Release-iphoneos/libDCTTableViewDataSources.a"; sourceTree = "<group>"; };
+		24FCFAC715BB110200D58EA9 /* libDCTCoreDataStack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDCTCoreDataStack.a; path = "DCTKit/DCTCoreDataStack/build/Release-iphoneos/libDCTCoreDataStack.a"; sourceTree = "<group>"; };
+		24FCFAC815BB110200D58EA9 /* libDCTMusicModel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDCTMusicModel.a; path = "DCTMusicModel/build/Release-iphoneos/libDCTMusicModel.a"; sourceTree = "<group>"; };
+		24FCFAC915BB110200D58EA9 /* libDCTTableViewDataSources.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDCTTableViewDataSources.a; path = "DCTKit/DCTTableViewDataSources/build/Release-iphoneos/libDCTTableViewDataSources.a"; sourceTree = "<group>"; };
 		24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYProgressView.h; sourceTree = "<group>"; };
 		24FEF28015B88C6E00ADF18D /* FGYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYProgressView.m; sourceTree = "<group>"; };
 		24FEF28315B8A9CA00ADF18D /* ImportingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportingViewController.h; sourceTree = "<group>"; };
@@ -197,10 +199,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DAAB4F15B98948002EA948 /* libFourgy.a in Frameworks */,
 				24FCFACA15BB110200D58EA9 /* libDCTCoreDataStack.a in Frameworks */,
 				24FCFACB15BB110200D58EA9 /* libDCTMusicModel.a in Frameworks */,
 				24FCFACC15BB110200D58EA9 /* libDCTTableViewDataSources.a in Frameworks */,
-				24DAAB4F15B98948002EA948 /* libFourgy.a in Frameworks */,
 				24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */,
 				24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */,
 				24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */,
@@ -239,6 +241,7 @@
 		24E8FF2215B756C400240A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2417506515BB1528005E56F8 /* DCTMusicModel.bundle */,
 				24FCFAC715BB110200D58EA9 /* libDCTCoreDataStack.a */,
 				24FCFAC815BB110200D58EA9 /* libDCTMusicModel.a */,
 				24FCFAC915BB110200D58EA9 /* libDCTTableViewDataSources.a */,
@@ -466,6 +469,7 @@
 			files = (
 				24E8FF6715B757B700240A87 /* InfoPlist.strings in Resources */,
 				24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */,
+				2417506615BB1528005E56F8 /* DCTMusicModel.bundle in Resources */,
 				24E8FF9E15B76D0300240A87 /* Default.png in Resources */,
 				24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */,
 				24B967D515B87601009F142C /* Icon.png in Resources */,
@@ -576,7 +580,7 @@
 				DSTROOT = /tmp/Fourgy.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -591,7 +595,7 @@
 				DSTROOT = /tmp/Fourgy.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fourgy/Fourgy-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

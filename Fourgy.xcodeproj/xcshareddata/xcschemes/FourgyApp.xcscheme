@@ -82,6 +82,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Fourgy"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
