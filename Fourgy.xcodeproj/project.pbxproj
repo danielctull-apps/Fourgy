@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		241AD6A915B94BDF0036F9D7 /* FGYTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */; };
-		24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BD315B83EA300FA5843 /* libDCTKit.a */; };
-		24700BF815B83EDF00FA5843 /* DCTKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24700BD515B83EA300FA5843 /* DCTKit.bundle */; };
 		24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BF915B83EF400FA5843 /* CoreData.framework */; };
 		24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BFB15B83F0400FA5843 /* QuartzCore.framework */; };
-		24B967AA15B85C40009F142C /* libDCTMusicModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9679C15B85BB0009F142C /* libDCTMusicModel.a */; };
-		24B967AB15B85C45009F142C /* DCTMusicModel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24B9679E15B85BB0009F142C /* DCTMusicModel.bundle */; };
 		24B967AE15B85D0B009F142C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B967AD15B85D0B009F142C /* MenuViewController.m */; };
 		24B967CE15B86168009F142C /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B967CD15B86168009F142C /* SongsViewController.m */; };
 		24B967D115B86E04009F142C /* ArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B967D015B86E04009F142C /* ArtistsViewController.m */; };
@@ -63,46 +59,14 @@
 		24EBAAE115B8D76300A53811 /* PlaylistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE015B8D76300A53811 /* PlaylistsViewController.m */; };
 		24EBAAE415B8D7DD00A53811 /* GenresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE315B8D7DD00A53811 /* GenresViewController.m */; };
 		24EBAAE715B8D8A200A53811 /* ComposersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EBAAE615B8D8A200A53811 /* ComposersViewController.m */; };
+		24FCFACA15BB110200D58EA9 /* libDCTCoreDataStack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FCFAC715BB110200D58EA9 /* libDCTCoreDataStack.a */; };
+		24FCFACB15BB110200D58EA9 /* libDCTMusicModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FCFAC815BB110200D58EA9 /* libDCTMusicModel.a */; };
+		24FCFACC15BB110200D58EA9 /* libDCTTableViewDataSources.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FCFAC915BB110200D58EA9 /* libDCTTableViewDataSources.a */; };
 		24FEF28615B8A9CA00ADF18D /* ImportingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FEF28415B8A9CA00ADF18D /* ImportingViewController.m */; };
 		24FEF28715B8A9CA00ADF18D /* ImportingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FEF28515B8A9CA00ADF18D /* ImportingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		24700BD215B83EA300FA5843 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2435B53D15A5CD3800F38962;
-			remoteInfo = DCTKit;
-		};
-		24700BD415B83EA300FA5843 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 24700BB015B83DCF00FA5843;
-			remoteInfo = DCTKitBundle;
-		};
-		24B9679B15B85BB0009F142C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 24700CA215B843E200FA5843;
-			remoteInfo = DCTMusicModel;
-		};
-		24B9679D15B85BB0009F142C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 24700CB615B8495000FA5843;
-			remoteInfo = DCTMusicModelBundle;
-		};
-		24B9679F15B85BB0009F142C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 24700D7915B8579C00FA5843;
-			remoteInfo = DCTMusicModelApp;
-		};
 		24DAAB4D15B98924002EA948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24E8FF1715B756C400240A87 /* Project object */;
@@ -141,10 +105,8 @@
 		241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYTableViewController.xib; sourceTree = "<group>"; };
 		24700B2915B8229D00FA5843 /* _FGYTableViewScrollHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FGYTableViewScrollHandler.h; sourceTree = "<group>"; };
 		24700B2A15B8229D00FA5843 /* _FGYTableViewScrollHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FGYTableViewScrollHandler.m; sourceTree = "<group>"; };
-		24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DCTKit.xcodeproj; path = DCTKit/DCTKit.xcodeproj; sourceTree = "<group>"; };
 		24700BF915B83EF400FA5843 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		24700BFB15B83F0400FA5843 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DCTMusicModel.xcodeproj; path = DCTMusicModel/DCTMusicModel.xcodeproj; sourceTree = "<group>"; };
 		24B967AC15B85D0B009F142C /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		24B967AD15B85D0B009F142C /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		24B967CC15B86168009F142C /* SongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewController.h; sourceTree = "<group>"; };
@@ -204,6 +166,9 @@
 		24EBAAE315B8D7DD00A53811 /* GenresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenresViewController.m; sourceTree = "<group>"; };
 		24EBAAE515B8D8A200A53811 /* ComposersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposersViewController.h; sourceTree = "<group>"; };
 		24EBAAE615B8D8A200A53811 /* ComposersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposersViewController.m; sourceTree = "<group>"; };
+		24FCFAC715BB110200D58EA9 /* libDCTCoreDataStack.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libDCTCoreDataStack.a; path = "DCTKit/DCTCoreDataStack/build/Release-iphoneos/libDCTCoreDataStack.a"; sourceTree = "<group>"; };
+		24FCFAC815BB110200D58EA9 /* libDCTMusicModel.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libDCTMusicModel.a; path = "DCTMusicModel/build/Release-iphoneos/libDCTMusicModel.a"; sourceTree = "<group>"; };
+		24FCFAC915BB110200D58EA9 /* libDCTTableViewDataSources.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libDCTTableViewDataSources.a; path = "DCTKit/DCTTableViewDataSources/build/Release-iphoneos/libDCTTableViewDataSources.a"; sourceTree = "<group>"; };
 		24FEF27F15B88C6E00ADF18D /* FGYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYProgressView.h; sourceTree = "<group>"; };
 		24FEF28015B88C6E00ADF18D /* FGYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYProgressView.m; sourceTree = "<group>"; };
 		24FEF28315B8A9CA00ADF18D /* ImportingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportingViewController.h; sourceTree = "<group>"; };
@@ -232,9 +197,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FCFACA15BB110200D58EA9 /* libDCTCoreDataStack.a in Frameworks */,
+				24FCFACB15BB110200D58EA9 /* libDCTMusicModel.a in Frameworks */,
+				24FCFACC15BB110200D58EA9 /* libDCTTableViewDataSources.a in Frameworks */,
 				24DAAB4F15B98948002EA948 /* libFourgy.a in Frameworks */,
-				24700BF715B83ED900FA5843 /* libDCTKit.a in Frameworks */,
-				24B967AA15B85C40009F142C /* libDCTMusicModel.a in Frameworks */,
 				24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */,
 				24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */,
 				24E8FFAB15B776A000240A87 /* MediaPlayer.framework in Frameworks */,
@@ -249,25 +215,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24700BC215B83EA300FA5843 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24700BD315B83EA300FA5843 /* libDCTKit.a */,
-				24700BD515B83EA300FA5843 /* DCTKit.bundle */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		24B9678A15B85BB0009F142C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24B9679C15B85BB0009F142C /* libDCTMusicModel.a */,
-				24B9679E15B85BB0009F142C /* DCTMusicModel.bundle */,
-				24B967A015B85BB0009F142C /* DCTMusicModelApp.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		24E8FF1515B756C400240A87 = {
 			isa = PBXGroup;
 			children = (
@@ -276,8 +223,6 @@
 				24E8FF6215B757B700240A87 /* FourgyApp */,
 				24E8FF2215B756C400240A87 /* Frameworks */,
 				24E8FF2115B756C400240A87 /* Products */,
-				24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */,
-				24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -294,6 +239,9 @@
 		24E8FF2215B756C400240A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24FCFAC715BB110200D58EA9 /* libDCTCoreDataStack.a */,
+				24FCFAC815BB110200D58EA9 /* libDCTMusicModel.a */,
+				24FCFAC915BB110200D58EA9 /* libDCTTableViewDataSources.a */,
 				24700BFB15B83F0400FA5843 /* QuartzCore.framework */,
 				24700BF915B83EF400FA5843 /* CoreData.framework */,
 				24E8FFAA15B776A000240A87 /* MediaPlayer.framework */,
@@ -490,16 +438,6 @@
 			mainGroup = 24E8FF1515B756C400240A87;
 			productRefGroup = 24E8FF2115B756C400240A87 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 24700BC215B83EA300FA5843 /* Products */;
-					ProjectRef = 24700BC115B83EA300FA5843 /* DCTKit.xcodeproj */;
-				},
-				{
-					ProductGroup = 24B9678A15B85BB0009F142C /* Products */;
-					ProjectRef = 24B9678915B85BB0009F142C /* DCTMusicModel.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				24DAAB1215B988AE002EA948 /* Fourgy */,
@@ -508,44 +446,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		24700BD315B83EA300FA5843 /* libDCTKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libDCTKit.a;
-			remoteRef = 24700BD215B83EA300FA5843 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24700BD515B83EA300FA5843 /* DCTKit.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DCTKit.bundle;
-			remoteRef = 24700BD415B83EA300FA5843 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24B9679C15B85BB0009F142C /* libDCTMusicModel.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libDCTMusicModel.a;
-			remoteRef = 24B9679B15B85BB0009F142C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24B9679E15B85BB0009F142C /* DCTMusicModel.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DCTMusicModel.bundle;
-			remoteRef = 24B9679D15B85BB0009F142C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24B967A015B85BB0009F142C /* DCTMusicModelApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = DCTMusicModelApp.app;
-			remoteRef = 24B9679F15B85BB0009F142C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		24E8FF4615B7572900240A87 /* Resources */ = {
@@ -565,8 +465,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E8FF6715B757B700240A87 /* InfoPlist.strings in Resources */,
-				24700BF815B83EDF00FA5843 /* DCTKit.bundle in Resources */,
-				24B967AB15B85C45009F142C /* DCTMusicModel.bundle in Resources */,
 				24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */,
 				24E8FF9E15B76D0300240A87 /* Default.png in Resources */,
 				24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */,
