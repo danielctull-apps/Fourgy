@@ -101,7 +101,7 @@
 		240819FE15B94EF30056B402 /* _FGYScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FGYScroller.m; sourceTree = "<group>"; };
 		24081A0215B9697F0056B402 /* FGYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewCell.h; sourceTree = "<group>"; };
 		24081A0315B9697F0056B402 /* FGYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewCell.m; sourceTree = "<group>"; };
-		2417506515BB1528005E56F8 /* DCTMusicModel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = DCTMusicModel.bundle; path = "/Volumes/RAM Disk/Fourgy-gpzgxecitglijohcwtmrknwovqam/Build/Products/Debug-iphoneos/DCTMusicModel.bundle"; sourceTree = "<absolute>"; };
+		2417506515BB1528005E56F8 /* DCTMusicModel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DCTMusicModel.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		241AD6A415B947C70036F9D7 /* FGYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewController.h; sourceTree = "<group>"; };
 		241AD6A515B947C70036F9D7 /* FGYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewController.m; sourceTree = "<group>"; };
 		241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYTableViewController.xib; sourceTree = "<group>"; };
@@ -408,7 +408,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24E8FF6E15B757B700240A87 /* Build configuration list for PBXNativeTarget "FourgyApp" */;
 			buildPhases = (
-				2437B59C15B970C100750117 /* Update Bundle Version Number */,
 				24E8FF5715B757B700240A87 /* Sources */,
 				24E8FF5815B757B700240A87 /* Frameworks */,
 				24E8FF5915B757B700240A87 /* Resources */,
@@ -480,23 +479,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2437B59C15B970C100750117 /* Update Bundle Version Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Update Bundle Version Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cat > InfoPlist.h\ngit=`sh /etc/profile; which git`\ncount=`$git log --oneline | wc -l`\necho -e \"#define GIT_COMMIT_COUNT $count\" > InfoPlist.h";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24DAAB0F15B988AE002EA948 /* Sources */ = {
@@ -697,6 +679,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FourgyApp/FourgyApp-Prefix.pch";
 				INFOPLIST_FILE = "FourgyApp/FourgyApp-Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-c";
 				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -718,6 +701,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FourgyApp/FourgyApp-Prefix.pch";
 				INFOPLIST_FILE = "FourgyApp/FourgyApp-Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-c";
 				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
 				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
