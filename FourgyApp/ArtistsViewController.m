@@ -20,12 +20,17 @@
 	DCTArtist *artist = [self.dataSource objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
 	NSArray *albums = [artist.albums allObjects];
 	
-	if ([albums count] == 1) {
-		DCTAlbum *album = [albums lastObject];
+	if ([albums count] <= 1) {
+		
 		NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTSongAttributes.trackNumber ascending:YES]];
-		NSArray *items = [[album.songs allObjects] sortedArrayUsingDescriptors:sortDescriptors];
+		NSArray *items = [[artist.songs allObjects] sortedArrayUsingDescriptors:sortDescriptors];
 		SongsViewController *vc = [[SongsViewController alloc] initWithItems:items];
-		vc.title = album.title;
+		
+		DCTAlbum *album = [albums lastObject];
+		NSString *title = album.title;
+		if ([title length] == 0) title = artist.name;
+		vc.title = title;
+		
 		[self.fgy_controller pushViewController:vc animated:YES];
 	} else {
 		NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:DCTAlbumAttributes.title ascending:YES]];
