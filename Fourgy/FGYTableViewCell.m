@@ -42,10 +42,10 @@
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-	self.tickingTextLabel.frame = CGRectInset(self.bounds, 10.0f, 0.0f);
-	self.standardTextLabel.frame = CGRectInset(self.bounds, 10.0f, 0.0f);
-	[self addSubview:self.tickingTextLabel];
-	[self addSubview:self.standardTextLabel];
+	self.tickingTextLabel.frame = CGRectInset(self.contentView.bounds, 10.0f, 0.0f);
+	self.standardTextLabel.frame = CGRectInset(self.contentView.bounds, 10.0f, 0.0f);
+	[self.contentView addSubview:self.tickingTextLabel];
+	[self.contentView addSubview:self.standardTextLabel];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
