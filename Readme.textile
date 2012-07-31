@@ -4,6 +4,8 @@ Fourgy is a 4th generation iPod emulator for the iPhone.
 
 It includes a library with classes to enable you to create iPod-like apps.
 
+*Upon cloning you will need to run `git submodule init` annd then `git submodule update` from inside the repository.*
+
 !=http://github.com/danielctull/Fourgy/raw/screenshots/Screenshot.png!
 
 h2. Features
