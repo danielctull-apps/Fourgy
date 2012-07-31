@@ -20,7 +20,7 @@ h3. FGYController
 
 FGYController is the main view controller that displays the iPod and click wheel. Its API is a simplified version of a UINavigationController. View controllers pushed will be resized to the size of the emulated iPod's display.
 
-Click wheel events are delievered to the top-most view controller, using methods in the "FGYClickWheelDelegate":https://github.com/danielctull/Fourgy/Fourgy/FGYClickWheel.h protocol.
+Click wheel events are delievered to the top-most view controller, using methods in the "FGYClickWheelDelegate":https://github.com/danielctull/Fourgy/blob/master/Fourgy/FGYClickWheel.h protocol.
 
 h3. FGYTableViewController
 
