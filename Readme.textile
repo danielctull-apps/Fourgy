@@ -1,0 +1,47 @@
+h1. Fourgy
+
+Fourgy is a 4th generation iPod emulator for the iPhone.
+
+It includes a library with classes to enable you to create iPod-like apps.
+
+!=http://github.com/danielctull/Fourgy/raw/screenshots/Screenshot.png!
+
+h2. Features
+
+* Music player demo app
+* Working battery indicator
+* FGYController, a parent view controller that displays the iPod chrome
+* FGYTableViewController
+* FGYTickingLabel, a label that scrolls the text if it is cut off
+* FGYProgressView, iPod-styled UIProgressIndicator subclass
+* FGYTableViewCell, cell that styles like the iPod using the ticking label
+
+h3. FGYController
+
+FGYController is the main view controller that displays the iPod and click wheel. Its API is a simplified version of a UINavigationController. View controllers pushed will be resized to the size of the emulated iPod's display.
+
+Click wheel events are delievered to the top-most view controller, using methods in the "FGYClickWheelDelegate":https://github.com/danielctull/Fourgy/Fourgy/FGYClickWheel.h protocol.
+
+h3. FGYTableViewController
+
+This is a table view controller that will handle scrolling on the click wheel and display an iPod-looking scrollbar if the content is long enough.
+
+h2. How to use
+
+# Drag the Fourgy Xcode project into your app project
+# Link against the Fourgy static library
+# Copy the Fourgy.bundle into the application's bundle
+
+h2. License
+
+Copyright (C) 2011 Daniel Tull. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+* Neither the name of the author nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
