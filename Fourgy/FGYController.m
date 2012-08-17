@@ -97,9 +97,7 @@
 	
 	[self addChildViewController:newViewController];
 	[self.contentView addSubview:newViewController.view];
-	[viewControllersToPop enumerateObjectsUsingBlock:^(UIViewController *vc, NSUInteger i, BOOL *stop) {
-		[vc willMoveToParentViewController:nil];
-	}];
+	[oldViewController willMoveToParentViewController:nil];
 	
 	[self _setupViewController:newViewController];
 	
@@ -116,10 +114,7 @@
 	} completion:^(BOOL finished) {
 		
 		[oldViewController.view removeFromSuperview];
-		
-		[viewControllersToPop enumerateObjectsUsingBlock:^(UIViewController *vc, NSUInteger i, BOOL *stop) {
-			[vc removeFromParentViewController];
-		}];
+		[oldViewController removeFromParentViewController];
 	}];
 	
 	return viewControllersToPop;
