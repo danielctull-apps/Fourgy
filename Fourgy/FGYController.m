@@ -55,19 +55,20 @@
 	
 	if (![self isViewLoaded]) return;
 	
-	[self addChildViewController:viewController];
-	[self.contentView addSubview:viewController.view];
-	
 	CGRect frame = self.contentView.bounds;
 	frame.origin.x = self.contentView.bounds.size.width;
 	viewController.view.frame = frame;
 	
-	frame.origin.x = -self.contentView.bounds.size.width;
+	[self addChildViewController:viewController];
+	[self.contentView addSubview:viewController.view];
+	[oldViewController willMoveToParentViewController:nil];
+	
+	[self _setupViewController:viewController];
 	
 	NSTimeInterval duration = 0.0f;
 	if (animated) duration = (1.0f/3.0f);
 	
-	[self _setupViewController:viewController];
+	frame.origin.x = -self.contentView.bounds.size.width;
 	
 	[UIView animateWithDuration:duration animations:^{
 		
@@ -96,13 +97,16 @@
 	
 	[self addChildViewController:newViewController];
 	[self.contentView addSubview:newViewController.view];
+	[viewControllersToPop enumerateObjectsUsingBlock:^(UIViewController *vc, NSUInteger i, BOOL *stop) {
+		[vc willMoveToParentViewController:nil];
+	}];
+	
+	[self _setupViewController:newViewController];
 	
 	NSTimeInterval duration = 0.0f;
 	if (animated) duration = (1.0f/3.0f);
 	
 	frame.origin.x = self.contentView.bounds.size.width;
-	
-	[self _setupViewController:newViewController];
 	
 	[UIView animateWithDuration:duration animations:^{
 		
@@ -113,8 +117,9 @@
 		
 		[oldViewController.view removeFromSuperview];
 		
-		for (UIViewController *vc in viewControllersToPop)
+		[viewControllersToPop enumerateObjectsUsingBlock:^(UIViewController *vc, NSUInteger i, BOOL *stop) {
 			[vc removeFromParentViewController];
+		}];
 	}];
 	
 	return viewControllersToPop;
