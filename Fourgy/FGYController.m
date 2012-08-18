@@ -48,38 +48,25 @@
 	return self;
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+- (void)pushViewController:(UIViewController *)newViewController animated:(BOOL)animated {
 	
 	UIViewController *oldViewController = self.topViewController;
-	[stack addObject:viewController];
+	[stack addObject:newViewController];
 	
 	if (![self isViewLoaded]) return;
 	
-	CGRect frame = self.contentView.bounds;
-	frame.origin.x = self.contentView.bounds.size.width;
-	viewController.view.frame = frame;
+	CGRect oldToFrame = self.contentView.bounds;
+	oldToFrame.origin.x = -self.contentView.bounds.size.width;
 	
-	[self addChildViewController:viewController];
-	[self.contentView addSubview:viewController.view];
-	[oldViewController willMoveToParentViewController:nil];
+	CGRect newFromFrame = self.contentView.bounds;
+	newFromFrame.origin.x = self.contentView.bounds.size.width;
 	
-	[self _setupViewController:viewController];
-	
-	NSTimeInterval duration = 0.0f;
-	if (animated) duration = (1.0f/3.0f);
-	
-	frame.origin.x = -self.contentView.bounds.size.width;
-	
-	[UIView animateWithDuration:duration animations:^{
-		
-		oldViewController.view.frame = frame;
-		viewController.view.frame = self.contentView.bounds;
-		
-	} completion:^(BOOL finished) {
-		
-		[oldViewController.view removeFromSuperview];
-		[oldViewController removeFromParentViewController];
-	}];
+	[self _moveOldViewController:oldViewController
+						 toFrame:oldToFrame
+			   newViewController:newViewController
+					   fromFrame:newFromFrame
+						 toFrame:self.contentView.bounds
+						animated:animated];
 }
 
 - (NSArray *)popToViewController:(UIViewController *)newViewController animated:(BOOL)animated {
@@ -90,11 +77,31 @@
 	UIViewController *oldViewController = self.topViewController;
 	NSArray *viewControllersToPop = [stack subarrayWithRange:range];
 	[stack removeObjectsInRange:range];
+		
+	CGRect oldToFrame = self.contentView.bounds;
+	oldToFrame.origin.x = self.contentView.bounds.size.width;
 	
-	CGRect frame = self.contentView.bounds;
-	frame.origin.x = -self.contentView.bounds.size.width;
-	newViewController.view.frame = frame;
+	CGRect newFromFrame = self.contentView.bounds;
+	newFromFrame.origin.x = -self.contentView.bounds.size.width;
 	
+	[self _moveOldViewController:oldViewController
+						 toFrame:oldToFrame
+			   newViewController:newViewController
+					   fromFrame:newFromFrame
+						 toFrame:self.contentView.bounds
+						animated:animated];
+	
+	return viewControllersToPop;
+}
+
+- (void)_moveOldViewController:(UIViewController *)oldViewController
+					   toFrame:(CGRect)oldToFrame
+			 newViewController:(UIViewController *)newViewController
+					 fromFrame:(CGRect)newFromFrame
+					   toFrame:(CGRect)newToFrame
+					  animated:(BOOL)animated {
+	
+	newViewController.view.frame = newFromFrame;
 	[self addChildViewController:newViewController];
 	[self.contentView addSubview:newViewController.view];
 	[oldViewController willMoveToParentViewController:nil];
@@ -104,20 +111,16 @@
 	NSTimeInterval duration = 0.0f;
 	if (animated) duration = (1.0f/3.0f);
 	
-	frame.origin.x = self.contentView.bounds.size.width;
-	
 	[UIView animateWithDuration:duration animations:^{
 		
-		oldViewController.view.frame = frame;
-		newViewController.view.frame = self.contentView.bounds;
+		oldViewController.view.frame = oldToFrame;
+		newViewController.view.frame = newToFrame;
 		
 	} completion:^(BOOL finished) {
 		
 		[oldViewController.view removeFromSuperview];
 		[oldViewController removeFromParentViewController];
 	}];
-	
-	return viewControllersToPop;
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
