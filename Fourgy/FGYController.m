@@ -35,7 +35,11 @@
 	
 	NSBundle *bundle = [Fourgy bundle];
 	
-	self = [self initWithNibName:@"FGYController" bundle:bundle];
+	if ([NSLayoutConstraint class])
+		self = [self initWithNibName:@"FGYController-autolayout" bundle:bundle];
+	else
+		self = [self initWithNibName:@"FGYController" bundle:bundle];
+	
 	if (!self) return nil;
 	
 	stack = [NSMutableArray new];
