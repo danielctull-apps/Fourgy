@@ -20,7 +20,10 @@
 @synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	
+
+	if ([[UIScreen mainScreen] bounds].size.height > 480.0f)
+		[application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+
 	_musicModel = [DCTMusicModel new];
 	
 	MenuViewController *vc = [[MenuViewController alloc] initWithManagedObjectContext:_musicModel.managedObjectContext];
