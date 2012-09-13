@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2417506615BB1528005E56F8 /* DCTMusicModel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2417506515BB1528005E56F8 /* DCTMusicModel.bundle */; };
 		241AD6A915B94BDF0036F9D7 /* FGYTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */; };
+		24468455160141DD0075447F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24468454160141DD0075447F /* Default-568h@2x.png */; };
 		24700BFA15B83EF400FA5843 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BF915B83EF400FA5843 /* CoreData.framework */; };
 		24700BFC15B83F0400FA5843 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24700BFB15B83F0400FA5843 /* QuartzCore.framework */; };
 		24B967AE15B85D0B009F142C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B967AD15B85D0B009F142C /* MenuViewController.m */; };
@@ -106,6 +107,7 @@
 		241AD6A415B947C70036F9D7 /* FGYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewController.h; sourceTree = "<group>"; };
 		241AD6A515B947C70036F9D7 /* FGYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewController.m; sourceTree = "<group>"; };
 		241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYTableViewController.xib; sourceTree = "<group>"; };
+		24468454160141DD0075447F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		24700B2915B8229D00FA5843 /* _FGYTableViewScrollHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FGYTableViewScrollHandler.h; sourceTree = "<group>"; };
 		24700B2A15B8229D00FA5843 /* _FGYTableViewScrollHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FGYTableViewScrollHandler.m; sourceTree = "<group>"; };
 		24700BF915B83EF400FA5843 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -222,6 +224,7 @@
 		24E8FF1515B756C400240A87 = {
 			isa = PBXGroup;
 			children = (
+				24468454160141DD0075447F /* Default-568h@2x.png */,
 				24E8FF2515B756C400240A87 /* Fourgy */,
 				24E8FF4B15B7572900240A87 /* FourgyBundle */,
 				24E8FF6215B757B700240A87 /* FourgyApp */,
@@ -479,6 +482,7 @@
 				24B967D715B87604009F142C /* Icon@2x.png in Resources */,
 				24B9682C15B8848D009F142C /* NowPlayingViewController.xib in Resources */,
 				24FEF28715B8A9CA00ADF18D /* ImportingViewController.xib in Resources */,
+				24468455160141DD0075447F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
