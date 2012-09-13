@@ -107,7 +107,7 @@
 		241AD6A415B947C70036F9D7 /* FGYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGYTableViewController.h; sourceTree = "<group>"; };
 		241AD6A515B947C70036F9D7 /* FGYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGYTableViewController.m; sourceTree = "<group>"; };
 		241AD6A615B947C70036F9D7 /* FGYTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FGYTableViewController.xib; sourceTree = "<group>"; };
-		24468454160141DD0075447F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		24468454160141DD0075447F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		24700B2915B8229D00FA5843 /* _FGYTableViewScrollHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FGYTableViewScrollHandler.h; sourceTree = "<group>"; };
 		24700B2A15B8229D00FA5843 /* _FGYTableViewScrollHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FGYTableViewScrollHandler.m; sourceTree = "<group>"; };
 		24700BF915B83EF400FA5843 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -224,7 +224,6 @@
 		24E8FF1515B756C400240A87 = {
 			isa = PBXGroup;
 			children = (
-				24468454160141DD0075447F /* Default-568h@2x.png */,
 				24E8FF2515B756C400240A87 /* Fourgy */,
 				24E8FF4B15B7572900240A87 /* FourgyBundle */,
 				24E8FF6215B757B700240A87 /* FourgyApp */,
@@ -364,6 +363,7 @@
 				24B967D415B87601009F142C /* Icon.png */,
 				24E8FF9D15B76D0200240A87 /* Default.png */,
 				24E8FF9F15B76D0600240A87 /* Default@2x.png */,
+				24468454160141DD0075447F /* Default-568h@2x.png */,
 				24E8FF6415B757B700240A87 /* FourgyApp-Info.plist */,
 				24E8FF6515B757B700240A87 /* InfoPlist.strings */,
 				24E8FF6815B757B700240A87 /* main.m */,
