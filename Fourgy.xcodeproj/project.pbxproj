@@ -22,6 +22,7 @@
 		24B967D715B87604009F142C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24B967D615B87604009F142C /* Icon@2x.png */; };
 		24B9682515B88350009F142C /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B9682415B88350009F142C /* NowPlayingViewController.m */; };
 		24B9682C15B8848D009F142C /* NowPlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9682B15B8848D009F142C /* NowPlayingViewController.xib */; };
+		24C772F1180182FF00F7833F /* DCTMusicModel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24BD5057180171E600F012A6 /* DCTMusicModel.bundle */; };
 		24DAAB1415B988AE002EA948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E8FF2315B756C400240A87 /* Foundation.framework */; };
 		24DAAB2015B988D6002EA948 /* Fourgy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF2A15B756C500240A87 /* Fourgy.m */; };
 		24DAAB2215B988D6002EA948 /* FGYBatteryLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8FF3615B756FB00240A87 /* FGYBatteryLevelView.m */; };
@@ -655,6 +656,7 @@
 				24E8FF6715B757B700240A87 /* InfoPlist.strings in Resources */,
 				24E8FF7515B7586A00240A87 /* Fourgy.bundle in Resources */,
 				243C273C180172370017A598 /* DCTTableViewDataSources.bundle in Resources */,
+				24C772F1180182FF00F7833F /* DCTMusicModel.bundle in Resources */,
 				24E8FF9E15B76D0300240A87 /* Default.png in Resources */,
 				24E8FFA015B76D0600240A87 /* Default@2x.png in Resources */,
 				24B967D515B87601009F142C /* Icon.png in Resources */,
