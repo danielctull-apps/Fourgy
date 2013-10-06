@@ -34,7 +34,7 @@
 	_musicModel.importHandler= ^(CGFloat percentComplete, BOOL finished) {
 		weakSelf.progressView.progress = percentComplete;
 		
-		if (finished) [self.fgy_controller popViewControllerAnimated:NO];
+		if (finished) [weakSelf.fgy_controller popViewControllerAnimated:NO];
 	};
 }
 
